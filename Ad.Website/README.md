@@ -1,0 +1,1 @@
+This is the project folder, ment to house our website' code.
