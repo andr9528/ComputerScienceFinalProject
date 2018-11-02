@@ -1,0 +1,1 @@
+This FOlder is meant to house all our documentation, as the name suggests
