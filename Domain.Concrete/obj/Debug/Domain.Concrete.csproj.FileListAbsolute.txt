@@ -1,0 +1,11 @@
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\bin\Debug\Domain.Concrete.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\bin\Debug\Domain.Concrete.pdb
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\bin\Debug\Domain.Core.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\bin\Debug\Repository.Core.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\bin\Debug\Domain.Core.pdb
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\bin\Debug\Repository.Core.pdb
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.csprojAssemblyReference.cache
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.csproj.CopyComplete
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.pdb

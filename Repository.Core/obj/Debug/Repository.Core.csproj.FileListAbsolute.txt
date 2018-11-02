@@ -1,0 +1,9 @@
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\bin\Debug\Repository.Core.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\bin\Debug\Repository.Core.pdb
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.pdb
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\bin\Debug\System.ValueTuple.dll
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\bin\Debug\System.ValueTuple.xml
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.csproj.CopyComplete
+C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.csprojAssemblyReference.cache
