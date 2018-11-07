@@ -7,3 +7,12 @@ C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCra
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\bin\Debug\System.ValueTuple.xml
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.csproj.CopyComplete
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.Core\obj\Debug\Repository.Core.csprojAssemblyReference.cache
+C:\ComputerScienceFinalProject\Repository.Core\bin\Debug\Repository.Core.dll
+C:\ComputerScienceFinalProject\Repository.Core\bin\Debug\Repository.Core.pdb
+C:\ComputerScienceFinalProject\Repository.Core\bin\Debug\System.ValueTuple.dll
+C:\ComputerScienceFinalProject\Repository.Core\bin\Debug\System.ValueTuple.xml
+C:\ComputerScienceFinalProject\Repository.Core\obj\Debug\Repository.Core.csprojAssemblyReference.cache
+C:\ComputerScienceFinalProject\Repository.Core\obj\Debug\Repository.Core.csproj.CoreCompileInputs.cache
+C:\ComputerScienceFinalProject\Repository.Core\obj\Debug\Repository.Core.csproj.CopyComplete
+C:\ComputerScienceFinalProject\Repository.Core\obj\Debug\Repository.Core.dll
+C:\ComputerScienceFinalProject\Repository.Core\obj\Debug\Repository.Core.pdb

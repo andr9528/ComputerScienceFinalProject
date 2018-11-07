@@ -1,0 +1,2 @@
+C:\ComputerScienceFinalProject\Ad.Server\obj\Debug\Ad.Server.csprojAssemblyReference.cache
+C:\ComputerScienceFinalProject\Ad.Server\obj\Debug\Ad.Server.csproj.CoreCompileInputs.cache
