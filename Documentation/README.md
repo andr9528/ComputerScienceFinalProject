@@ -1,1 +1,1 @@
-This FOlder is meant to house all our documentation, as the name suggests
+This Folder is meant to house all our documentation, as the name suggests
