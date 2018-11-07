@@ -9,3 +9,14 @@ C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCra
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.csproj.CopyComplete
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.dll
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Domain.Concrete\obj\Debug\Domain.Concrete.pdb
+C:\ComputerScienceFinalProject\Domain.Concrete\bin\Debug\Domain.Concrete.dll
+C:\ComputerScienceFinalProject\Domain.Concrete\bin\Debug\Domain.Concrete.pdb
+C:\ComputerScienceFinalProject\Domain.Concrete\bin\Debug\Domain.Core.dll
+C:\ComputerScienceFinalProject\Domain.Concrete\bin\Debug\Repository.Core.dll
+C:\ComputerScienceFinalProject\Domain.Concrete\bin\Debug\Domain.Core.pdb
+C:\ComputerScienceFinalProject\Domain.Concrete\bin\Debug\Repository.Core.pdb
+C:\ComputerScienceFinalProject\Domain.Concrete\obj\Debug\Domain.Concrete.csprojAssemblyReference.cache
+C:\ComputerScienceFinalProject\Domain.Concrete\obj\Debug\Domain.Concrete.csproj.CoreCompileInputs.cache
+C:\ComputerScienceFinalProject\Domain.Concrete\obj\Debug\Domain.Concrete.csproj.CopyComplete
+C:\ComputerScienceFinalProject\Domain.Concrete\obj\Debug\Domain.Concrete.dll
+C:\ComputerScienceFinalProject\Domain.Concrete\obj\Debug\Domain.Concrete.pdb
