@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Core
 {
-    /*
     public interface ILogEntry : IEntity
     {
-        int PropertyA { get; set; }
-        string PropertyB { get; set; }
-        IYourDomainClass PropertyC { get; set; }
-        ICollection<IYourSecoundDomainClass> PropertyD { get; set; }
+        DateTime TimeStamp { get; set; }
+        string Message { get; set; }
+        Exception Exception { get; set; }
+        string StackTrace { get; set; }
     }
-    */
+    
 }
