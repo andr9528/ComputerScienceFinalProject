@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>310</y>
+      <x>220</x>
+      <y>480</y>
       <w>180</w>
       <h>100</h>
     </coordinates>
@@ -23,8 +23,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>220</y>
+      <x>350</x>
+      <y>390</y>
       <w>30</w>
       <h>110</h>
     </coordinates>
@@ -34,8 +34,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>100</y>
+      <x>220</x>
+      <y>270</y>
       <w>180</w>
       <h>130</h>
     </coordinates>
@@ -51,7 +51,7 @@ IClient
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>10</y>
+      <y>180</y>
       <w>110</w>
       <h>100</h>
     </coordinates>
@@ -65,18 +65,18 @@ IEntity
     <id>Relation</id>
     <coordinates>
       <x>100</x>
-      <y>80</y>
-      <w>180</w>
+      <y>250</y>
+      <w>140</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0;100.0;90.0;160.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0;60.0;90.0;120.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>100</y>
+      <x>460</x>
+      <y>270</y>
       <w>200</w>
       <h>130</h>
     </coordinates>
@@ -93,8 +93,8 @@ IAd
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
-      <y>310</y>
+      <x>470</x>
+      <y>480</y>
       <w>200</w>
       <h>130</h>
     </coordinates>
@@ -112,18 +112,18 @@ IAd
     <id>Relation</id>
     <coordinates>
       <x>100</x>
-      <y>50</y>
-      <w>470</w>
-      <h>70</h>
+      <y>230</y>
+      <w>430</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;450.0;10.0;450.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;410.0;10.0;410.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>540</x>
-      <y>220</y>
+      <x>500</x>
+      <y>390</y>
       <w>30</w>
       <h>110</h>
     </coordinates>
@@ -133,8 +133,8 @@ IAd
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>220</y>
+      <x>390</x>
+      <y>390</y>
       <w>100</w>
       <h>110</h>
     </coordinates>
@@ -144,8 +144,8 @@ IAd
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
-      <y>220</y>
+      <x>390</x>
+      <y>390</y>
       <w>90</w>
       <h>110</h>
     </coordinates>
@@ -155,8 +155,8 @@ IAd
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>330</y>
+      <x>680</x>
+      <y>500</y>
       <w>160</w>
       <h>90</h>
     </coordinates>
@@ -171,8 +171,8 @@ IAd
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>120</y>
+      <x>680</x>
+      <y>290</y>
       <w>140</w>
       <h>110</h>
     </coordinates>
@@ -189,22 +189,78 @@ IUSer
     <id>Relation</id>
     <coordinates>
       <x>100</x>
-      <y>20</y>
-      <w>740</w>
-      <h>120</h>
+      <y>210</y>
+      <w>640</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;720.0;10.0;720.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;620.0;10.0;620.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
-      <y>220</y>
+      <x>720</x>
+      <y>390</y>
       <w>30</w>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>500</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>LogEntry
+--
++ Timestamp: DateTime
++ Message: string
++ Id: int
++ Exception: Exception
++ StrackTrace: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>860</x>
+      <y>300</y>
+      <w>170</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ILogEntry
+--
++ Timestamp: DateTime
++ Message: string
++ Exception: Exception
++ StrackTrace: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>410</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>190</y>
+      <w>830</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;810.0;10.0;810.0;110.0</additional_attributes>
   </element>
 </diagram>
