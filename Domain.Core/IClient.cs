@@ -12,6 +12,13 @@ namespace Domain.Core
         string Ip { get; set; }
         DateTime CreationDate { get; set; }
         ICollection<IAd> Ads { get; set; }
+<<<<<<< HEAD
+=======
+        TimeSpan AdsPlayTtime { get; set; }
+        int AdsPlayCount { get; set; }
+
+        int AdsCount { get; }
+>>>>>>> Domain
     }
     
 }

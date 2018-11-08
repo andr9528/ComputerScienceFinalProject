@@ -14,6 +14,22 @@ namespace Domain.Concrete
         public string Ip { get; set; }
         public DateTime CreationDate { get; set; }
         public ICollection<IAd> Ads { get; set; }
+<<<<<<< HEAD
+=======
+        public TimeSpan AdsPlayTtime { get; set; }
+        public int AdsPlayCount { get; set; }
+
+
+        public int AdsCount
+        {
+            get { return Ads.Count; }
+        }
+
+        public Client()
+        {
+            Ads = new List<IAd>();
+        }
+>>>>>>> Domain
     }
     
 }

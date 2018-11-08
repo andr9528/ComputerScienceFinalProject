@@ -4,10 +4,15 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>220</x>
       <y>480</y>
+=======
+      <x>410</x>
+      <y>800</y>
+>>>>>>> Domain
       <w>180</w>
-      <h>100</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>Client
 --
@@ -15,7 +20,10 @@
 + Id: int
 + CreationDate: DateTime
 + Ads: ICollection&lt;IAd&gt;
++ AdsPlayTime: TimeSpan
++ AdsPlayCount: int
 
++ AdsCount: int
 
 </panel_attributes>
     <additional_attributes/>
@@ -23,35 +31,54 @@
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< HEAD
       <x>350</x>
       <y>390</y>
+=======
+      <x>540</x>
+      <y>610</y>
+>>>>>>> Domain
       <w>30</w>
-      <h>110</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>220</x>
       <y>270</y>
+=======
+      <x>420</x>
+      <y>460</y>
+>>>>>>> Domain
       <w>180</w>
-      <h>130</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IClient
 --
 + Ip: string
 + CreationDate: DateTime
-+ Ads: ICollection&lt;IAd&gt;</panel_attributes>
++ Ads: ICollection&lt;IAd&gt;
++ AdsPlayTime: TimeSpan
++ AdsPlayCount: int
+
++ AdsCount: int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>0</x>
       <y>180</y>
+=======
+      <x>200</x>
+      <y>320</y>
+>>>>>>> Domain
       <w>110</w>
       <h>100</h>
     </coordinates>
@@ -64,6 +91,7 @@ IEntity
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< HEAD
       <x>100</x>
       <y>250</y>
       <w>140</w>
@@ -71,46 +99,76 @@ IEntity
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;60.0;10.0;60.0;90.0;120.0;90.0</additional_attributes>
+=======
+      <x>300</x>
+      <y>390</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;170.0;70.0</additional_attributes>
+>>>>>>> Domain
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>460</x>
       <y>270</y>
+=======
+      <x>660</x>
+      <y>450</y>
+>>>>>>> Domain
       <w>200</w>
-      <h>130</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IAd
 --
 + AdName: string
-+ FilePath: string
++ FileLocation: string
 + CreationDate: DateTime 
 + Clients: ICollection&lt;IClient&gt;
-+ FileExtention: string</panel_attributes>
++ FileExtention: string
++ TotalPlayTime: TimeSpan
++ TotalPlayCount: int
+
++ CompleteFilePath: string
++ ClientCount: int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>470</x>
       <y>480</y>
+=======
+      <x>660</x>
+      <y>800</y>
+>>>>>>> Domain
       <w>200</w>
-      <h>130</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>Ad
 --
 + Id: int
 + AdName: string
-+ FilePath: string
++ FileLocation: string
 + CreationDate: DateTime
 + Clients: ICollection&lt;IClient&gt;
-+ FileExtention: string</panel_attributes>
++ FileExtention: string
++ TotalPlayTime: TimeSpan
++ TotalPlayCount: int
+
++ CompleteFilePath: string
++ ClientCount: int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< HEAD
       <x>100</x>
       <y>230</y>
       <w>430</w>
@@ -118,45 +176,78 @@ IAd
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;410.0;10.0;410.0;40.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>500</x>
-      <y>390</y>
-      <w>30</w>
-      <h>110</h>
+=======
+      <x>300</x>
+      <y>370</y>
+      <w>430</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;410.0;10.0;410.0;80.0</additional_attributes>
+>>>>>>> Domain
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< HEAD
+      <x>500</x>
+      <y>390</y>
+=======
+      <x>690</x>
+      <y>790</y>
+>>>>>>> Domain
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD
       <x>390</x>
       <y>390</y>
       <w>100</w>
       <h>110</h>
+=======
+      <x>590</x>
+      <y>610</y>
+      <w>90</w>
+      <h>210</h>
+>>>>>>> Domain
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;190.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< HEAD
       <x>390</x>
       <y>390</y>
       <w>90</w>
       <h>110</h>
+=======
+      <x>580</x>
+      <y>650</y>
+      <w>100</w>
+      <h>170</h>
+>>>>>>> Domain
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>680</x>
       <y>500</y>
+=======
+      <x>700</x>
+      <y>10</y>
+>>>>>>> Domain
       <w>160</w>
       <h>90</h>
     </coordinates>
@@ -171,8 +262,13 @@ IAd
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< HEAD
       <x>680</x>
       <y>290</y>
+=======
+      <x>710</x>
+      <y>190</y>
+>>>>>>> Domain
       <w>140</w>
       <h>110</h>
     </coordinates>
@@ -188,24 +284,107 @@ IUSer
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< HEAD
       <x>100</x>
       <y>210</y>
       <w>640</w>
       <h>100</h>
+=======
+      <x>300</x>
+      <y>290</y>
+      <w>470</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;620.0;10.0;620.0;80.0</additional_attributes>
+    <additional_attributes>10.0;70.0;450.0;70.0;450.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
-      <y>390</y>
+      <x>760</x>
+      <y>90</y>
       <w>30</w>
-      <h>130</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>0</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>LogEntry
+--
++ Timestamp: DateTime
++ Message: string
++ Id: int
++ Exception: Exception
++ StrackTrace: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>190</y>
+      <w>170</w>
+      <h>120</h>
+>>>>>>> Domain
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ILogEntry
+--
++ Timestamp: DateTime
++ Message: string
++ Exception: Exception
++ StrackTrace: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>100</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>300</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+<<<<<<< HEAD
+    <additional_attributes>10.0;10.0;620.0;10.0;620.0;80.0</additional_attributes>
+=======
+    <additional_attributes>10.0;40.0;180.0;40.0;180.0;10.0</additional_attributes>
+>>>>>>> Domain
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD
+      <x>720</x>
+      <y>390</y>
+=======
+      <x>760</x>
+      <y>650</y>
+>>>>>>> Domain
+      <w>30</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
