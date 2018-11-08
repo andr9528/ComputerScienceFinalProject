@@ -14,11 +14,9 @@ namespace Ad.Server
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ClientService : IClientService
     {
-        internal string connectionString = "Hest"; 
-
         public IRepository GetHandler()
         {
-            return new EntityRepositoryHandler(connectionString: connectionString);
+            return new EntityRepositoryHandler();
         }
     }
 }

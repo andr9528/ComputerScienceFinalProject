@@ -13,7 +13,7 @@ namespace Domain.Concrete
         public string FileLocation { get; set; }
         public DateTime CreationDate { get; set; }
         public string FileExtension { get; set; }
-        public virtual ICollection<IClient> Clients { get; set; }
+        public virtual ICollection<IClientAd> Clients { get; set; }
         public int Id { get; set; }
         public TimeSpan TotalPlayTime { get; set; }
         public int TotalPlayCount { get; set; }
@@ -23,7 +23,7 @@ namespace Domain.Concrete
 
         public Ad()
         {
-            Clients = new List<IClient>();
+            Clients = new List<IClientAd>();
         }
     }
 }
