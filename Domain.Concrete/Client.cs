@@ -13,7 +13,7 @@ namespace Domain.Concrete
         public int Id { get; set; }
         public string Ip { get; set; }
         public DateTime CreationDate { get; set; }
-        public ICollection<IAd> Ads { get; set; }
+        public virtual ICollection<IAd> Ads { get; set; }
         public TimeSpan AdsPlayTtime { get; set; }
         public int AdsPlayCount { get; set; }
 
