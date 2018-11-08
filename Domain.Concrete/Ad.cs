@@ -13,7 +13,7 @@ namespace Domain.Concrete
         public string FilePath { get; set; }
         public DateTime CreationDate { get; set; }
         public string FileExtension { get; set; }
-        public ICollection<IClient> Clients { get; set; }
+        public virtual ICollection<IClient> Clients { get; set; }
         public int Id { get; set; }
     }
 }
