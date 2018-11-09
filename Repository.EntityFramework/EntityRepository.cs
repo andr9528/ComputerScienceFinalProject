@@ -31,8 +31,13 @@ namespace Repository.EntityFramework
         // Example:
         // public virtual DbSet<YourDomainClass> YourDomainClassInPlural { get; set; }
 
+        public virtual DbSet<Ad> Ads { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<LogEntry> LogEntries { get; set; }
+        public virtual DbSet<ClientAd> ClientAds { get; set; }
 
-     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // To Lazy Load properties they require the keywork Virtual.
             // Making use of Lazy load means that the property only loads as it is about to be used,
@@ -43,10 +48,16 @@ namespace Repository.EntityFramework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Create a new class under Config, with the name of the domain class you wish to persist,
-                // ending it in Config, to differnetiate it from the actual class
-            
+            // ending it in Config, to differnetiate it from the actual class
+
             // Example:
             // modelBuilder.ApplyConfiguration(new YourDomainClassConfig());
+
+            modelBuilder.ApplyConfiguration(new AdConfig());
+            modelBuilder.ApplyConfiguration(new ClientConfig());
+            modelBuilder.ApplyConfiguration(new LogEntryConfig());
+            modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new ClientAdConfig());
         }
     }
 }

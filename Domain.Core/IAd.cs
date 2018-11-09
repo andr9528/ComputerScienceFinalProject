@@ -14,7 +14,7 @@ namespace Domain.Core
         string FileLocation { get; set; }
         DateTime CreationDate { get; set; }
         string FileExtension { get; set; }
-        ICollection<IClient> Clients { get; set; }
+        ICollection<IClientAd> Clients { get; set; }
         TimeSpan TotalPlayTime { get; set; }
         int TotalPlayCount { get; set; }
 

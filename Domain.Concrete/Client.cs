@@ -13,8 +13,8 @@ namespace Domain.Concrete
         public int Id { get; set; }
         public string Ip { get; set; }
         public DateTime CreationDate { get; set; }
-        public virtual ICollection<IAd> Ads { get; set; }
-        public TimeSpan AdsPlayTtime { get; set; }
+        public virtual ICollection<IClientAd> Ads { get; set; }
+        public TimeSpan AdsPlayTime { get; set; }
         public int AdsPlayCount { get; set; }
 
 
@@ -25,7 +25,7 @@ namespace Domain.Concrete
 
         public Client()
         {
-            Ads = new List<IAd>();
+            Ads = new List<IClientAd>();
         }
     }
     
