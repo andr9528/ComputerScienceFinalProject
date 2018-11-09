@@ -34,7 +34,7 @@ namespace Repository.EntityFramework
         public virtual DbSet<Ad> Ads { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<LogEntry> LongEntries { get; set; }
+        public virtual DbSet<LogEntry> LogEntries { get; set; }
         public virtual DbSet<ClientAd> ClientAds { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
