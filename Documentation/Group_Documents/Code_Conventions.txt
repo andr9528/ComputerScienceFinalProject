@@ -1,0 +1,42 @@
+Code conventions
+Computer Science Final Project
+
+Vores code conventions stemmer generelt overens med Microsofts egne .NET conventions
+
+Naming Conventions
+ - Unit tests skal navngives “layer_hvadDerTestes_expected”
+ - Variablernes og klassernes navne skal give mening
+ - Ingen forkortelser i navne (“windowSize” > “winSize”), med undtagelse af generelt accepterede forkortelser hvor de også skrives med camelCase (“uiElementer” > “UIElementer”)
+ - Private variabler og parameter navne skal være i camelcase (“oilAdjustment”)
+ - Namespaces, klasser, metoder og public variabler skal være i PascalCase (“OilAdjustment”)
+ - Hungarian notation, og generelt identifiers i variabel navne er no go (“string name” > “string strName”)
+ - Ingen SCREAMING CAPS
+ - Ingen underscores i identifiers, underscores må kun bruges til at starte private variabler, og kun hvis der er grund til det (f.eks. ved partial views “_homePage”)
+ - Parameter/Constructor navne skal være variere mere end bare uppercase/lowercase (Do not “public void MyFunction(string name, string Name)”)
+ - Error handling på alle metoder, specielt hvis de vender sig mod clienten
+ - Ingen mellemrum på filnavne
+
+Layout Conventions
+ - En statement per linje, på nær properties hvor der ikke er angivet noget i get og set
+ - En blank linje mellem metoder
+ - Align brackets vertikalt
+ - Alt skal have en body
+ - Hver klasse skal have sin egen fil
+ - Declare variabler i toppen af klassen, med static variabler øverst
+ - Constructor skal være lige under variablerne
+ - Skab regions for overloads, metoder som er næsten ens eller private metoder
+
+Commenting Conventions
+ - Så lidt kommentarer som muligt, i og med de også skal vedligeholdes og ikke kan testes
+ - Der må ikke efterlades “scrap code”/udkommenteret kode når man merger til developer/main branch
+
+Language Guidelines
+ - Alt kode og kodekommentar er på engelsk
+ - Dokumentation er på dansk
+ - Brug som udgangspunkt datatypens navn og ikke ‘var’
+ - SCRUM board og issues skal være på engelsk
+
+Versionsstyring Guidelines
+ - Når der udvikles skal det være i branches som er lavet fra development
+ - Alle branches skal være tied til et Issue, og branchens navn skal være det samme som Issuet
+ - Når man merger skal det være med development, er der blevet lavet noget på development skal development merges ind i branchen før man kan merge den ind i development
