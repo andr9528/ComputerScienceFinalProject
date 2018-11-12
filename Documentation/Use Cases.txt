@@ -1,0 +1,8 @@
+Use Cases
+-Administratoren/Teknikeren skal opsætte en ny skærm.
+-En kunde har bestilt 10 timers visning af sit 20 sekunders reklamespot.
+-Administratoren skal tilføje en ny reklame til visning.
+-En kunde vil vide hvor mange gange hans reklame er blevet vist.
+-En kunde ønsker at specificere i hvilke områder hans reklame skal vises.
+-Administratoren skal sikre at alle skærmene kører.
+-Administratoren skal informere en kunde om at han er løbet tør for reklametid.
