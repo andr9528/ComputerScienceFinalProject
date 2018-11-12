@@ -1,0 +1,6 @@
+Krav:
+En Port til at forbinde via 'Forbindelse til Fjerskrivebord'.
+En Port til at forbinde til Database.
+En Port til at forbinde til Hjemmeside/Service.
+
+En Bruger som vi alle 3 bruger til at forbinde med til Fjerskrivebordet.

@@ -11,8 +11,10 @@ namespace Domain.Core
     {
         DateTime TimeStamp { get; set; }
         string Message { get; set; }
-        Exception Exception { get; set; }
         string StackTrace { get; set; }
+        ILogEntry InnerLogEntry { get; set; }
+        int FK_LogEntry { get; set; }
+        ILogEntry OuterLogEntry { get; set; }
     }
     
 }
