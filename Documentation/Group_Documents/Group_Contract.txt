@@ -1,0 +1,32 @@
+Computer Science Final Project - Group Contract
+ André Steenhoff
+ Christian Liljeroth
+ Kristian Saxkjær
+
+Regler
+ §1 Projektet ligger under fælles ansvar, der ved skal alle bidrage til succes.
+ 	§1.1 Dette betyder også at på trods af givne roller, kan alle ende med at skulle lave opgaver som falder uden for dette ansvarsområde.
+
+	§1.2 Standard mødetid er 8:30-9:00 på alle hverdage hvor arbejdet fortsætter indtil 14:00 eller indtil dagens tasks er overstået, 
+	     medmindre andet er aftalt.
+	
+	§1.3 Der skal meldes fravær til gruppen mindst 2 timer før gruppearbejde starter, medmindre gruppearbejdet starter fra morgenen af, 
+	     i hvilket tilfælde fraværet skal meldes inden arbejdet starter.
+	
+	§1.4 Projektet styres på GitHub, hvor alt lægges op så det er versionsstyret, med den færdige rapport som undtagelse.
+		§1.3.1 Alle tasks skal oprettes som issues og sættes til det givne sprint.
+	
+	§1.5 Projektstyringsformatet er mere eller mindre SCRUM, hvor der oprettes boards på GitHub for hvert sprint.	
+
+	§1.6 Rapporten skrives i OverLeaf, men dokumentation skabt under projektet gemmes i .txt filer på GitHub.
+
+ §2 Møder med project owner sker ved aftale, helst omkring én gang hver anden uge.
+	§2.1 Kan man ikke deltage i mødet meldes dette til de øvrige medlemmer i god tid.
+
+	§2.2 Skriv gerne spørgsmål og lignende under sprint så de er klar til møderne.
+
+Kontakt
+ André:		22 28 72 57, andre@steenhoff.dk
+ Christian:	29 28 63 45, chrlil@live.dk
+ Kristian:	53 38 00 16, Kristiansax@hotmail.com
+ 
