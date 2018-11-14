@@ -5,7 +5,7 @@ til at lave release på. Dernæst development branch (som er vores main branch) so
 branches ind i (når de er blevet kvalitetssikret). Til sidst har vi vores feature/bug fixing branches, som er der vi udvikler og fixer.
 
 Alle branches skal have en issue oprettet i issue trackeren, og alle feature branches skal også have en use case eller user story de tager udgangspunkt i.
-Konflikter i med developer branchen skal ordnes i feature/bugfix branchen frem for på developer.
+Konflikter med developer branchen skal ordnes i feature/bugfix branchen frem for på developer.
 De eneste ting som må direkte committes til developer branch er dokumentation.
  
 Versionsstyring Guidelines
