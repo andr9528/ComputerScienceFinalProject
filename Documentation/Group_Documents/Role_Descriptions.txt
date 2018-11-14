@@ -1,0 +1,12 @@
+Role Descriptions
+
+André - 	Projektleder: Har det overordnede billede af hele projektet og systemet og forstår hvordan de enkelte elementer skal hænge sammen.
+			Gitmaster: Håndterer Github og sikrer at den er up-to-date.
+			Interfacer: Har det primære ansvar for udvikling af interfaces.
+			Databaser: Har det primære ansvar for udvikling af databaseforbindelsen.
+
+Christian -	Webudvilking: Har det primære ansvar for udvikling af websiden.
+			Qualityguy: Sikrer at alle elementer bliver tjekket inden de defineres som færdige.
+
+Kristian -	Trellomaster: Håndterer Trelloboardet og sikrer at det er up-to-date.
+			Scrummaster: Styrer vores scrum og håndterer scrummøderne.
