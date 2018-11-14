@@ -138,6 +138,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\AdConfig.cs" />
+    <Compile Include="Config\ClientAdConfig.cs" />
+    <Compile Include="Config\ClientConfig.cs" />
+    <Compile Include="Config\LogEntryConfig.cs" />
+    <Compile Include="Config\UserConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Config\ExampleConfig.cs" />
     <Compile Include="EntityRepository.cs" />

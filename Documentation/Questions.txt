@@ -1,0 +1,3 @@
+Nogen præferance for hvordan reklamer afspilles?
+  Playlist Loop / Psedo Random
+  Skal det kunne indstilles fra hjemmesiden?
