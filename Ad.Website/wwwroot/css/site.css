@@ -1,0 +1,31 @@
+body {
+    margin: 1%;
+    font-size: 20px;
+}
+
+#menu {
+    width: 15%;
+    height: 100%;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    display: inline-block;
+}
+
+#content {
+    width: 80%;
+    height: 100%;
+    display: inline-block;
+}
+
+.topTxt {
+    text-align: center;
+}
+
+.tab {
+    text-align: center;
+    display: inline-block;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}
