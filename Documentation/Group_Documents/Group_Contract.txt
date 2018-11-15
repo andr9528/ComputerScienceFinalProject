@@ -1,32 +1,32 @@
 Computer Science Final Project - Group Contract
- André Steenhoff
+ AndrÃ© Steenhoff
  Christian Liljeroth
- Kristian Saxkjær
+ Kristian SaxkjÃ¦r
 
 Regler
- §1 Projektet ligger under fælles ansvar, der ved skal alle bidrage til succes.
- 	§1.1 Dette betyder også at på trods af givne roller, kan alle ende med at skulle lave opgaver som falder uden for dette ansvarsområde.
+ Â§1 Projektet ligger under fÃ¦lles ansvar, der ved skal alle bidrage til succes.
+ 	Â§1.1 Dette betyder ogsÃ¥ at pÃ¥ trods af givne roller, kan alle ende med at skulle lave opgaver som falder uden for dette ansvarsomrÃ¥de.
 
-	§1.2 Standard mødetid er 8:30-9:00 på alle hverdage hvor arbejdet fortsætter indtil 14:00 eller indtil dagens tasks er overstået, 
+	Â§1.2 Standard mÃ¸detid er 8:30-9:00 pÃ¥ alle hverdage hvor arbejdet fortsÃ¦tter indtil 14:00 eller indtil dagens tasks er overstÃ¥et, 
 	     medmindre andet er aftalt.
 	
-	§1.3 Der skal meldes fravær til gruppen mindst 2 timer før gruppearbejde starter, medmindre gruppearbejdet starter fra morgenen af, 
-	     i hvilket tilfælde fraværet skal meldes inden arbejdet starter.
+	Â§1.3 Der skal meldes fravÃ¦r til gruppen mindst 2 timer fÃ¸r gruppearbejde starter, medmindre gruppearbejdet starter fra morgenen af, 
+	     i hvilket tilfÃ¦lde fravÃ¦ret skal meldes inden arbejdet starter.
 	
-	§1.4 Projektet styres på GitHub, hvor alt lægges op så det er versionsstyret, med den færdige rapport som undtagelse.
-		§1.3.1 Alle tasks skal oprettes som issues og sættes til det givne sprint.
+	Â§1.4 Projektet styres pÃ¥ GitHub, hvor alt lÃ¦gges op sÃ¥ det er versionsstyret, med den fÃ¦rdige rapport som undtagelse.
+		Â§1.4.1 Alle tasks skal oprettes som issues og sÃ¦ttes til det givne sprint.
 	
-	§1.5 Projektstyringsformatet er mere eller mindre SCRUM, hvor der oprettes boards på GitHub for hvert sprint.	
+	Â§1.5 Projektstyringsformatet er mere eller mindre SCRUM, hvor der oprettes boards pÃ¥ GitHub for hvert sprint.	
 
-	§1.6 Rapporten skrives i OverLeaf, men dokumentation skabt under projektet gemmes i .txt filer på GitHub.
+	Â§1.6 Rapporten skrives i OverLeaf, men dokumentation skabt under projektet gemmes i .txt filer pÃ¥ GitHub.
 
- §2 Møder med project owner sker ved aftale, helst omkring én gang hver anden uge.
-	§2.1 Kan man ikke deltage i mødet meldes dette til de øvrige medlemmer i god tid.
+ Â§2 MÃ¸der med project owner sker ved aftale, helst omkring Ã©n gang hver anden uge.
+	Â§2.1 Kan man ikke deltage i mÃ¸det meldes dette til de Ã¸vrige medlemmer i god tid.
 
-	§2.2 Skriv gerne spørgsmål og lignende under sprint så de er klar til møderne.
+	Â§2.2 Skriv gerne spÃ¸rgsmÃ¥l og lignende under sprint sÃ¥ de er klar til mÃ¸derne.
 
 Kontakt
- André:		22 28 72 57, andre@steenhoff.dk
+ AndrÃ©:		22 28 72 57, andre@steenhoff.dk
  Christian:	29 28 63 45, chrlil@live.dk
  Kristian:	53 38 00 16, Kristiansax@hotmail.com
  
