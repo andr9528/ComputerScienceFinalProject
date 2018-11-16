@@ -13092,7 +13092,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andre\\.nuget\\packages\\": {},
+    "C:\\Users\\andre\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13101,14 +13101,14 @@
       "projectUniqueName": "C:\\ComputerScienceFinalProject\\Ad.Website\\Ad.Website.csproj",
       "projectName": "Ad.Website",
       "projectPath": "C:\\ComputerScienceFinalProject\\Ad.Website\\Ad.Website.csproj",
-      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
       "outputPath": "C:\\ComputerScienceFinalProject\\Ad.Website\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
