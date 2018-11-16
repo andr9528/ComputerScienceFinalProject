@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>568</y>
+      <w>160</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Client
+--
++ Ip: string
++ Id: int
++ CreationDate: DateTime
++ Ads: ICollection&lt;IClientAd&gt;
++ AdsPlayTime: TimeSpan
++ AdsPlayCount: int
+
++ AdsCount: int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>488</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>368</y>
+      <w>144</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IClient
+--
++ Ip: string
++ CreationDate: DateTime
++ Ads: ICollection&lt;IAd&gt;
++ AdsPlayTime: TimeSpan
++ AdsPlayCount: int
+
++ AdsCount: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>256</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IEntity
+--
++ Id: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>312</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0;130.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>352</y>
+      <w>160</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IAd
+--
++ AdName: string
++ FileLocation: string
++ CreationDate: DateTime 
++ Clients: ICollection&lt;IClient&gt;
++ FileExtention: string
++ TotalPlayTime: TimeSpan
++ TotalPlayCount: int
+
++ CompleteFilePath: string
++ ClientCount: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>568</y>
+      <w>176</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Ad
+--
++ Id: int
++ AdName: string
++ FileLocation: string
++ CreationDate: DateTime
++ Clients: ICollection&lt;IClientAd&gt;
++ FileExtention: string
++ TotalPlayTime: TimeSpan
++ TotalPlayCount: int
+
++ CompleteFilePath: string
++ ClientCount: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>296</y>
+      <w>576</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;700.0;10.0;700.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>560</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>480</y>
+      <w>136</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>480</y>
+      <w>128</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>8</y>
+      <w>128</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>User
+--
++ Email: string
++ Username: string
++ Password: string
++ Id: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>496</x>
+      <y>152</y>
+      <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IUSer
+--
++ Email: string
++ Username: string
++ Password: string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>224</y>
+      <w>464</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;560.0;80.0;560.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>72</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>0</y>
+      <w>144</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>LogEntry
+--
++ Timestamp: DateTime
++ Message: string
++ InnerLogEntry: ILogEntry
++ OuterLogEntry: ILogEntry
++ FK_LogEntry: int
++ StrackTrace: string
++ Id: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>136</y>
+      <w>144</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+ILogEntry
+--
++ Timestamp: DateTime
++ Message: string
++ InnerLogEntry: ILogEntry
++ OuterLogEntry: ILogEntry
++ FK_LogEntry: int
++ StrackTrace: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>104</y>
+      <w>24</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>240</y>
+      <w>248</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;290.0;40.0;290.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>512</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>392</y>
+      <w>104</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IClientAd
+--
++ FK_ClientId: int
++ FK_AdId: int
++ Client: IClient
++ Ad: IAd</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>624</y>
+      <w>104</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ClientAd
+--
++ FK_ClientId: int
++ FK_AdId: int
++ Client: IClient
++ Ad: IAd</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>480</y>
+      <w>24</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>408</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>408</y>
+      <w>136</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>144</y>
+      <w>72</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0;10.0;90.0;70.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>512</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Ad
+--
+Name
+PlayTime
+DateCreated
+TimesPlayed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>840</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Ad Screen
+--
+AdsPlayed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1416</x>
+      <y>512</y>
+      <w>160</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Administration page
+--
+Metrics</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>672</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>PlayList
+--
+Name
+TotalPlayTime
+Quantity
+DateAdded</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1248</x>
+      <y>568</y>
+      <w>56</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+0..*
+
+Kept-in
+
+
+0..*
+
+</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1248</x>
+      <y>744</y>
+      <w>72</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1
+
+Shown-on
+
+
+0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>536</y>
+      <w>136</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+Entered-on</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1296</x>
+      <y>592</y>
+      <w>288</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1
+
+
+
+Assigns-ads-to
+
+
+
+</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;150.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1304</x>
+      <y>696</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>0..*
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
