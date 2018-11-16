@@ -10,6 +10,7 @@ namespace Repository.EntityFramework
     {
         private string connectionString = string.Empty;
         private bool useLazyLoading;
+        // Connection string is gotten from file, in ClientService, and parsed in.
         public EntityRepository(string connectionString = "YourDeafaultConnectionString", bool useLazyLoading = true, bool ensureDeleted = false, bool ensureCreated = true, bool migrate = false)
         {
             this.connectionString = connectionString;
