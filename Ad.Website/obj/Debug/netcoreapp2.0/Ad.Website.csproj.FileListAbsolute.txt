@@ -9,3 +9,14 @@ C:\Users\ChristianRønnowLilje\Documents\Skole\Datamatiker\5. Semester\Afslutten
 C:\Users\ChristianRønnowLilje\Documents\Skole\Datamatiker\5. Semester\Afsluttende Projekt\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.AssemblyInfo.cs
 C:\Users\ChristianRønnowLilje\Documents\Skole\Datamatiker\5. Semester\Afsluttende Projekt\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.dll
 C:\Users\ChristianRønnowLilje\Documents\Skole\Datamatiker\5. Semester\Afsluttende Projekt\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.pdb
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Ad.Website.deps.json
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Ad.Website.runtimeconfig.json
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Ad.Website.runtimeconfig.dev.json
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Ad.Website.dll
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Ad.Website.pdb
+C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.csprojAssemblyReference.cache
+C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.csproj.CoreCompileInputs.cache
+C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.AssemblyInfoInputs.cache
+C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.AssemblyInfo.cs
+C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.dll
+C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.pdb

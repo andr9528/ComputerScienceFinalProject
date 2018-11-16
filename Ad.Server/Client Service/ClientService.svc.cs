@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -14,9 +15,15 @@ namespace Ad.Server
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ClientService : IClientService
     {
+        public string connectionPath = "..\\ConnectionStringPath";
         public IRepository GetHandler()
         {
-            return new EntityRepositoryHandler();
+            return new EntityRepositoryHandler(connectionString: GetConnectionString());
+        }
+
+        private string GetConnectionString()
+        {
+            return File.ReadLines(connectionPath).First();
         }
     }
 }
