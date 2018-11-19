@@ -1,14 +1,15 @@
 Role Descriptions
 
-For at være sikker på alle opgaver bliver løst på en ordenlig måde, har vi valgt at lave roller, som dækker forskellige ansvarsområder. Selvom vi hver især har vores egne ansvarsområder, betyder det ikke at vi ikke kommer til at lave opgaver fra hinandens områder. F.eks. kommer vi alle til at udføre kvalitetssikring på hinandens opgaver, men det er Christian der har hovedansvaret for at det bliver gjort.
+For at være sikker på alle opgaver bliver løst på en ordenlig måde, har vi valgt at lave roller, som dækker forskellige ansvarsområder i projektet. Dette betyder at vi i gruppen hver især holder et ekstra vågent øje med, at vores enkelte ansvarsområder bliver arbejdet på. Selvom vi hver især har vores egne ansvarsområder, betyder det ikke at vi ikke kommer til at lave opgaver fra hinandens områder. F.eks. er det stadig alles ansvar at udføre kvalitetssikring på hinandens opgaver, men hvis alle er optagede, er det ham som har hovedansvaret for kvalitetssikringen der sikre at det bliver gjort.
 
 André - 	Projektleder: Har det overordnede billede af hele projektet og systemet og forstår hvordan de enkelte elementer skal hænge sammen.
-		Gitmaster: Håndterer Github og sikrer at den er up-to-date.
-		Interfacer: Har det primære ansvar for udvikling af interfaces.
-		Databaser: Har det primære ansvar for udvikling af databaseforbindelsen.
+			Gitmaster: Håndterer Github og sikrer at den er up-to-date.
+			Interfacer: Har det primære ansvar for udvikling af interfaces.
+			Databaser: Har det primære ansvar for udvikling af databaseforbindelsen.
 
-Christian -	Webudvilking: Har det primære ansvar for udvikling af websiden.
-		Qualityguy: Sikrer at alle elementer bliver tjekket inden de defineres som færdige.
+Christian -	Webudvilking: Har det primære ansvar og overblik over udvikling af websiden.
+			Qualityguy: Sikrer at alle elementer bliver tjekket inden de defineres som færdige.
 
 Kristian -	Trellomaster: Håndterer Trelloboardet og sikrer at det er up-to-date.
-		Scrummaster: Styrer vores scrum og håndterer scrummøderne.
+			Scrummaster: Styrer vores scrum og håndterer scrummøderne.
+			Systemudvikler: Har det primære overblik over vores dokumentation, og hvad der skal laves af for at sikre god dokumentation af vores projekt og kode.
