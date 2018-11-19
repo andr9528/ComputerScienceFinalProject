@@ -1,0 +1,23 @@
+Kvalitetssikring - Computer Science Final Project
+
+Som del af vi forsøger at implementere Feature Driven Development som vores systemudviklingsmetode, skal vi både opdatere vores domain model og peer review den.
+
+Derudover, stadig som del af FDD, designer vi vores features, hvor designet også skal inspiceres inden man kan gå i gang med at implementere den. Normalt vis ville man lave flere forskellige feature-teams som er ansvarlige for forskellige features, hvor man laver flere forskellige designs til sine features, og derefter vælger de bedste af dem. Alt efter vores workload ender vi nok med at lave design selv, og derefter få et andet gruppemedlem til at inspicere dem.
+Til sidst skal der også skrives tests til sin kode (eller først hvis man laver TDD), og efterfølgende skal den også inspiceres af et andet medlem inden den kan bringes ind i main branchen.
+
+Foruden de foranstaltninger der er med i de metoder vi bruger, har vi også valgt at lave kvalitetssikring på alle vores tasks. Det vil sige at ingen task er done, før den har været kvalitetssikret af et andet medlem først. 
+Kvalitetssikringen af tasks indebærer kriterier, som er sat både af ejeren af tasken, og personen som kvalitetssikrer. Når man opretter sin task, har man til ansvar at lave en liste af kriterier, som derefter skal bruges af personen som tjekker det gennem. Derudover skal personen som kvalitetssikrer også sikre sig at kvalitetskriterierne er fyldestgørende. Eksemplevis en domænemodel som skal stemme overens med de kriterier den har i Larman. Kvalitetskriterierne må ikke være vage, eller omfatter flere forskellige kriterier.
+
+Alle vores kode tasks skal have kvalitetskriterier til SOLID principperne, foruden andre ting som er vigtigt for den enkelte taks.
+- [ ] Single Responsibility principle
+- [ ] Open/Close principle
+- [ ] Liskov's substitution principle
+- [ ] Interface segregation principle
+- [ ] Dependency inversion principle
+
+Alle vores unit test tasks skal have kvalitetskriterierne beskrevet nedenfor, foruden andre ting som er vigtigt for den enkelte task.
+- [ ] Independent
+- [ ] Isolated
+- [ ] Predictable
+- [ ] Repeatable
+- [ ] Only tests one method
