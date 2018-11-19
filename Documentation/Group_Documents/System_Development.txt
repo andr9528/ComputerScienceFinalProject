@@ -5,7 +5,7 @@ I vores projekt har vi mulighed for at mødes med vores PO hver anden uge. Derfo
 Systemudviklingsmetoden vi har valgt at tage udgangspunkt i, er Feature-Driven Development. Den overordnede idé med FDD er at man bruger
 kravssætningen til at lave features, som driver udviklingen. På denne måde er alt hvad man laver i løsningen baseret i et ønske fra kunden (og i vores tilfælde har en use case/user story bag sig). Deruover betyder det at det er nemmere at se fremgang og resultater løbende, og i teorien gør det nemmere at levere et fungerende produkt til tiden.
 
-FDD følger en meta model (https://i.imgur.com/XN8TkoT.png), vi kommer til at gentage dele af denne model hvert sprint, hvor det første step kommer til at være møde med PO, hvor vi fremlægger vores fremgang, får feedback, og målsætter for de kommende sprintet.
+FDD følger en meta model (https://i.imgur.com/XN8TkoT.png), vi kommer til at gentage dele af denne model hvert sprint, hvor det første trin kommer til at være møde med PO, hvor vi fremlægger vores fremgang, får feedback, og målsætter for de kommende sprintet.
 
 Develop overall model:
 I FDD starter man med "Develop overall model", hvor man starter i high-level med at gennemgå systemets scope og derefter i små grupper laver forskellige modeller baseret på de forskellige områder i systemet. En eller flere af disse modeller bliver derefter valgt som modellen for dens område. Disse modeller bliver derefter løbende lagt sammen med domæne modellen.
@@ -13,7 +13,7 @@ I FDD starter man med "Develop overall model", hvor man starter i high-level med
 I og med vi ikke er en stor gruppe, ender vi med at lave en overordnet domæne model fra starten af. Denne domæne model vil så blive taget op til genovervejelse i slutningen af hvert sprint for at sørge for den altid stemmer overens med virkeligheden. 
 
 Build feature list:
-I andet step laver man en liste af features, baseret på den viden man har anskaffet sig i første step. For at kategorisere listen starter man med at koge domæne modellen ned til områder, som indeholder forskellige forretnigns aktiviteter. Det vil sige hver feature er baseret på hvad kunden skal bruge formuleret som "<action><result><object>" f.eks. "Calculate the total time played of a Console client".
+I andet trin laver man en liste af features, baseret på den viden man har anskaffet sig i første trin. For at kategorisere listen starter man med at koge domæne modellen ned til områder, som indeholder forskellige forretnigns aktiviteter. Det vil sige hver feature er baseret på hvad kunden skal bruge formuleret som "<action><result><object>" f.eks. "Calculate the total time played of a Console client".
 
 Vi vil også have en use case eller user story forbundet til de forskellige features, eller featurekategorier, hvis de tæt sammenhængende.
 
@@ -21,7 +21,7 @@ Plan by feature:
 Herefter tager man de forskellige features (eller featurekategorier) man har beskrevet, og uddeler dem til forskellige udviklerere som tasks.
 
 Design by feature:
-Her tager man de nogle af de features som er i listen, som skal laves inden sprintet er omme (dette er mere eller mindre vores sprint planning). Herefter laver "designer" man sine features først, f.eks. detaljerede SD'er eller andre modeller som forklarer hvordan featuren skal fungere. Til sidst inspicerer man designet, inden man fortsætter til sidste step.
+Her tager man de nogle af de features som er i listen, som skal laves inden sprintet er omme (dette er mere eller mindre vores sprint planning). Herefter laver "designer" man sine features først, f.eks. detaljerede SD'er eller andre modeller som forklarer hvordan featuren skal fungere. Til sidst inspicerer man designet, inden man fortsætter til sidste trin.
 
 Build by feature:
 Her tager hver udvikler deres uddelte features, og udvikler dem. Når det er gjort, laver man unit testing, og koden inspiceres af et andet medlem. Efter koden er godkendt, kan det blive pushed til main build. Man bestemmer selv om man vil køre TDD for sine features, eller man vil teste bagefter.

@@ -1,8 +1,7 @@
 Use Cases
--Administratoren/Teknikeren skal opsætte en ny skærm.
--En kunde har bestilt 10 timers visning af sit 20 sekunders reklamespot.
--Administratoren skal tilføje en ny reklame til visning.
--En kunde vil vide hvor mange gange hans reklame er blevet vist.
--En kunde ønsker at specificere i hvilke områder hans reklame skal vises.
--Administratoren skal sikre at alle skærmene kører.
--Administratoren skal informere en kunde om at han er løbet tør for reklametid.
+Teknikeren er blevet bedt om at installere en ny skærm. Dette indebærer at han sætter skærmen op, men også installerer clienten på den og registrer den nye skærm i systemet.
+-En kunde har bestilt 10 timers visning af sit 20 sekunders reklamespot. Derfor registrerer han reklamen i systemet, og sætter en maximum visningstid på 10 timer. Efter reklamen har fået 10 timers visningstid stoppes den med at vises, og systemet informerer administratoren.
+-En kunde ringer til administratoren og vil vide hvor mange gange hans reklame er blevet vist, så administratoren åbner systemet, og sorterer efter navnet på en reklame (el. reklamens ejer?) og aflæser hvor mange gange den i alt er afspillet.
+-En kunde ønsker at specificere i hvilke områder hans reklame skal vises, så administratoren åbner systemet og tilføjer den til specifikke grupper der passer til hvor kunden ønsker at afspille sine reklamer.
+-Administratoren skal sikre at alle skærmene kører. Derfor kigger han på listen over skærme, og tjekker efter advarselstegnet på, at de er offline.
+-Administratoren bliver af systemet informeret om, at en kundes reklame nu er løbet tør for tid, og administratoren skal derfor informere kunden om at han er løbet tør for reklametid.
