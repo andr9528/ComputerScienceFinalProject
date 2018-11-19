@@ -1,3 +1,8 @@
 Nogen præferance for hvordan reklamer afspilles?
   Playlist Loop / Psedo Random
   Skal det kunne indstilles fra hjemmesiden?
+  
+Hvilke værdier er relevante at have Statestik informationer om i forhold til
+ - Reklamer
+ - Klienter
+ - Playlister
