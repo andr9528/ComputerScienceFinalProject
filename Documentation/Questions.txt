@@ -7,7 +7,7 @@ Hvilke værdier er relevante at have Statestik informationer om i forhold til
  - Klienter
  - Playlister
 
-Hvilket problem ligger til grund for dette projekt? 
+Hvilket problem ligger til grund for dette projekt? Hvad er formålet med systemet?
 Hvem skal bruge løsningen (OneHouse eller sælger de videre)? Hvordan skal løsningen skabe værdi, og for hvem?
 Hvad er OneHouses fokus når det kommer til at sælge til kunder? (Business Case)
-Hvad har triggered den her idé, var det et kundekrav? (for at vi kan komme med det bedste løsningsforslag)
+Hvad ligger til grundlag for den her idé? Har det været et kundekrav? (for at vi kan komme med det bedste løsningsforslag)
