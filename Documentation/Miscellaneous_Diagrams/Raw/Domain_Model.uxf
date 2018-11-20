@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>272</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Ad
+--
+name
+playTime
+dateCreated
+timesPlayed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>608</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Ad Screen
+--
+name
+description
+adsPlayed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>272</y>
+      <w>160</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Administration
+--
+metrics</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>440</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Playlist
+--
+name
+totalPlayTime
+quantity
+dateAdded</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>328</y>
+      <w>56</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+
+
+0..*
+
+Kept-in
+
+
+0..*
+
+</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>512</y>
+      <w>72</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1
+
+Shown-on
+
+
+0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>296</y>
+      <w>136</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+0..*    Entered-on     1</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>352</y>
+      <w>288</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+1
+
+
+
+Assigns-ads-to
+
+
+
+</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;160.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>784</x>
+      <y>456</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>0..*
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
