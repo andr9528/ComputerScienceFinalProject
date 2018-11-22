@@ -10,16 +10,16 @@ namespace Domain.Core
     
     public interface IAd : IEntity
     {
-        string AdName { get; set; }
+        string Name { get; set; }
         string FileLocation { get; set; }
         DateTime CreationDate { get; set; }
         string FileExtension { get; set; }
-        ICollection<IClientAd> Clients { get; set; }
+        ICollection<IPlaylistAd> Playlists { get; set; }
         TimeSpan TotalPlayTime { get; set; }
         int TotalPlayCount { get; set; }
+        string Description { get; set; }
 
         string CompleteFilePath { get; }
-        int ClientsCount { get; }
     }
     
 }

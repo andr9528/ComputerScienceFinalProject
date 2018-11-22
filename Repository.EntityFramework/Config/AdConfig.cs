@@ -25,8 +25,8 @@ namespace Repository.EntityFramework.Config
             builder.Property(x => x.CreationDate).ValueGeneratedOnAdd();
             builder.Property(x => x.CreationDate).HasDefaultValue(DateTime.Now);
 
-            // Defining Properties that are not stored in database -->
-            builder.Ignore(x => x.CompleteFilePath).Ignore(x=>x.ClientsCount);
+            // Defining that a property need to be unique in the database -->
+            builder.HasIndex(x => x.Name).IsUnique();
         }
     }
     

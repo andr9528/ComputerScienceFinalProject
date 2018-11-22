@@ -47,8 +47,10 @@
   <ItemGroup>
     <Compile Include="IAd.cs" />
     <Compile Include="IClient.cs" />
-    <Compile Include="IClientAd.cs" />
+    <Compile Include="IClientPlaylist.cs" />
+    <Compile Include="IPlaylistAd.cs" />
     <Compile Include="ILogEntry.cs" />
+    <Compile Include="IPlaylist.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IExample.cs" />

@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 namespace Domain.Concrete
 {
 
-    public class ClientAd : IClientAd
+    public class PlaylistAd : IPlaylistAd
     {
         public int FK_AdId { get; set; }
-        public IAd Ad { get; set; }
+        public virtual IAd Ad { get; set; }
 
-        public int FK_ClientId { get; set; }
-        public IClient Client { get; set; }
+
+        public int FK_PlaylistId { get; set; }
+        public virtual IPlaylist Playlist { get; set; }
     }
 }

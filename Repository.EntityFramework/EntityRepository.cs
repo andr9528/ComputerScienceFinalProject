@@ -36,7 +36,7 @@ namespace Repository.EntityFramework
         public virtual DbSet<Client> Clients { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<LogEntry> LogEntries { get; set; }
-        public virtual DbSet<ClientAd> ClientAds { get; set; }
+        public virtual DbSet<PlaylistAd> ClientAds { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -56,9 +56,11 @@ namespace Repository.EntityFramework
 
             modelBuilder.ApplyConfiguration(new AdConfig());
             modelBuilder.ApplyConfiguration(new ClientConfig());
+            modelBuilder.ApplyConfiguration(new PlaylistConfig());
             modelBuilder.ApplyConfiguration(new LogEntryConfig());
             modelBuilder.ApplyConfiguration(new UserConfig());
-            modelBuilder.ApplyConfiguration(new ClientAdConfig());
+            modelBuilder.ApplyConfiguration(new PlaylistAdConfig());
+            modelBuilder.ApplyConfiguration(new ClientPlaylistConfig());
         }
     }
 }

@@ -128,8 +128,6 @@ namespace Repository.EntityFramework
         // Might need to expand the 'AdsPlayTime' to use Hours/Minutes/Seconds
         private IQueryable<Client> BuildFindClientQuery(IClient c, IQueryable<Client> query)
         {
-            if (c.AdsCount != default(int))
-                query = query.Where(x => x.AdsCount == c.AdsCount);
             if (c.AdsPlayCount != default(int))
                 query = query.Where(x => x.AdsPlayCount == c.AdsPlayCount);
 
@@ -148,13 +146,11 @@ namespace Repository.EntityFramework
         // Might need to expand the 'TotalPlayTime' to use Hours/Minutes/Seconds
         private IQueryable<Ad> BuildFindAdQuery(IAd a, IQueryable<Ad> query)
         {
-            if (a.ClientsCount != default(int))
-                query = query.Where(x => x.ClientsCount == a.ClientsCount);
             if (a.TotalPlayCount != default(int))
                 query = query.Where(x => x.TotalPlayCount == a.TotalPlayCount);
 
-            if (!a.AdName.IsNullOrEmpty())
-                query = query.Where(x => x.AdName.Contains(a.AdName));
+            if (!a.Name.IsNullOrEmpty())
+                query = query.Where(x => x.Name.Contains(a.Name));
             if (!a.FileExtension.IsNullOrEmpty())
                 query = query.Where(x => x.FileExtension.Contains(a.FileExtension));
             if (!a.FileLocation.IsNullOrEmpty())
@@ -410,7 +406,7 @@ namespace Repository.EntityFramework
                 //    entry = repo.YourDomainClassInPlural.AddIfNotExists(y as YourDomainClass, x => (x.PropertyA, x.PropertyB, ...));
                 //    break;
                 case IAd a:
-                    entry = repo.Ads.AddIfNotExists(a as Ad, x => (x.AdName, x.FileExtension, x.FileLocation));
+                    entry = repo.Ads.AddIfNotExists(a as Ad, x => (x.Name, x.FileExtension, x.FileLocation));
                     break;
                 case IClient c:
                     entry = repo.Clients.AddIfNotExists(c as Client, x => (x.Ip));

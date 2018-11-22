@@ -85,7 +85,7 @@ Inherits</panel_attributes>
     <coordinates>
       <x>1640</x>
       <y>470</y>
-      <w>200</w>
+      <w>220</w>
       <h>220</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
@@ -94,14 +94,13 @@ IAd
 + Name: string
 + FileLocation: string
 + CreationDate: DateTime 
-+ Clients: ICollection&lt;IClient&gt;
++ Playlist: ICollection&lt;IPlaylistAd&gt;
 + FileExtention: string
 + TotalPlayTime: TimeSpan
 + TotalPlayCount: int
 + Description: string
 
-+ CompleteFilePath: string
-+ ClientCount: int</panel_attributes>
++ CompleteFilePath: string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -118,14 +117,13 @@ IAd
 + Name: string
 + FileLocation: string
 + CreationDate: DateTime
-+ Clients: ICollection&lt;IClientAd&gt;
++ Playlist: ICollection&lt;IPlaylistAd&gt;
 + FileExtention: string
 + TotalPlayTime: TimeSpan
 + TotalPlayCount: int
 + Description: string
 
-+ CompleteFilePath: string
-+ ClientCount: int</panel_attributes>
++ CompleteFilePath: string</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -347,13 +345,14 @@ m2=0..n</panel_attributes>
       <x>920</x>
       <y>500</y>
       <w>240</w>
-      <h>140</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IPlaylist
 --
 + Clients: ICollection&lt;IClientPlaylist&gt;
 + Ads: ICollection&lt;IPlaylistAd&gt;
++ CreationDate: DateTime
 + StartTime: DateTime
 + EndTime: DateTime
 + Name: string
@@ -469,13 +468,14 @@ m2=0..n</panel_attributes>
       <x>900</x>
       <y>760</y>
       <w>250</w>
-      <h>140</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>Client
 --
 + Id: int
 + Clients: ICollection&lt;IClientPlaylist&gt;
 + Ads: ICollection&lt;IPlaylistAd&gt;
++ CreationDate: DateTime
 + StartTime: DateTime
 + EndTime: DateTime
 + Name: string
@@ -487,12 +487,12 @@ m2=0..n</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1030</x>
-      <y>630</y>
+      <y>650</y>
       <w>100</w>
-      <h>150</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
 </diagram>

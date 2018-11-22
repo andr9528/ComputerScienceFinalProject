@@ -1,5 +1,4 @@
-﻿using Repository.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Domain.Core
 {
-    public interface IClient : IEntity
+    public interface IPlaylist
     {
-        string Ip { get; set; }
+        ICollection<IClientPlaylist> Clients { get; set; }
+        ICollection<IPlaylistAd> Ads { get; set; }
+        DateTime StartTime { get; set; }
+        DateTime EndTime { get; set; }
         DateTime CreationDate { get; set; }
-        ICollection<IClientPlaylist> Playlists { get; set; }
-        TimeSpan AdsPlayTime { get; set; }
-        int AdsPlayCount { get; set; }
         string Name { get; set; }
         string Description { get; set; }
     }
-    
 }

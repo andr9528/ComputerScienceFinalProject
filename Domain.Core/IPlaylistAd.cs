@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Core
 {
-    public interface IClientAd
+    public interface IPlaylistAd
     {
         int FK_AdId { get; set; }
         IAd Ad { get; set; }
 
-        int FK_ClientId { get; set; }
-        IClient Client { get; set; }
+        int FK_PlaylistId { get; set; }
+        IPlaylist Playlist { get; set; }
     }
 }
