@@ -1,0 +1,10 @@
+Problemformulering
+
+Til vores projekt, har vi valgt at arbejde sammen med OneHouse. OneHouse laver IT-løsninger for kunder, alt fra komplette IT-systemer til mobil apps.
+
+I denne sammenhæng har OneHouse haft en kunde, hvis arbejde var at vise reklamer i f.eks. butikker eller på tankstationer. Han bliver betalt pr. visning af reklamen,
+men i-og-med han viser reklamer mange forskellige steder, er han afhængig af de forskellige steders muligheder for at vise reklamerne. Derudover er det også et problem
+at skulle manuelt ud til de forskellige steder, hvis han skal ændre på reklamerne der bliver spillet, foruden der ikke er nogen god måde at holde styr på hvor mange gange
+en reklame er blevet vist i et tidsrum. Derfor kunne han godt tænke sig et system hvor han kan holde styr på hvad der kører på de forskellige skærme, uden at skulle være
+der fysisk. Derudover skal systemet kunne fortælle ham, hvor mange gange en given reklame er blevet spillet, og om de forskellige skærme fungerer. Til sidst vil han også
+gerne være uafhængig af hvad der er tilgængeligt ved den givne reklameskærm.
