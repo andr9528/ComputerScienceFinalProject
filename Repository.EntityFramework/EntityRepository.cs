@@ -34,9 +34,11 @@ namespace Repository.EntityFramework
 
         public virtual DbSet<Ad> Ads { get; set; }
         public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Playlist> Playlists { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<LogEntry> LogEntries { get; set; }
-        public virtual DbSet<PlaylistAd> ClientAds { get; set; }
+        public virtual DbSet<ClientPlaylist> ClientPlaylists { get; set; }
+        public virtual DbSet<PlaylistAd> PlaylistAds { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

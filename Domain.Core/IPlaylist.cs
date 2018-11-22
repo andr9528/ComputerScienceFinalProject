@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Repository.Core;
 
 namespace Domain.Core
 {
-    public interface IPlaylist
+    public interface IPlaylist : IEntity
     {
         ICollection<IClientPlaylist> Clients { get; set; }
         ICollection<IPlaylistAd> Ads { get; set; }

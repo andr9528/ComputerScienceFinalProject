@@ -51,6 +51,9 @@ namespace Repository.EntityFramework
                 case IUser u:
                     entity = FindUser(u);
                     break;
+                case IPlaylist p:
+                    entity = FindPlaylist(p);
+                    break;
                 default :
                     throw new Exception("Nooooooooooooooo"); 
             }
@@ -80,6 +83,9 @@ namespace Repository.EntityFramework
                     break;
                 case IUser u:
                     entities = FindMultipleUsers(u) as ICollection<T>;
+                    break;
+                case IPlaylist p:
+                    entities = FindMultiplePlaylists(p) as ICollection<T>;
                     break;
                 default :
                     throw new Exception("Nooooooooooooooo"); 
@@ -113,6 +119,23 @@ namespace Repository.EntityFramework
         }
         */
 
+        private IQueryable<Playlist> BuildFindPlaylistQuery(IPlaylist p, IQueryable<Playlist> query)
+        {
+            if (!p.Name.IsNullOrEmpty())
+                query = query.Where(x => x.Name.Contains(p.Name));
+            if (!p.Description.IsNullOrEmpty())
+                query = query.Where(x => x.Description.Contains(p.Description));
+
+            if (p.CreationDate != default(DateTime))
+                query = query.Where(x => x.CreationDate.Date == p.CreationDate.Date);
+            if (p.EndTime != default(DateTime))
+                query = query.Where(x => x.EndTime.TimeOfDay == p.EndTime.TimeOfDay);
+            if (p.StartTime != default(DateTime))
+                query = query.Where(x => x.CreationDate.TimeOfDay == p.CreationDate.TimeOfDay);
+
+            return query;
+        }
+
         private IQueryable<User> BuildFindUserQuery(IUser u, IQueryable<User> query)
         {
             if (!u.Email.IsNullOrEmpty())
@@ -133,6 +156,10 @@ namespace Repository.EntityFramework
 
             if (!c.Ip.IsNullOrEmpty())
                 query = query.Where(x => x.Ip.Contains(c.Ip));
+            if (!c.Name.IsNullOrEmpty())
+                query = query.Where(x => x.Name.Contains(c.Name));
+            if (!c.Description.IsNullOrEmpty())
+                query = query.Where(x => x.Description.Contains(c.Description));
 
             if (c.CreationDate != default(DateTime))
                 query = query.Where(x => x.CreationDate.Date == c.CreationDate.Date);
@@ -155,6 +182,8 @@ namespace Repository.EntityFramework
                 query = query.Where(x => x.FileExtension.Contains(a.FileExtension));
             if (!a.FileLocation.IsNullOrEmpty())
                 query = query.Where(x => x.FileLocation.Contains(a.FileLocation));
+            if (!a.Description.IsNullOrEmpty())
+                query = query.Where(x => x.Description.Contains(a.Description));
 
             if (a.CreationDate != default(DateTime))
                 query = query.Where(x => x.CreationDate.Date == a.CreationDate.Date);
@@ -202,6 +231,13 @@ namespace Repository.EntityFramework
             return FindMultipleResults(query);
         }
         */
+        private ICollection<Playlist> FindMultiplePlaylists(IPlaylist p)
+        {
+            var query = repo.Playlists.AsQueryable();
+            query = BuildFindPlaylistQuery(p, query);
+
+            return FindMultipleResults(query);
+        }
 
         private ICollection<User> FindMultipleUsers(IUser u)
         {
@@ -261,6 +297,14 @@ namespace Repository.EntityFramework
             return FindAResult(query);
         }
         */
+
+        private IPlaylist FindPlaylist(IPlaylist p)
+        {
+            var query = repo.Playlists.AsQueryable();
+            query = BuildFindPlaylistQuery(p, query);
+
+            return FindAResult(query);
+        }
 
         private IAd FindAd(IAd a)
         {
@@ -325,6 +369,9 @@ namespace Repository.EntityFramework
                 case ILogEntry l:
                     entry = repo.Remove(l);
                     break;
+                case IPlaylist p:
+                    entry = repo.Remove(p);
+                    break;
                 default :
                     throw new Exception("Nooooooooooooooo"); 
             }
@@ -370,6 +417,9 @@ namespace Repository.EntityFramework
                 case ILogEntry l:
                     entry = repo.Update(l);
                     break;
+                case IPlaylist p:
+                    entry = repo.Update(p);
+                    break;
                 default :
                     throw new Exception("Nooooooooooooooo"); 
             }
@@ -409,13 +459,16 @@ namespace Repository.EntityFramework
                     entry = repo.Ads.AddIfNotExists(a as Ad, x => (x.Name, x.FileExtension, x.FileLocation));
                     break;
                 case IClient c:
-                    entry = repo.Clients.AddIfNotExists(c as Client, x => (x.Ip));
+                    entry = repo.Clients.AddIfNotExists(c as Client, x => (x.Ip, x.Name));
                     break;
                 case ILogEntry l:
                     entry = repo.LogEntries.AddIfNotExists(l as LogEntry, x => (x.TimeStamp));
                     break;
                 case IUser u:
                     entry = repo.Users.AddIfNotExists(u as User, x => (x.Username, x.Email, x.Password));
+                    break;
+                case IPlaylist p:
+                    entry = repo.Playlists.AddIfNotExists(p as Playlist, x => (x.Name));
                     break;
                 default:
                     throw new Exception("Nooooooooooooooo");
