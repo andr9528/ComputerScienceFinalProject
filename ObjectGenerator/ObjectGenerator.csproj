@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BaseGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialityGenerators\ClientGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository.Core\Repository.Core.csproj">
@@ -50,8 +51,6 @@
       <Name>Repository.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SpecialityGenerators\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
