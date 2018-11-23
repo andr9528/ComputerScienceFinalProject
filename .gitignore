@@ -335,3 +335,5 @@ ASALocalRun/
 .localhistory/
 Ad.Server/ConnectionStringFile.txt
 Ad.UnitTests/ConnectionStringFile.txt
+.cache
+.props
