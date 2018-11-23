@@ -15,7 +15,7 @@ namespace Ad.Server
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ClientService : IClientService
     {
-        public string connectionPath = "..\\ConnectionStringFile.txt";
+        public string connectionPath = "..\\ConnectionStringPath";
         public IRepository GetHandler()
         {
             return new EntityRepositoryHandler(connectionString: GetConnectionString());
