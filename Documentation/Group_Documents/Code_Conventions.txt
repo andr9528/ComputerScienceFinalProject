@@ -4,39 +4,40 @@ Computer Science Final Project
 Vores code conventions stemmer generelt overens med Microsofts egne .NET conventions
 
 Naming Conventions
- - Unit tests skal navngives “layer_hvadDerTestes_expected”
+ - Unit tests klasser skal navngives â€œhvilketOmrÃ¥deDerTestesTestsâ€
+ - Unit tests skal navngives â€œhvadDerTestes_expectedâ€
  - Variablernes og klassernes navne skal give mening
- - Ingen forkortelser i navne (“windowSize” > “winSize”), med undtagelse af generelt accepterede forkortelser hvor de også skrives med camelCase (“uiElementer” > “UIElementer”)
- - Private variabler og parameter navne skal være i camelcase (“oilAdjustment”)
- - Namespaces, klasser, metoder og public variabler skal være i PascalCase (“OilAdjustment”)
- - Hungarian notation, og generelt identifiers i variabel navne er no go (“string name” > “string strName”)
+ - Ingen forkortelser i navne (â€œwindowSizeâ€ > â€œwinSizeâ€), med undtagelse af generelt accepterede forkortelser hvor de ogsÃ¥ skrives med camelCase (â€œuiElementerâ€ > â€œUIElementerâ€)
+ - Private variabler og parameter navne skal vÃ¦re i camelcase (â€œoilAdjustmentâ€)
+ - Namespaces, klasser, metoder og public variabler skal vÃ¦re i PascalCase (â€œOilAdjustmentâ€)
+ - Hungarian notation, og generelt identifiers i variabel navne er no go (â€œstring nameâ€ > â€œstring strNameâ€)
  - Ingen SCREAMING CAPS
- - Ingen underscores i identifiers, underscores må kun bruges til at starte private variabler, og kun hvis der er grund til det (f.eks. ved partial views “_homePage”)
- - Parameter/Constructor navne skal være variere mere end bare uppercase/lowercase (Do not “public void MyFunction(string name, string Name)”)
- - Error handling på alle metoder, specielt hvis de vender sig mod clienten
- - Ingen mellemrum på filnavne
+ - Ingen underscores i identifiers, underscores mÃ¥ kun bruges til at starte private variabler, og kun hvis der er grund til det (f.eks. ved partial views â€œ_homePageâ€)
+ - Parameter/Constructor navne skal vÃ¦re variere mere end bare uppercase/lowercase (Do not â€œpublic void MyFunction(string name, string Name)â€)
+ - Error handling pÃ¥ alle metoder, specielt hvis de vender sig mod clienten
+ - Ingen mellemrum pÃ¥ filnavne
 
 Layout Conventions
- - En statement per linje, på nær properties hvor der ikke er angivet noget i get og set
+ - En statement per linje, pÃ¥ nÃ¦r properties hvor der ikke er angivet noget i get og set
  - En blank linje mellem metoder
  - Align brackets vertikalt
  - Alt skal have en body
  - Hver klasse skal have sin egen fil
- - Declare variabler i toppen af klassen, med static variabler øverst
- - Constructor skal være lige under variablerne
- - Skab regions for overloads, metoder som er næsten ens eller private metoder
+ - Declare variabler i toppen af klassen, med static variabler Ã¸verst
+ - Constructor skal vÃ¦re lige under variablerne
+ - Skab regions for overloads, metoder som er nÃ¦sten ens eller private metoder
 
 Commenting Conventions
- - Så lidt kommentarer som muligt, i og med de også skal vedligeholdes og ikke kan testes
- - Der må ikke efterlades “scrap code”/udkommenteret kode når man merger til developer/main branch
+ - SÃ¥ lidt kommentarer som muligt, i og med de ogsÃ¥ skal vedligeholdes og ikke kan testes
+ - Der mÃ¥ ikke efterlades â€œscrap codeâ€/udkommenteret kode nÃ¥r man merger til developer/main branch
 
 Language Guidelines
- - Alt kode og kodekommentar er på engelsk
- - Dokumentation er på dansk
- - Brug som udgangspunkt datatypens navn og ikke ‘var’
- - SCRUM board og issues skal være på engelsk
+ - Alt kode og kodekommentar er pÃ¥ engelsk
+ - Dokumentation er pÃ¥ dansk
+ - Brug som udgangspunkt datatypens navn og ikke â€˜varâ€™
+ - SCRUM board og issues skal vÃ¦re pÃ¥ engelsk
 
 Versionsstyring Guidelines
- - Når der udvikles skal det være i branches som er lavet fra development
- - Alle branches skal være tied til et Issue, og branchens navn skal være det samme som Issuet
- - Når man merger skal det være med development, er der blevet lavet noget på development skal development merges ind i branchen før man kan merge den ind i development
+ - NÃ¥r der udvikles skal det vÃ¦re i branches som er lavet fra development
+ - Alle branches skal vÃ¦re tied til et Issue, og branchens navn skal vÃ¦re det samme som Issuet
+ - NÃ¥r man merger skal det vÃ¦re med development, er der blevet lavet noget pÃ¥ development skal development merges ind i branchen fÃ¸r man kan merge den ind i development
