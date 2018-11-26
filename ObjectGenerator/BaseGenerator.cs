@@ -78,7 +78,7 @@ namespace ObjectGenerator
         private void SetString(T obj, PropertyInfo info)
         {
             string value = "";
-            int charsCount = random.Next(0, 50);
+            int charsCount = random.Next(1, 50);
 
             for (int i = 0; i < charsCount; i++)
             {

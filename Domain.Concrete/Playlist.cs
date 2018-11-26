@@ -17,5 +17,12 @@ namespace Domain.Concrete
         public string Name { get; set; }
         public string Description { get; set; }
         public int Id { get; set; }
+
+        public Playlist()
+        {
+            Clients = new List<IClientPlaylist>();
+            Ads = new List<IPlaylistAd>();
+            CreationDate = DateTime.Now;
+        }
     }
 }

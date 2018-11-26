@@ -14,9 +14,9 @@ namespace Domain.Concrete
         public string Message { get; set; }
         public string StackTrace { get; set; }
         public int Id { get; set; }
-        public virtual ILogEntry InnerLogEntry { get; set; }
-        public int FK_LogEntry { get; set; }
-        public virtual ILogEntry OuterLogEntry { get; set; }
+        //public virtual ILogEntry InnerLogEntry { get; set; }
+        //public int FK_LogEntry { get; set; }
+        //public virtual ILogEntry OuterLogEntry { get; set; }
     }
 
 }

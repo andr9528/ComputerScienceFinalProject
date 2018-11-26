@@ -19,11 +19,13 @@ namespace Domain.Concrete
         public int TotalPlayCount { get; set; }
         public string Description { get; set; }
 
-        public string CompleteFilePath { get { return string.Format("{0}{1}{2}", FileLocation, Name, FileExtension); } }
+        public string CompleteFilePath { get { return string.Format(@"{0}\{1}{2}", FileLocation, Name, FileExtension); } }
 
         public Ad()
         {
             Playlists = new List<IPlaylistAd>();
+            FileLocation = @"C:\inetpub\wwwroot\AdProgram\Ads";
+            CreationDate = DateTime.Now;
         }
     }
 }

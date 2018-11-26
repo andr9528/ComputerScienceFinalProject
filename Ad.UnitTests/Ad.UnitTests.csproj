@@ -62,6 +62,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Concrete\Domain.Concrete.csproj">
+      <Project>{745142DE-D049-4FB4-AAFE-7FB494214F16}</Project>
+      <Name>Domain.Concrete</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{1BF85A7C-A60B-4554-A55A-895BAB9859ED}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjectGenerator\ObjectGenerator.csproj">
+      <Project>{BF766555-F2CE-4838-ADC2-C1EC73CFD86D}</Project>
+      <Name>ObjectGenerator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository.Core\Repository.Core.csproj">
       <Project>{B91A1F8C-6643-4938-A493-9C00971B5ACB}</Project>
       <Name>Repository.Core</Name>

@@ -22,6 +22,7 @@ namespace Domain.Concrete
         public Client()
         {
             Playlists = new List<IClientPlaylist>();
+            CreationDate = DateTime.Now;
         }
     }
     

@@ -21,10 +21,6 @@ namespace Repository.EntityFramework.Config
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).HasColumnName("AdId");
 
-            // Should theoretically set the time the entity is created when it is added to the database
-            builder.Property(x => x.CreationDate).ValueGeneratedOnAdd();
-            builder.Property(x => x.CreationDate).HasDefaultValue(DateTime.Now);
-
             // Defining that a property need to be unique in the database -->
             builder.HasIndex(x => x.Name).IsUnique();
         }
