@@ -167,6 +167,9 @@ namespace Repository.EntityFramework
             if (c.AdsPlayTime != default(TimeSpan))
                 query = query.Where(x => x.AdsPlayTime.TotalHours == c.AdsPlayTime.TotalHours);
 
+            if (c.Id != 0)
+                query = query.Where(x => x.Id == c.Id);
+
             return query;
         }
 
