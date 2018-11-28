@@ -18,6 +18,7 @@ namespace Domain.Concrete
         public int AdsPlayCount { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public bool State { get; set; }
 
         public Client()
         {

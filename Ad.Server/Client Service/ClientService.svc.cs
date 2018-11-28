@@ -16,10 +16,18 @@ namespace Ad.Server
     public class ClientService : IClientService
     {
         public string connectionPath = "..\\ConnectionStringPath";
+
+        public RemoteFileInfo DownloadFile(DownloadRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
         public IRepository GetHandler()
         {
             return new EntityRepositoryHandler(connectionString: GetConnectionString());
         }
+
+
 
         private string GetConnectionString()
         {

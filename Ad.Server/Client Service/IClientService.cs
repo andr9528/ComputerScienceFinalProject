@@ -15,6 +15,9 @@ namespace Ad.Server
     {
         [OperationContract]
         IRepository GetHandler();
+
+        [OperationContract]
+        RemoteFileInfo DownloadFile(DownloadRequest request);
     }
 
 }

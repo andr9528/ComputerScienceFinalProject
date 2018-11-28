@@ -10,6 +10,7 @@ using Domain.Concrete;
 using Repository.Core;
 using System.Net;
 using System.Runtime.Remoting.Messaging;
+using System.Threading;
 
 namespace Ad.Client
 {
@@ -18,7 +19,8 @@ namespace Ad.Client
         ClientServiceClient service = new ClientServiceClient();
         private IRepository handler;
         private IClient client;
-        private string localSaveFile = "..\\KeyInfos";
+        private string localSaveFile = "..\\KeyInfos.txt";
+        private readonly string adSaveLocation = "..\\Ads";
 
         static void Main(string[] args)
         {
@@ -29,6 +31,60 @@ namespace Ad.Client
         private void Run()
         {
             Init();
+            Play();
+        }
+
+        private void Play()
+        {
+            bool firstPlay = true;
+            while (client.State)
+            {
+                foreach (ClientPlaylist playlist in client.Playlists)
+                {
+                    foreach (Domain.Concrete.Ad ad in playlist.Playlist.Ads  )
+                    {
+                        if (!File.Exists(Path.Combine(adSaveLocation, ad.Name)))
+                            Download(ad);
+                    }
+                }
+
+                if (firstPlay)
+                {
+                    foreach (ClientPlaylist playlist in client.Playlists)
+                    {
+                        StartThread(playlist);
+                    }
+
+                    firstPlay = false;
+                }
+
+                Thread.Sleep(15 * 60 * 1000);
+            }
+        }
+
+        private void StartThread(IClientPlaylist playlist)
+        {
+            Thread thread = new Thread(() => PlayPlaylist(playlist));
+            thread.Start();
+        }
+
+        private void PlayPlaylist(IClientPlaylist playlist)
+        {
+            IPlaylist list = playlist.Playlist;
+            while (client.State)
+            {
+                while (DateTime.Now >= list.StartTime && DateTime.Now < list.EndTime)
+                {
+                    
+                }
+            }
+        }
+
+        private void Download(IAd ad)
+        {
+            throw new NotImplementedException();
+
+            //ClientService.RemoteFileInfo fileinfo = client.DownloadFile(new ClientService.DownloadRequest() {FileName = ad.Name});
         }
 
         private void Init()
