@@ -3,14 +3,19 @@ INTRODUCTION
 Virksomhedsbaggrund
 	
 Problem
-
+	OneHouse står i en situation, hvor de oplever at mange kunder, i forbindelse med andre services de får, også gerne vil have hjælp til deres markedsføring. Dette er på nuværende tidspunkt ikke noget OneHouse er i stand til at hjælpe med. Dette resulterer i, at de risikerer at miste kunder til konkurenter der tilbyder denne service, eller at de blot ikke kan give deres kunder alt hvad de efterspørger. Derfor har OneHouse nu ønsket om at bevæge sig ind i markedsføringsområdet, så de også er i stand til at tilbyde services på dette punkt. OneHouse søger derfor nu et sted at starte, for at kunne komme ind på dette område.
 Parthavere
-	OneHouse?
-	Mr. Boss?
+Parthaverne er alle som har en eller anden form for interesse i virksomheden og hvad de udvikler. Dette indbefatter også alle som bliver påvirket af vores system.
+	Investorer?
+	Kunder - OneHouses kunder har en stor interesse i at de udvider deres services til også at indkludere markedsføring. Dette betyder at kunder som kommer til OneHouse for i forbindelse med IT-drift og infrastruktur, også har muligheden for at kunne blive tilbudt hjælp til markedsføring i samme forbindelse. Muligheden for at kunne få hjælp til markedsføring er dessuden allerede blevet efterspurgt hos nogle kunder. Mens ikke alle kunder vil have interesse i dette projekt, vil der være en del som er, og disse bør og ønsker sansynligvis at blive involveret i udviklingen af løsningen.
+	Kunders kunder - OneHouses kunders kunder er i sidste ende målgruppen for systemet der skal udvikles, da disse er dem som markedsføringen skal påvirke. Disse  kan være relevante at indrage i projektet, da de er en vigtig interessent, men ikke selv vil tage initiativet.
+	Ansatte - De ansattes holdning til løsningen afhænger af 
+	Samarbejdspartnere
+	Konkurenter
 Løsning
-	
+	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et reklameskærmssystemet. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige clientskærme forskellige steder. Disse skærme skal automatisk vise ønskede reklamefilm. Kunder får dermed muligheden for at installere softwaren på skærme. Årsagen til at vi mener at dette er den bedste løsning er, at det er en nem løsning for OneHouse at komme ind på markedsføringsområdet. OneHouse har ikke noget erfaring på området, og dette er en simpel måde at komme ind på det med. Det eneste det kræver er 
 Alternative Løsninger
-	Nulløsningen
-	OPTION 1 
+	Nulløsningen - 
+	Søgemaskineoptimering - Søgemaskineoptimering (eller SEO) er en form for digital markedsføring, hvor formålet er at forbedre websteders placering i søgemaskiner.
 	OPTION 2
 Key Performance Indicators
