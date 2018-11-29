@@ -17,7 +17,59 @@ namespace ServerService
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
         System.Threading.Tasks.Task<object> GetHandlerAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
+        System.Threading.Tasks.Task<ServerService.RemoteFileInfo> DownloadFileAsync(ServerService.DownloadRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DownloadRequest", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class DownloadRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string FileName;
+        
+        public DownloadRequest()
+        {
+        }
+        
+        public DownloadRequest(string FileName)
+        {
+            this.FileName = FileName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoteFileInfo", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class RemoteFileInfo
+    {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public string FileName;
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public long Length;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public byte[] FileByteStream;
+        
+        public RemoteFileInfo()
+        {
+        }
+        
+        public RemoteFileInfo(string FileName, long Length, byte[] FileByteStream)
+        {
+            this.FileName = FileName;
+            this.Length = Length;
+            this.FileByteStream = FileByteStream;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
@@ -73,6 +125,19 @@ namespace ServerService
         public System.Threading.Tasks.Task<object> GetHandlerAsync()
         {
             return base.Channel.GetHandlerAsync();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServerService.RemoteFileInfo> ServerService.IServerService.DownloadFileAsync(ServerService.DownloadRequest request)
+        {
+            return base.Channel.DownloadFileAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServerService.RemoteFileInfo> DownloadFileAsync(string FileName)
+        {
+            ServerService.DownloadRequest inValue = new ServerService.DownloadRequest();
+            inValue.FileName = FileName;
+            return ((ServerService.IServerService)(this)).DownloadFileAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

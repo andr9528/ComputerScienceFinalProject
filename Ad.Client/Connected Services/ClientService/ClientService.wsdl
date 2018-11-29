@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IClientService_GetHandler_InputMessage">
@@ -12,10 +13,24 @@
   <wsdl:message name="IClientService_GetHandler_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetHandlerResponse" />
   </wsdl:message>
+  <wsdl:message name="DownloadRequest">
+    <wsdl:part name="parameters" element="tns:DownloadRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfo">
+    <wsdl:part name="parameters" element="tns:RemoteFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfo_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="Length" element="tns:Length" />
+  </wsdl:message>
   <wsdl:portType name="IClientService">
     <wsdl:operation name="GetHandler">
       <wsdl:input wsaw:Action="http://tempuri.org/IClientService/GetHandler" message="tns:IClientService_GetHandler_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetHandlerResponse" message="tns:IClientService_GetHandler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/DownloadFile" name="DownloadRequest" message="tns:DownloadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/DownloadFileResponse" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IClientService" type="tns:IClientService">
@@ -26,6 +41,17 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IClientService/DownloadFile" style="document" />
+      <wsdl:input name="DownloadRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemoteFileInfo">
+        <soap:header message="tns:RemoteFileInfo_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:RemoteFileInfo_Headers" part="Length" use="literal" />
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

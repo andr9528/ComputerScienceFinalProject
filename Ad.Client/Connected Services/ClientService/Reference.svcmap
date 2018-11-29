@@ -25,6 +25,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="ClientService.wsdl" MetadataType="Wsdl" ID="d98763ea-55e7-443d-9b8b-bc57264db703" SourceId="1" SourceUrl="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?wsdl" />
+    <MetadataFile FileName="ClientService2.xsd" MetadataType="Schema" ID="103c3fc2-4b20-4927-a083-b113c1aae4c5" SourceId="1" SourceUrl="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?xsd=xsd2" />
     <MetadataFile FileName="ClientService.xsd" MetadataType="Schema" ID="c6ca7513-b05b-4874-aa87-7fcabfa7fed3" SourceId="1" SourceUrl="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?xsd=xsd1" />
     <MetadataFile FileName="ClientService.disco" MetadataType="Disco" ID="1d64dfd1-fd70-40c0-a808-a81c0d2924de" SourceId="1" SourceUrl="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?disco" />
     <MetadataFile FileName="ClientService1.xsd" MetadataType="Schema" ID="1682ad3c-69df-4432-b1e3-cec69d5d2d49" SourceId="1" SourceUrl="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc?xsd=xsd0" />

@@ -16,7 +16,8 @@ namespace Ad.Client
 {
     class Program
     {
-        ClientServiceClient service = new ClientServiceClient();
+        private ClientServiceClient service = new ClientServiceClient();
+        private object _lock = new object();
         private IRepository handler;
         private IClient client;
         private string localSaveFile = "..\\KeyInfos.txt";
@@ -59,6 +60,8 @@ namespace Ad.Client
                 }
 
                 Thread.Sleep(15 * 60 * 1000);
+                FindItSelf();
+
             }
         }
 
@@ -82,9 +85,7 @@ namespace Ad.Client
 
         private void Download(IAd ad)
         {
-            throw new NotImplementedException();
-
-            //ClientService.RemoteFileInfo fileinfo = client.DownloadFile(new ClientService.DownloadRequest() {FileName = ad.Name});
+            //RemoteFileInfo fileinfo = service.DownloadFile(new DownloadRequest() {FileName = ad.Name});
         }
 
         private void Init()
@@ -97,8 +98,8 @@ namespace Ad.Client
                 bool result = handler.Add(client, true);
                 SaveKeyInfos();
             }
-            else
-                FindItSelf();
+            
+            FindItSelf();
         }
         /// <summary>
         /// Saves the Id, Ip and Name of client to a local file to be used later to retrive from the database.
@@ -130,8 +131,10 @@ namespace Ad.Client
             else 
                 predicate = new Domain.Concrete.Client() {Ip = ip, Name = name};
 
-            client = handler.Find(predicate);
-
+            lock (_lock)
+            {
+                client = handler.Find(predicate);
+            }
             SaveKeyInfos();
         }
 
