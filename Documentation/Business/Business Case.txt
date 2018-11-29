@@ -13,9 +13,9 @@ Parthaverne er alle som har en eller anden form for interesse i virksomheden og 
 	Samarbejdspartnere
 	Konkurenter
 Løsning
-	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et reklameskærmssystemet. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige clientskærme forskellige steder. Disse skærme skal automatisk vise ønskede reklamefilm. Kunder får dermed muligheden for at installere softwaren på skærme. Årsagen til at vi mener at dette er den bedste løsning er, at det er en nem løsning for OneHouse at komme ind på markedsføringsområdet. OneHouse har ikke noget erfaring på området, og dette er en simpel måde at komme ind på det med. Det eneste det kræver er 
+	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et reklameskærmssystemet. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige clientskærme forskellige steder. Disse skærme skal automatisk vise ønskede reklamefilm. Kunder får dermed muligheden for at installere softwaren på skærme. Årsagen til at vi mener at dette er den bedste løsning er, at det er en nem løsning for OneHouse at komme ind på markedsføringsområdet. OneHouse har ikke noget erfaring på området, og dette er en simpel måde at komme ind på det med. Det eneste det kræve af OneHouse efter systemet er udviklet, er en medarbejder med ansvaret for systemet og kontakten med kunder. Derudover skal de også begynde at gøre kunderne opmærksomme på denne nye mulighed. Når denne service er blevet etableret, vil det også være muligt for OneHouse at markedsføre dette specifikke produkt.
 Alternative Løsninger
 	Nulløsningen - 
-	Søgemaskineoptimering - Søgemaskineoptimering (eller SEO) er en form for digital markedsføring, hvor formålet er at forbedre websteders placering i søgemaskiner.
+	Søgemaskineoptimering - Søgemaskineoptimering (eller SEO) er en form for digital markedsføring, hvor formålet er at forbedre websteders placering i søgemaskiner. Søgemaskineoptimering har vi også vurderet som en god mulighed for OneHouse, da dette også er 
 	OPTION 2
 Key Performance Indicators
