@@ -108,3 +108,51 @@ Exceptions ->
 	None
 Assumptions ->
 	None
+______________________________________________________________________________________
+
+Method Name ->
+	Download
+Method Description ->
+	Method that does the actual work with downloading the specified ad from the server, by calling the DownloadFile method on the client service.
+Input ->
+	IAd
+Output ->
+	None
+Returntype ->
+	Void
+Exceptions ->
+	None
+Assumptions ->
+	None
+______________________________________________________________________________________
+
+Method Name ->
+	StartThread
+Method Description ->
+	Starts a thread, using the method PlayPlaylist, with the specified playlist.
+Input ->
+	IPlaylist
+Output ->
+	None
+Returntype ->
+	Void
+Exceptions ->
+	None
+Assumptions ->
+	None
+______________________________________________________________________________________
+
+Method Name ->
+	PlayPlaylist
+Method Description ->
+	This method is the one that does all the work with actually playing the playlist specified in the input. The method is keept alive with a whileloop that look if the client is still active, which means should the client be deactivated via the website, all the threads, silently shutsdown.
+Input ->
+	IPlaylist
+Output ->
+	None
+Returntype ->
+	Void
+Exceptions ->
+	None
+Assumptions ->
+	None

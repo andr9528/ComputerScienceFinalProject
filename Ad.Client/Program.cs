@@ -22,6 +22,7 @@ namespace Ad.Client
         private IClient client;
         private string localSaveFile = "..\\KeyInfos.txt";
         private readonly string adSaveLocation = "..\\Ads";
+        private List<Thread> playlistThreads = new List<Thread>();
 
         static void Main(string[] args)
         {
@@ -53,34 +54,48 @@ namespace Ad.Client
                 {
                     foreach (ClientPlaylist playlist in client.Playlists)
                     {
-                        StartThread(playlist);
+                        StartThread(playlist.Playlist);
                     }
 
                     firstPlay = false;
                 }
 
-                Thread.Sleep(15 * 60 * 1000);
-                FindItSelf();
+                Thread.Sleep(new TimeSpan(0, 15, 0));
 
+                FindItSelf();
             }
         }
 
-        private void StartThread(IClientPlaylist playlist)
+        private void StartThread(IPlaylist playlist)
         {
             Thread thread = new Thread(() => PlayPlaylist(playlist));
             thread.Start();
+            playlistThreads.Add(thread);
         }
 
-        private void PlayPlaylist(IClientPlaylist playlist)
+        private void PlayPlaylist(IPlaylist playlist)
         {
-            IPlaylist list = playlist.Playlist;
             while (client.State)
             {
-                while (DateTime.Now >= list.StartTime && DateTime.Now < list.EndTime)
+                while (DateTime.Now >= playlist.StartTime && DateTime.Now < playlist.EndTime)
                 {
-                    
+                    IAd ad = PickAAd(playlist);
+                    PlayAd(ad);
+                    bool result = handler.Update(ad);
                 }
+
+                Thread.Sleep(new TimeSpan(0, 1, 0));
             }
+        }
+
+        private void PlayAd(IAd ad)
+        {
+            throw new NotImplementedException();
+        }
+
+        private IAd PickAAd(IPlaylist playlist)
+        {
+            throw new NotImplementedException();
         }
 
         private void Download(IAd ad)
