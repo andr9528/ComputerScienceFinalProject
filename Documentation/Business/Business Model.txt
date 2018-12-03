@@ -1,40 +1,26 @@
-Key Partners
-	What are our Key Partners
-	What are our Key Suppliers
-	Which Key Resources are we acquiring from partners
-	Which Key Activities do partners perform?
-Key Activities
-	What Key Activities do our Value Propositions require
-	Our Distribution Channels
-	Customer Relationships? 
-	Revenue streams?
-Key Resources
-	What Key Resources do our Value Propositions require?
-	Our Distribution Channels? Customer Relationships?
-	Revenue Streams?
-Customer Segments
-	For whom are we creating value?
-	What are our most important customers?
-Customer Relationships 
+Nøglepartnere
+	OneHouse har en række forskellige nøglepartnere, som gør dem i stand til at levere deres services. De primære inkluderer Dell, Microsoft, Oki Data Americas, VMware og WatchGuard. En del af OneHouses primære partnere, tilbyder værktøjer til markedsføring og forretningsrelateret dataanalyse. Derudover har OneHouse også distributionsaftaler med forskellige partnere, der gør det muligt for dem at tilbyde billigere support. 
+Nøgleaktiviteter
+	OneHouse tilbyder en lang række forskellige IT services. Dette inkluderer blandt andet hosting-ydelser som hosted backup, web og mail. De tilbyder også rådgivning inden for IT, IT-support og softwareudvikling. Derudover udlejer de også en række kontorfaciliter i Svendborg. OneHouse lever af at levere services til en lang række af forskellige kunder, og da de tilbyder mange forskellige services, kommer indtægterne også mange forskellige steder fra. Dessuden tilbydes der også rabat, hvis man ønsker at købe flere forskellige services af OneHouse.
+Nøgleressourcer
+	OneHouse skaber sin indtægt ved tre nøgleressourcer. De ansatte, faciliteterne og deres servere. Disse tre ressourcer er alle vitale, for at OneHouse kan levere alle deres services. De ansatte sidder med den viden og kompetencer der er nødvendig for at kunne levere, hvad kunderne har behov for. Dette gælder især på områder som service, vejledning og udvikling. Serverne spiller en afgørende rolle for muligheden for at kunne tilbyde nogen form for hosting. Til sidst er faciliteterne også afgørende, da dette både er hvor serverne rent fysisk er placeret, men også fordi der også tilbydes udlejning af kontorer. 
+Kundesegmenter
+	OneHouse har mange forskellige kunder, da langt de fleste virksomheder har en eller anden form for IT-behov. OneHouse opfylder i en eller anden form de fleste sådanne behov. OneHouse arbejder primært for små og mellemstore virksomheder. OneHouse har både faste og engangskunder. De faste kunder benytter sig for det meste af OneHouse for at opfylde deres support- eller hostingbehov. Disse har hermed også en tendens til at gå til OneHouse hvis de får behov for yderligere rådgivning eller udvikling af software. De faste kunder er de vigtigste, da det er en fast indtægt, og det er disse der holder virksomheden stabilt kørende. Derudover har OneHouse også engangskunder. Disse kommer for det meste for rådgivning eller softwareudvikling.
+Kundeforhold 
 	What type of relationship does each of our Customer?
 	Segments expect us to establish and maintain with them?
 	Which ones have we established?
 	How are they integrated with the rest of our business model?
 	How costly are they?
-Channels
-	Through which Channels do our Customer Segments want to be reached?
-	Which ones work best?
-	Which ones are most cost-efficient?
-	How are we integrating them with customer routines?
+Kanaler
+	HVORDAN NÅR DE DERES KUNDER?
 Value Proposition
-	What value does he deliver to the customer?
+	What value does we deliver to the customer?
 	Which one of our customer’s problems are we helping to solve?
 	What bundles of products and services are we offering to each Customer Segment?
-Cost Structure
-	What are the most important costs inherent in our business model?
-	Which Key Resources are most expensive?
-	Which Key Activities are most expensive?
-Revenue Streams
+Omkostninger
+	De primære omkostninger består i løn til de ansatte samt forbrug af faciliteterne. De ansatte er den største omkostning i virksomheden. Forbrug af faciliteterne, er dog også en betydelig omkostning, da OneHouse også betaler vand, varme og el for lejerne af kontorene.
+Indtægter
 	For what value are our customers willing to pay?
 	For what d	they currently pay?
 	How are they currently paying?
