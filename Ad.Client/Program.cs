@@ -11,6 +11,7 @@ using Repository.Core;
 using System.Net;
 using System.Runtime.Remoting.Messaging;
 using System.Threading;
+using LibVLCSharp.Shared;
 
 namespace Ad.Client
 {
@@ -23,6 +24,11 @@ namespace Ad.Client
         private string localSaveFile = "..\\KeyInfos.txt";
         private readonly string adSaveLocation = "..\\Ads";
         private List<Thread> playlistThreads = new List<Thread>();
+        private LibVLC vlc = new LibVLC();
+        private TimeSpan sleepDuringPlay = new TimeSpan(0,0,10);
+        private TimeSpan sleepDuringOffTime = new TimeSpan(0, 1, 0);
+        private TimeSpan sleepBetweenUpdate = new TimeSpan(0, 15, 0);
+        private MediaPlayer player;
 
         static void Main(string[] args)
         {
@@ -60,7 +66,7 @@ namespace Ad.Client
                     firstPlay = false;
                 }
 
-                Thread.Sleep(new TimeSpan(0, 15, 0));
+                Thread.Sleep(sleepBetweenUpdate);
 
                 FindItSelf();
             }
@@ -79,21 +85,39 @@ namespace Ad.Client
             {
                 while (DateTime.Now >= playlist.StartTime && DateTime.Now < playlist.EndTime)
                 {
-                    IAd ad = PickAAd(playlist);
-                    PlayAd(ad);
+                    IAd ad = PickAnAd(playlist);
+                    ad = PlayAd(ad);
                     bool result = handler.Update(ad);
                 }
 
-                Thread.Sleep(new TimeSpan(0, 1, 0));
+                Thread.Sleep(sleepDuringOffTime);
             }
         }
 
-        private void PlayAd(IAd ad)
+        private IAd PlayAd(IAd ad)
         {
-            throw new NotImplementedException();
+            string path = Path.Combine(adSaveLocation, ad.Name);
+
+            player = new MediaPlayer(vlc);
+            Media file = new Media(vlc, path);
+
+            Console.WriteLine("Playing File: " + ad.Name);
+            player.ToggleFullscreen();
+            player.Play(file);
+
+            while (file.State != VLCState.Ended)
+            {
+                Thread.Sleep(sleepDuringPlay);
+            }
+
+            player.Dispose();
+
+            ad.TotalPlayCount++;
+
+            return ad;
         }
 
-        private IAd PickAAd(IPlaylist playlist)
+        private IAd PickAnAd(IPlaylist playlist)
         {
             throw new NotImplementedException();
         }
@@ -106,6 +130,7 @@ namespace Ad.Client
         private void Init()
         {
             handler = (IRepository) service.GetHandler();
+            Core.Initialize();
 
             if (!File.Exists(localSaveFile))
             {
