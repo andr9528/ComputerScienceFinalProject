@@ -1,0 +1,30 @@
+Method Name ->
+	GetHandler
+Method Description ->
+	return a new instance of our Entity Repository Handler, with the connection string gotten from the method GetConnectionString. The return type is a interface called IRepository, which tell users what methods are accessible.
+Input ->
+	None
+Output ->
+	None
+Returntype ->
+	IRepository
+Exceptions ->
+	None
+Assumptions ->
+	None
+______________________________________________________________________________________
+
+Method Name ->
+	GetConnectionStrings
+Method Description ->
+	Gets the connection string from file, as the connection string can not be put in to our code, without exposing username and password to our database.
+Input ->
+	None
+Output ->
+	None
+Returntype ->
+	string
+Exceptions ->
+	None
+Assumptions ->
+	That a file called ConnectionStringFile exists, beside the service.

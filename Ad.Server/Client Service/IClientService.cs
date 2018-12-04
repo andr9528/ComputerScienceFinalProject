@@ -1,6 +1,7 @@
 ﻿using Repository.Core;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -17,7 +18,7 @@ namespace Ad.Server
         IRepository GetHandler();
 
         [OperationContract]
-        RemoteFileInfo DownloadFile(DownloadRequest request);
+        Stream DownloadFile(string path);
     }
 
 }

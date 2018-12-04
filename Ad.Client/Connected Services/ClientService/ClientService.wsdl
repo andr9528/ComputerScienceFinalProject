@@ -33,7 +33,7 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IClientService/DownloadFileResponse" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IClientService" type="tns:IClientService">
+  <wsdl:binding name="BasicHttpBinding_ClientService" type="tns:IClientService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetHandler">
       <soap:operation soapAction="http://tempuri.org/IClientService/GetHandler" style="document" />
@@ -57,8 +57,8 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ClientService">
-    <wsdl:port name="BasicHttpBinding_IClientService" binding="tns:BasicHttpBinding_IClientService">
-      <soap:address location="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc" />
+    <wsdl:port name="BasicHttpBinding_ClientService" binding="tns:BasicHttpBinding_ClientService">
+      <soap:address location="http://www12.steenhoff.dk:4880/AdProgram/Service/Client Service/ClientService.svc/ClientService.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

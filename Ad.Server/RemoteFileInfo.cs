@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Web;
 
 namespace Ad.Server
 {
-    [MessageContract]
+    [DataContract]
     public class RemoteFileInfo : IDisposable
     {
-        [MessageHeader(MustUnderstand = true)]
+        [DataMember]
         public string FileName;
 
-        [MessageHeader(MustUnderstand = true)]
+        [DataMember]
         public long Length;
 
-        [MessageBodyMember(Order = 1)]
+        [DataMember]
         public System.IO.Stream FileByteStream;
 
         public void Dispose()
