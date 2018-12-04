@@ -6,23 +6,13 @@ Nøgleressourcer
 	OneHouse skaber sin indtægt ved tre nøgleressourcer. De ansatte, faciliteterne og deres servere. Disse tre ressourcer er alle vitale, for at OneHouse kan levere alle deres services. De ansatte sidder med den viden og kompetencer der er nødvendig for at kunne levere, hvad kunderne har behov for. Dette gælder især på områder som service, vejledning og udvikling. Serverne spiller en afgørende rolle for muligheden for at kunne tilbyde nogen form for hosting. Til sidst er faciliteterne også afgørende, da dette både er hvor serverne rent fysisk er placeret, men også fordi der også tilbydes udlejning af kontorer. 
 Kundesegmenter
 	OneHouse har mange forskellige kunder, da langt de fleste virksomheder har en eller anden form for IT-behov. OneHouse opfylder i en eller anden form de fleste sådanne behov. OneHouse arbejder primært for små og mellemstore virksomheder. OneHouse har både faste og engangskunder. De faste kunder benytter sig for det meste af OneHouse for at opfylde deres support- eller hostingbehov. Disse har hermed også en tendens til at gå til OneHouse hvis de får behov for yderligere rådgivning eller udvikling af software. De faste kunder er de vigtigste, da det er en fast indtægt, og det er disse der holder virksomheden stabilt kørende. Derudover har OneHouse også engangskunder. Disse kommer for det meste for rådgivning eller softwareudvikling.
-Kundeforhold 
-	What type of relationship does each of our Customer?
-	Segments expect us to establish and maintain with them?
-	Which ones have we established?
-	How are they integrated with the rest of our business model?
-	How costly are they?
+Kundeforhold
+	HVILKET FORHOLD HAR DE TIL KUNDESEGMENTERNE? HVAD GØR DE FOR HVER ENKELT?
 Kanaler
 	HVORDAN NÅR DE DERES KUNDER?
-Value Proposition
-	What value does we deliver to the customer?
-	Which one of our customer’s problems are we helping to solve?
-	What bundles of products and services are we offering to each Customer Segment?
+Værdiskabelse
+	OneHouse skaber værdi for deres kunder ved at stille IT til rådighed for virksomhederne. Gennem OneHouse får kunderne adgang til at kunne få en hjemmeside lavet og hosted, de kan få hosted backup samt mailbox. Derudover kan de også tilbyde IT-support og udvikling af software. Alt dette er med til at opfylde størstedelen af deres kunders IT-relaterede behov.
 Omkostninger
 	De primære omkostninger består i løn til de ansatte samt forbrug af faciliteterne. De ansatte er den største omkostning i virksomheden. Forbrug af faciliteterne, er dog også en betydelig omkostning, da OneHouse også betaler vand, varme og el for lejerne af kontorene.
 Indtægter
-	For what value are our customers willing to pay?
-	For what d	they currently pay?
-	How are they currently paying?
-	How would they prefer to pay?
-	How much does each Revenue Stream contribute to overall revenues?
+	De faste indtægter i form af support- og hostingaftaler giver OneHouse en solid fast indkomst. Det samme gælder den månedlige husleje, som OneHouse får gennem kontorleje. OneHouse er imidlertid afhængige af engangsindtægterne fra softwareudvikling og rådgivning. Derfor er det også en nødvendighed for dem, at de bliver ved med at få nye kunder, der kan holde OneHouse økonomisk solid.
