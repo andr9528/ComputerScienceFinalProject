@@ -13,15 +13,11 @@
   <wsdl:message name="IClientService_GetHandler_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetHandlerResponse" />
   </wsdl:message>
-  <wsdl:message name="DownloadRequest">
-    <wsdl:part name="parameters" element="tns:DownloadRequest" />
+  <wsdl:message name="IClientService_DownloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
   </wsdl:message>
-  <wsdl:message name="RemoteFileInfo">
-    <wsdl:part name="parameters" element="tns:RemoteFileInfo" />
-  </wsdl:message>
-  <wsdl:message name="RemoteFileInfo_Headers">
-    <wsdl:part name="FileName" element="tns:FileName" />
-    <wsdl:part name="Length" element="tns:Length" />
+  <wsdl:message name="IClientService_DownloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
   </wsdl:message>
   <wsdl:portType name="IClientService">
     <wsdl:operation name="GetHandler">
@@ -29,8 +25,8 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetHandlerResponse" message="tns:IClientService_GetHandler_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DownloadFile">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/DownloadFile" name="DownloadRequest" message="tns:DownloadRequest" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/DownloadFileResponse" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/DownloadFile" message="tns:IClientService_DownloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/DownloadFileResponse" message="tns:IClientService_DownloadFile_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ClientService" type="tns:IClientService">
@@ -46,12 +42,10 @@
     </wsdl:operation>
     <wsdl:operation name="DownloadFile">
       <soap:operation soapAction="http://tempuri.org/IClientService/DownloadFile" style="document" />
-      <wsdl:input name="DownloadRequest">
+      <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="RemoteFileInfo">
-        <soap:header message="tns:RemoteFileInfo_Headers" part="FileName" use="literal" />
-        <soap:header message="tns:RemoteFileInfo_Headers" part="Length" use="literal" />
+      <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

@@ -64,9 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\ClientService\Ad.Client.ClientService.RemoteFileInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ClientService\ClientService.wsdl" />
     <None Include="Connected Services\ClientService\ClientService.xsd">
       <SubType>Designer</SubType>

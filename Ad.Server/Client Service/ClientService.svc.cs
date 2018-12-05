@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web.Hosting;
 using Repository.Core;
 using Repository.EntityFramework;
 
@@ -18,17 +19,22 @@ namespace Ad.Server
         internal string connectionPath = "..\\ConnectionStringFile.txt";
         internal string adSaveLocation = "..\\Ads";
 
-        public Stream DownloadFile(string path)
+        public Stream DownloadFile(string filePath)
         {
-            if(WebOperationContext.Current == null) throw new Exception("WebOperationContext not set");  
-  
-            // As the current service is being used by a windows client, there is no browser interactivity.  
-            // In case you are using the code Web, please use the appropriate content type.  
-            var fileName = Path.GetFileName(path);  
-            WebOperationContext.Current.OutgoingResponse.ContentType= "application/octet-stream";  
-            WebOperationContext.Current.OutgoingResponse.Headers.Add("content-disposition", "inline; filename=" + fileName);  
-  
-            return File.OpenRead(path);  
+            try
+            {
+                FileStream file = File.OpenRead(filePath);
+                return file;
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine(
+                    String.Format("An exception was thrown while trying to open file {0}", filePath));
+                Console.WriteLine("Exception is: ");
+                Console.WriteLine(ex.ToString());
+                throw ex;
+            }
+            
         }
 
         public IRepository GetHandler()

@@ -18,7 +18,7 @@ namespace Ad.Server
         IRepository GetHandler();
 
         [OperationContract]
-        Stream DownloadFile(string path);
+        Stream DownloadFile(string filePath);
     }
 
 }

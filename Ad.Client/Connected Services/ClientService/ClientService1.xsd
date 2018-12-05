@@ -13,20 +13,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DownloadRequest">
+  <xs:element name="DownloadFile">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="RemoteFileInfo">
+  <xs:element name="DownloadFileResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="FileByteStream" type="q1:StreamBody" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="DownloadFileResult" type="q1:StreamBody" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="FileName" nillable="true" type="xs:string" />
-  <xs:element name="Length" type="xs:long" />
 </xs:schema>

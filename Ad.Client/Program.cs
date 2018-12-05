@@ -51,8 +51,8 @@ namespace Ad.Client
                 {
                     foreach (Domain.Concrete.Ad ad in playlist.Playlist.Ads  )
                     {
-                        if (!File.Exists(Path.Combine(adSaveLocation, ad.Name)))
-                            Download(ad);
+                        if (!File.Exists(Path.Combine(adSaveLocation, ad.Name + "." + ad.FileExtension)))
+                            DownLoadFileFromRemoteLocation(Path.Combine(ad.FileLocation, ad.Name + "." + ad.FileExtension));
                     }
                 }
 
@@ -120,11 +120,6 @@ namespace Ad.Client
         private IAd PickAnAd(IPlaylist playlist)
         {
             throw new NotImplementedException();
-        }
-
-        private void Download(IAd ad)
-        {
-            //RemoteFileInfo fileinfo = service.DownloadFile(new DownloadRequest() {FileName = ad.Name});
         }
 
         private void Init()
@@ -208,7 +203,44 @@ namespace Ad.Client
 
             return ip;
         }
+        private void DownLoadFileFromRemoteLocation(string downloadFileLocation, string downloadedFileSaveLocation = @"..\Ads\")  
+        {  
+            try  
+            {  
+                using (var fileStream = service.DownloadFile(downloadFileLocation))  
+                {  
+                    if (fileStream == null)  
+                    {
+                        Console.WriteLine("File not recieved");  
+                        return;  
+                    }  
 
+                    CreateDirectoryForSaveLocation(downloadedFileSaveLocation);  
+                    SaveFile(Path.Combine(downloadedFileSaveLocation, downloadFileLocation.Split('\\').Last()), fileStream);  
+                } 
+                Console.WriteLine("File downloaded and copied");  
+            }  
+            catch (Exception ex)  
+            {
+                Console.WriteLine("File could not be downloaded or saved. Message :" + ex.Message);  
+            }  
+              
+        }  
+  
+        private static void SaveFile(string downloadedFileSaveLocation, Stream fileStream)  
+        {  
+            using (var file = File.Create(downloadedFileSaveLocation))  
+            {  
+                fileStream.CopyTo(file);  
+            }  
+        }  
+  
+        private void CreateDirectoryForSaveLocation(string downloadedFileSaveLocation)  
+        {  
+            var fileInfo = new FileInfo(downloadedFileSaveLocation);  
+            if (fileInfo.DirectoryName == null) throw new Exception("Save location directory could not be determined");  
+            Directory.CreateDirectory(fileInfo.DirectoryName);  
+        }
 
     }
 }

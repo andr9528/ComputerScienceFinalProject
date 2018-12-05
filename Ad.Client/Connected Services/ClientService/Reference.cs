@@ -22,54 +22,11 @@ namespace Ad.Client.ClientService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
         System.Threading.Tasks.Task<object> GetHandlerAsync();
         
-        // CODEGEN: Generating message contract since the wrapper name (DownloadRequest) of message DownloadRequest does not match the default value (DownloadFile)
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
-        Ad.Client.ClientService.RemoteFileInfo DownloadFile(Ad.Client.ClientService.DownloadRequest request);
+        System.IO.Stream DownloadFile(string filePath);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
-        System.Threading.Tasks.Task<Ad.Client.ClientService.RemoteFileInfo> DownloadFileAsync(Ad.Client.ClientService.DownloadRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DownloadRequest", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class DownloadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string FileName;
-        
-        public DownloadRequest() {
-        }
-        
-        public DownloadRequest(string FileName) {
-            this.FileName = FileName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoteFileInfo", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class RemoteFileInfo {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
-        public string FileName;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
-        public long Length;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public System.IO.Stream FileByteStream;
-        
-        public RemoteFileInfo() {
-        }
-        
-        public RemoteFileInfo(string FileName, long Length, System.IO.Stream FileByteStream) {
-            this.FileName = FileName;
-            this.Length = Length;
-            this.FileByteStream = FileByteStream;
-        }
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string filePath);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -107,29 +64,12 @@ namespace Ad.Client.ClientService {
             return base.Channel.GetHandlerAsync();
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Ad.Client.ClientService.RemoteFileInfo Ad.Client.ClientService.IClientService.DownloadFile(Ad.Client.ClientService.DownloadRequest request) {
-            return base.Channel.DownloadFile(request);
+        public System.IO.Stream DownloadFile(string filePath) {
+            return base.Channel.DownloadFile(filePath);
         }
         
-        public long DownloadFile(ref string FileName, out System.IO.Stream FileByteStream) {
-            Ad.Client.ClientService.DownloadRequest inValue = new Ad.Client.ClientService.DownloadRequest();
-            inValue.FileName = FileName;
-            Ad.Client.ClientService.RemoteFileInfo retVal = ((Ad.Client.ClientService.IClientService)(this)).DownloadFile(inValue);
-            FileName = retVal.FileName;
-            FileByteStream = retVal.FileByteStream;
-            return retVal.Length;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Ad.Client.ClientService.RemoteFileInfo> Ad.Client.ClientService.IClientService.DownloadFileAsync(Ad.Client.ClientService.DownloadRequest request) {
-            return base.Channel.DownloadFileAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Ad.Client.ClientService.RemoteFileInfo> DownloadFileAsync(string FileName) {
-            Ad.Client.ClientService.DownloadRequest inValue = new Ad.Client.ClientService.DownloadRequest();
-            inValue.FileName = FileName;
-            return ((Ad.Client.ClientService.IClientService)(this)).DownloadFileAsync(inValue);
+        public System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string filePath) {
+            return base.Channel.DownloadFileAsync(filePath);
         }
     }
 }
