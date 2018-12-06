@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -11,6 +12,10 @@ namespace Ad.Server
     [ServiceContract]
     public interface IServerService : IClientService
     {
+        [OperationContract]
+        bool UploadFile(Stream stream);
 
+        [OperationContract]
+        void SetNextFileName(string name, bool @override = false);
     }
 }

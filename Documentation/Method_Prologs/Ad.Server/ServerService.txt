@@ -1,0 +1,15 @@
+Method Name ->
+	UploadFile
+Method Description ->
+	Takes in a Stream, that it then saved by calling SaveFile from our SharedCode class in our Helper project.
+Input ->
+	Stream
+Output ->
+	None
+Returntype ->
+	bool
+Exceptions ->
+	None
+Assumptions ->
+	None
+

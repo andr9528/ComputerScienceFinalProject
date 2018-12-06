@@ -12,6 +12,7 @@ using System.Net;
 using System.Runtime.Remoting.Messaging;
 using System.Threading;
 using LibVLCSharp.Shared;
+using Helpers;
 
 namespace Ad.Client
 {
@@ -21,10 +22,10 @@ namespace Ad.Client
         private object _lock = new object();
         private IRepository handler;
         private IClient client;
-        private string localSaveFile = "..\\KeyInfos.txt";
+        private readonly string localSaveFile = "..\\KeyInfos.txt";
         private readonly string adSaveLocation = "..\\Ads";
         private List<Thread> playlistThreads = new List<Thread>();
-        private LibVLC vlc = new LibVLC();
+        private readonly LibVLC vlc = new LibVLC();
         private TimeSpan sleepDuringPlay = new TimeSpan(0,0,10);
         private TimeSpan sleepDuringOffTime = new TimeSpan(0, 1, 0);
         private TimeSpan sleepBetweenUpdate = new TimeSpan(0, 15, 0);
@@ -52,7 +53,7 @@ namespace Ad.Client
                     foreach (Domain.Concrete.Ad ad in playlist.Playlist.Ads  )
                     {
                         if (!File.Exists(Path.Combine(adSaveLocation, ad.Name + "." + ad.FileExtension)))
-                            DownLoadFileFromRemoteLocation(Path.Combine(ad.FileLocation, ad.Name + "." + ad.FileExtension));
+                            DownLoadFileFromRemoteLocation(ad.Name + "." + ad.FileExtension);
                     }
                 }
 
@@ -136,9 +137,7 @@ namespace Ad.Client
             
             FindItSelf();
         }
-        /// <summary>
-        /// Saves the Id, Ip and Name of client to a local file to be used later to retrive from the database.
-        /// </summary>
+
         private void SaveKeyInfos()
         {
             using (TextWriter write = new StreamWriter(localSaveFile, false))
@@ -196,18 +195,18 @@ namespace Ad.Client
         private string GetIP()
         {
             // Retrive the Name of HOST 
-            string hostName = Dns.GetHostName(); 
+            string hostName = GetHostName();
             
             // Get the IP  
             string ip = Dns.GetHostEntry(hostName).AddressList[0].ToString();
 
             return ip;
         }
-        private void DownLoadFileFromRemoteLocation(string downloadFileLocation, string downloadedFileSaveLocation = @"..\Ads\")  
+        private void DownLoadFileFromRemoteLocation(string fileNameAndExtension, string downloadedFileSaveLocation = @"..\Ads\")  
         {  
             try  
             {  
-                using (var fileStream = service.DownloadFile(downloadFileLocation))  
+                using (var fileStream = service.DownloadFile(fileNameAndExtension))  
                 {  
                     if (fileStream == null)  
                     {
@@ -215,8 +214,7 @@ namespace Ad.Client
                         return;  
                     }  
 
-                    CreateDirectoryForSaveLocation(downloadedFileSaveLocation);  
-                    SaveFile(Path.Combine(downloadedFileSaveLocation, downloadFileLocation.Split('\\').Last()), fileStream);  
+                    SharedCode.SaveFile(Path.Combine(downloadedFileSaveLocation, fileNameAndExtension), fileStream);  
                 } 
                 Console.WriteLine("File downloaded and copied");  
             }  
@@ -224,23 +222,6 @@ namespace Ad.Client
             {
                 Console.WriteLine("File could not be downloaded or saved. Message :" + ex.Message);  
             }  
-              
         }  
-  
-        private static void SaveFile(string downloadedFileSaveLocation, Stream fileStream)  
-        {  
-            using (var file = File.Create(downloadedFileSaveLocation))  
-            {  
-                fileStream.CopyTo(file);  
-            }  
-        }  
-  
-        private void CreateDirectoryForSaveLocation(string downloadedFileSaveLocation)  
-        {  
-            var fileInfo = new FileInfo(downloadedFileSaveLocation);  
-            if (fileInfo.DirectoryName == null) throw new Exception("Save location directory could not be determined");  
-            Directory.CreateDirectory(fileInfo.DirectoryName);  
-        }
-
     }
 }

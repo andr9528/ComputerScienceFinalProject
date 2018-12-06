@@ -28,3 +28,19 @@ Exceptions ->
 	None
 Assumptions ->
 	That a file called ConnectionStringFile exists, beside the service.
+______________________________________________________________________________________
+
+Method Name ->
+	DownloadFile
+Method Description ->
+	Sends the file specified in the input string path, to the caller as a Stream.
+Input ->
+	string
+Output ->
+	None
+Returntype ->
+	Stream
+Exceptions ->
+	None
+Assumptions ->
+	None

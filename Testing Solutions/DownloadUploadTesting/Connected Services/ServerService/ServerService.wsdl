@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServerService_GetHandler_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandler" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_GetHandler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_DownloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_DownloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_UploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_UploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_SetNextFileName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNextFileName" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_SetNextFileName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNextFileNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServerService">
+    <wsdl:operation name="GetHandler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/GetHandler" message="tns:IServerService_GetHandler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetHandlerResponse" message="tns:IServerService_GetHandler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/DownloadFile" message="tns:IServerService_DownloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/DownloadFileResponse" message="tns:IServerService_DownloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/UploadFile" message="tns:IServerService_UploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/UploadFileResponse" message="tns:IServerService_UploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNextFileName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/SetNextFileName" message="tns:IServerService_SetNextFileName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/SetNextFileNameResponse" message="tns:IServerService_SetNextFileName_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ServerService" type="tns:IServerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHandler">
+      <soap:operation soapAction="http://tempuri.org/IClientService/GetHandler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IClientService/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/IServerService/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNextFileName">
+      <soap:operation soapAction="http://tempuri.org/IServerService/SetNextFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServerService">
+    <wsdl:port name="BasicHttpBinding_ServerService" binding="tns:BasicHttpBinding_ServerService">
+      <soap:address location="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc/ServerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

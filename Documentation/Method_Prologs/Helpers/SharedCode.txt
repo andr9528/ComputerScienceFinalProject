@@ -1,0 +1,31 @@
+Method Name ->
+	SaveFile
+Method Description ->
+	Saves the file from the inputed Stream to the specifed path in the inputed string, after first calling CreateDirectoryForSaveLocation, with the path.
+Input ->
+	None
+Output ->
+	string, Stream
+Returntype ->
+	Void
+Exceptions ->
+	None
+Assumptions ->
+	None
+______________________________________________________________________________________
+
+Method Name ->
+	CreateDirectoryForSaveLocation, 
+Method Description ->
+	Creates the directories specified in the inputed string, if they do not exist already.
+Input ->
+	string
+Output ->
+	None
+Returntype ->
+	Void
+Exceptions ->
+	None
+Assumptions ->
+	None
+______________________________________________________________________________________

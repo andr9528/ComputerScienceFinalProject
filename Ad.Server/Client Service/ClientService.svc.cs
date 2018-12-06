@@ -17,19 +17,19 @@ namespace Ad.Server
     public class ClientService : IClientService
     {
         internal string connectionPath = "..\\ConnectionStringFile.txt";
-        internal string adSaveLocation = "..\\Ads";
+        internal string adSaveLocation = @"C:\inetpub\wwwroot\AdProgram\Service\Ads";
 
-        public Stream DownloadFile(string filePath)
+        public Stream DownloadFile(string fileNameAndExtension)
         {
             try
             {
-                FileStream file = File.OpenRead(filePath);
+                FileStream file = File.OpenRead(Path.Combine(adSaveLocation, fileNameAndExtension));
                 return file;
             }
             catch (IOException ex)
             {
                 Console.WriteLine(
-                    String.Format("An exception was thrown while trying to open file {0}", filePath));
+                    string.Format("An exception was thrown while trying to open file {0}", fileNameAndExtension));
                 Console.WriteLine("Exception is: ");
                 Console.WriteLine(ex.ToString());
                 throw ex;

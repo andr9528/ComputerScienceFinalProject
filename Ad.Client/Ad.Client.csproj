@@ -106,6 +106,10 @@
       <Project>{1bf85a7c-a60b-4554-a55a-895bab9859ed}</Project>
       <Name>Domain.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{F4A23918-2A6A-4B1F-9D4B-32CC3E724106}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Repository.Core\Repository.Core.csproj">
       <Project>{B91A1F8C-6643-4938-A493-9C00971B5ACB}</Project>
       <Name>Repository.Core</Name>
