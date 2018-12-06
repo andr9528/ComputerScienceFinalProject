@@ -1,9 +1,7 @@
-INTRODUCTION
-	
-Virksomhedsbaggrund
-	
-Problem
-	OneHouse står i en situation, hvor de oplever at mange kunder, i forbindelse med andre services de får, også gerne vil have hjælp til deres markedsføring. Dette er på nuværende tidspunkt ikke noget OneHouse er i stand til at hjælpe med. Dette resulterer i, at de risikerer at miste kunder til konkurenter der tilbyder denne service, eller at de blot ikke kan give deres kunder alt hvad de efterspørger. Derfor har OneHouse nu ønsket om at bevæge sig ind i markedsføringsområdet, så de også er i stand til at tilbyde services på dette punkt. OneHouse søger derfor nu et sted at starte, for at kunne komme ind på dette område.
+FORRETNINGSGRUNDLAG
+	I oktober stiftede vi for første gang med OneHouse og deres problemstilling da den administrerende direktør Lars Thomsen delte deres projektbeskrivelse med os. Siden er der i november blevet holdt et møde med Lars, som yderligere har beskrevet og uddybet problemstillingen for os, samt hans forventinger og forestillinger til hvordan systemet skal udformes. 
+Problemområde
+	Baseret på forretningsmodellen, har vi vurderet, at det 
 Parthavere
 Parthaverne er alle som har en eller anden form for interesse i virksomheden og hvad de udvikler. Dette indbefatter også alle som bliver påvirket af vores system.
 	Investorer?
@@ -13,9 +11,9 @@ Parthaverne er alle som har en eller anden form for interesse i virksomheden og 
 	Samarbejdspartnere
 	Konkurenter
 Løsning
-	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et reklameskærmssystemet. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige clientskærme forskellige steder. Disse skærme skal automatisk vise ønskede reklamefilm. Kunder får dermed muligheden for at installere softwaren på skærme. Årsagen til at vi mener at dette er den bedste løsning er, at det er en nem løsning for OneHouse at komme ind på markedsføringsområdet. OneHouse har ikke noget erfaring på området, og dette er en simpel måde at komme ind på det med. Det eneste det kræve af OneHouse efter systemet er udviklet, er en medarbejder med ansvaret for systemet og kontakten med kunder. Derudover skal de også begynde at gøre kunderne opmærksomme på denne nye mulighed. Når denne service er blevet etableret, vil det også være muligt for OneHouse at markedsføre dette specifikke produkt.
+	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et system hvor samtlige skærme kan styres for en webside. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige klientskærme forskellige steder. Disse skærme skal automatisk vise ønskede reklamefilm. Intentionen er at kunder både får mulighed for at installere softwaren på computere eller på små RaspberryPi enheder.
+	Årsagen til at vi mener at dette er den bedste løsning er, at det er en nem løsning for OneHouse at komme ind på markedsføringsområdet. OneHouse har ikke noget erfaring på området, og dette er en simpel måde at komme ind på det med. Det eneste det kræve af OneHouse efter systemet er udviklet, er en medarbejder med ansvaret for systemet og kontakten med kunder. Derudover skal de også begynde at gøre kunderne opmærksomme på denne nye mulighed. Når denne service er blevet etableret, vil det også være muligt for OneHouse at markedsføre dette specifikke produkt.
 Alternative Løsninger
-	Nulløsningen - 
-	Søgemaskineoptimering - Søgemaskineoptimering (eller SEO) er en form for digital markedsføring, hvor formålet er at forbedre websteders placering i søgemaskiner. Søgemaskineoptimering har vi også vurderet som en god mulighed for OneHouse, da dette også er 
+	OPTION 1
 	OPTION 2
 Key Performance Indicators

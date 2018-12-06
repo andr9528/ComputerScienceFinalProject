@@ -1,0 +1,32 @@
+Ads
+ - Upload the customers ads 
+ - Create description of an ad
+ - Search for a specific or multiple ads
+ - Update the name of an ad
+ - Update the description of an ad
+ - Delete an ad
+ - Display metrics based on the customers ads
+
+Playlist
+ - Create a playlist of ads
+ - Create a discription of a playlist
+ - Search for a specific or multiple playlists
+ - Update name of a playlist
+ - Update description of a playlist
+ - Delete a playlist
+ - Choose play method of a playlist
+ - Choose intervals for playlists
+ - Display metrics based on playlists
+
+Display unit/Console client
+ - Create new display unit on setup
+ - Create new description for display unit
+ - Search for specific or multiple display units
+ - Find itself in the database
+ - Update name of the display unit
+ - Update IP of the display unit
+ - Update description of a display unit
+ - Delete display unit on database if inactive
+ - Show a playlist of ads on a screen
+ - Set an interval for how long playlist are played
+ - Display metrics based on the display unit

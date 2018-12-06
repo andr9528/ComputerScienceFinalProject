@@ -1,3 +1,4 @@
+FORRETNINGSMODEL
 Nøglepartnere
 	OneHouse har en række forskellige nøglepartnere, som gør dem i stand til at levere deres services. De primære inkluderer Dell, Microsoft, Oki Data Americas, VMware og WatchGuard. En del af OneHouses primære partnere, tilbyder værktøjer til markedsføring og forretningsrelateret dataanalyse. Derudover har OneHouse også distributionsaftaler med forskellige partnere, der gør det muligt for dem at tilbyde billigere support. 
 Nøgleaktiviteter
@@ -7,9 +8,9 @@ Nøgleressourcer
 Kundesegmenter
 	OneHouse har mange forskellige kunder, da langt de fleste virksomheder har en eller anden form for IT-behov. OneHouse opfylder i en eller anden form de fleste sådanne behov. OneHouse arbejder primært for små og mellemstore virksomheder. OneHouse har både faste og engangskunder. De faste kunder benytter sig for det meste af OneHouse for at opfylde deres support- eller hostingbehov. Disse har hermed også en tendens til at gå til OneHouse hvis de får behov for yderligere rådgivning eller udvikling af software. De faste kunder er de vigtigste, da det er en fast indtægt, og det er disse der holder virksomheden stabilt kørende. Derudover har OneHouse også engangskunder. Disse kommer for det meste for rådgivning eller softwareudvikling.
 Kundeforhold
-	HVILKET FORHOLD HAR DE TIL KUNDESEGMENTERNE? HVAD GØR DE FOR HVER ENKELT?
+	Da OneHouse er afhængige af deres faste kunder, går de også meget op i at bevare et godt forhold til dem. Dette gøres blandt andet ved at have en forsat kontakt med kunderne. Derfor går OneHouse også meget op i at bibevare gode kundeforhold. Især de faste kunder er vigtige for OneHouse. Derfor går en stor del af den brugte tid på dette segment af kunder. For eksempel sender OneHouse gerne en medarbejdere ud til kunder for at løse problemer, selv når det er problemer som egentlig kunne løses hjemmefra med skærmdeling. Derudover tager Lars også selv kontakt til kunderne fra tid til anden, for at sikre at alt er som det skal være.
 Kanaler
-	HVORDAN NÅR DE DERES KUNDER?
+	OneHouse beskæftiger sig en del med opsøgende markedsføring. Lars besidder et stort netværk, som han benytter sig af for at skaffe kunder i virksomheden. Lars bruger dermed selv meget tid på at samarbejde med andre virksomheder - også virksomheder som endnu ikke er kunder, for at opbygge et forhold. Derudover rejser han også meget rundt for at holde møder og skabe interesse for hvad han og OneHouse kan tilbyde. Dette resulterer i at OneHouse er det første mange virksomheder tænker på når de får et IT-relateret behov, og da Lars allerede er et kendt ansigt er der fra starten en form for gensidig tillid. 
 Værdiskabelse
 	OneHouse skaber værdi for deres kunder ved at stille IT til rådighed for virksomhederne. Gennem OneHouse får kunderne adgang til at kunne få en hjemmeside lavet og hosted, de kan få hosted backup samt mailbox. Derudover kan de også tilbyde IT-support og udvikling af software. Alt dette er med til at opfylde størstedelen af deres kunders IT-relaterede behov.
 Omkostninger
