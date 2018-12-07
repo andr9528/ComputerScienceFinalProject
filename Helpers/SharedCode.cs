@@ -13,12 +13,16 @@ namespace Helpers
         {
             if (fileStream.CanRead == false)
                 throw new Exception("Unable to read from stream, as it is Closed");
+            
+            // Not Supported on the inputed stream
+            //if (fileStream.Length <= 0)
+            //    throw new Exception("Size of Stream is 0 bytes or less.");
 
             CreateDirectoryForSaveLocation(downloadedFileSaveLocation);
 
             using (var file = File.Create(downloadedFileSaveLocation))  
             {  
-                fileStream.CopyTo(file);  
+                fileStream.CopyTo(file);
             }  
         }  
   

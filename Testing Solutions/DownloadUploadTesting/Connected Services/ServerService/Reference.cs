@@ -16,10 +16,7 @@ namespace DownloadUploadTesting.ServerService {
     public interface IServerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.MarshalByRefObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.IO.FileStream))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.IO.Stream))]
         object GetHandler();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
@@ -32,10 +29,10 @@ namespace DownloadUploadTesting.ServerService {
         System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string fileNameAndExtension);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/UploadFile", ReplyAction="http://tempuri.org/IServerService/UploadFileResponse")]
-        bool UploadFile(System.IO.FileStream stream);
+        bool UploadFile(System.IO.Stream stream);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/UploadFile", ReplyAction="http://tempuri.org/IServerService/UploadFileResponse")]
-        System.Threading.Tasks.Task<bool> UploadFileAsync(System.IO.FileStream stream);
+        System.Threading.Tasks.Task<bool> UploadFileAsync(System.IO.Stream stream);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileName", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameResponse")]
         void SetNextFileName(string name, bool @override);
@@ -87,11 +84,11 @@ namespace DownloadUploadTesting.ServerService {
             return base.Channel.DownloadFileAsync(fileNameAndExtension);
         }
         
-        public bool UploadFile(System.IO.FileStream stream) {
+        public bool UploadFile(System.IO.Stream stream) {
             return base.Channel.UploadFile(stream);
         }
         
-        public System.Threading.Tasks.Task<bool> UploadFileAsync(System.IO.FileStream stream) {
+        public System.Threading.Tasks.Task<bool> UploadFileAsync(System.IO.Stream stream) {
             return base.Channel.UploadFileAsync(stream);
         }
         

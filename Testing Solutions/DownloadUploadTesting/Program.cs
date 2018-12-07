@@ -82,7 +82,7 @@ namespace DownloadUploadTesting
             try
             {
                 FileInfo file = ChoseFile();
-                FileStream stream = file.OpenRead();
+                Stream stream = file.OpenRead();
                 server.SetNextFileName(file.Name, false);
                 server.UploadFile(stream);
             }

@@ -23,10 +23,10 @@ namespace Ad.Client.ClientService {
         System.Threading.Tasks.Task<object> GetHandlerAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
-        System.IO.Stream DownloadFile(string filePath);
+        System.IO.Stream DownloadFile(string fileNameAndExtension);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
-        System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string filePath);
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string fileNameAndExtension);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -64,12 +64,12 @@ namespace Ad.Client.ClientService {
             return base.Channel.GetHandlerAsync();
         }
         
-        public System.IO.Stream DownloadFile(string filePath) {
-            return base.Channel.DownloadFile(filePath);
+        public System.IO.Stream DownloadFile(string fileNameAndExtension) {
+            return base.Channel.DownloadFile(fileNameAndExtension);
         }
         
-        public System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string filePath) {
-            return base.Channel.DownloadFileAsync(filePath);
+        public System.Threading.Tasks.Task<System.IO.Stream> DownloadFileAsync(string fileNameAndExtension) {
+            return base.Channel.DownloadFileAsync(fileNameAndExtension);
         }
     }
 }

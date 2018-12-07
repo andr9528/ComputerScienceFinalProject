@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Exception = System.Exception;
 
 namespace Ad.Server
 {
@@ -25,10 +27,47 @@ namespace Ad.Server
 
             SharedCode.SaveFile(fileSaveLocation, stream);
 
-            if (File.Exists(fileSaveLocation))
-                return true;
-            else 
+            return VerifySuccecfullUpload(fileSaveLocation, true);
+        }
+
+        private bool VerifySuccecfullUpload(string path, bool shouldThrow = false)
+        {
+            List<bool> bools = new List<bool>();
+            List<Exception> errors = new List<Exception>();
+
+            FileInfo info = new FileInfo(path);
+
+            bools.Add(info.Exists);
+            if (!info.Exists)
+                errors.Add(new FileNotFoundException("The File was not created."));
+
+            bool size = info.Length > 0;
+            bools.Add(size);
+            if (!size)
+                errors.Add(new Exception("The File has a size of 0 bytes or less."));
+
+            if (shouldThrow && errors.Count > 0)
+                ThrowErrors(errors);
+
+            if (bools.Any(x => x == false))
                 return false;
+            else
+                return true;
+
+        }
+
+        private void ThrowErrors(List<Exception> errors)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var error in errors)
+            {
+                builder.AppendLine(error.Message + " :");
+                builder.AppendLine("\t " + error.StackTrace);
+                builder.AppendLine();
+            }
+
+            throw new Exception(builder.ToString());
         }
 
         public void SetNextFileName(string name, bool @override = false)
