@@ -24,7 +24,7 @@ namespace Ad.Client
         private IRepository handler;
         private IClient client;
         private readonly string localSaveFile = "..\\KeyInfos.txt";
-        private readonly string adSaveLocation = "..\\Ads";
+        private readonly string adSaveLocation = "..\\Ads\\";
         private List<Thread> playlistThreads = new List<Thread>();
         private LibVLC vlc;
         private TimeSpan sleepDuringPlay = new TimeSpan(0,0,10);

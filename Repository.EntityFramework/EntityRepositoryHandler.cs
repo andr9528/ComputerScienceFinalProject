@@ -8,7 +8,6 @@ using Domain.Concrete;
 using Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using DateTime = System.DateTime;
 
 namespace Repository.EntityFramework
 {

@@ -296,3 +296,4 @@ C:\ComputerScienceFinalProject\Helpers\obj\Debug\Helpers.csproj.CoreCompileInput
 C:\ComputerScienceFinalProject\Helpers\obj\Debug\Helpers.csproj.CopyComplete
 C:\ComputerScienceFinalProject\Helpers\obj\Debug\Helpers.dll
 C:\ComputerScienceFinalProject\Helpers\obj\Debug\Helpers.pdb
+C:\ComputerScienceFinalProject\Helpers\bin\Debug\System.ValueTuple.xml
