@@ -1,4 +1,5 @@
 ﻿using Repository.Core;
+using Repository.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +16,7 @@ namespace Ad.Server
     public interface IClientService
     {
         [OperationContract]
-        IRepository GetHandler();
+        string GetHandlerConnectionString();
 
         [OperationContract]
         Stream DownloadFile(string fileNameAndExtension);

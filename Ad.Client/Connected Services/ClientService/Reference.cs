@@ -15,12 +15,11 @@ namespace Ad.Client.ClientService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ClientService.IClientService")]
     public interface IClientService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
-        object GetHandler();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandlerConnectionString", ReplyAction="http://tempuri.org/IClientService/GetHandlerConnectionStringResponse")]
+        string GetHandlerConnectionString();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
-        System.Threading.Tasks.Task<object> GetHandlerAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandlerConnectionString", ReplyAction="http://tempuri.org/IClientService/GetHandlerConnectionStringResponse")]
+        System.Threading.Tasks.Task<string> GetHandlerConnectionStringAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
         System.IO.Stream DownloadFile(string fileNameAndExtension);
@@ -56,12 +55,12 @@ namespace Ad.Client.ClientService {
                 base(binding, remoteAddress) {
         }
         
-        public object GetHandler() {
-            return base.Channel.GetHandler();
+        public string GetHandlerConnectionString() {
+            return base.Channel.GetHandlerConnectionString();
         }
         
-        public System.Threading.Tasks.Task<object> GetHandlerAsync() {
-            return base.Channel.GetHandlerAsync();
+        public System.Threading.Tasks.Task<string> GetHandlerConnectionStringAsync() {
+            return base.Channel.GetHandlerConnectionStringAsync();
         }
         
         public System.IO.Stream DownloadFile(string fileNameAndExtension) {

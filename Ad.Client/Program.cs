@@ -13,19 +13,20 @@ using System.Runtime.Remoting.Messaging;
 using System.Threading;
 using LibVLCSharp.Shared;
 using Helpers;
+using Repository.EntityFramework;
 
 namespace Ad.Client
 {
     class Program
     {
-        private ClientServiceClient service = new ClientServiceClient();
+        private ClientServiceClient service;
         private object _lock = new object();
         private IRepository handler;
         private IClient client;
         private readonly string localSaveFile = "..\\KeyInfos.txt";
         private readonly string adSaveLocation = "..\\Ads";
         private List<Thread> playlistThreads = new List<Thread>();
-        private readonly LibVLC vlc = new LibVLC();
+        private LibVLC vlc;
         private TimeSpan sleepDuringPlay = new TimeSpan(0,0,10);
         private TimeSpan sleepDuringOffTime = new TimeSpan(0, 1, 0);
         private TimeSpan sleepBetweenUpdate = new TimeSpan(0, 15, 0);
@@ -125,8 +126,12 @@ namespace Ad.Client
 
         private void Init()
         {
-            handler = (IRepository) service.GetHandler();
+            service = new ClientServiceClient();
+            handler = new EntityRepositoryHandler(service.GetHandlerConnectionString());
+            
             Core.Initialize();
+            vlc = new LibVLC();
+
 
             if (!File.Exists(localSaveFile))
             {
@@ -198,7 +203,7 @@ namespace Ad.Client
             string hostName = GetHostName();
             
             // Get the IP  
-            string ip = Dns.GetHostEntry(hostName).AddressList[0].ToString();
+            string ip = Dns.GetHostEntry(hostName).AddressList[1].ToString();
 
             return ip;
         }

@@ -167,11 +167,6 @@ C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCra
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.EntityFramework\bin\Debug\Helpers.pdb
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.EntityFramework\bin\Debug\System.ValueTuple.xml
 C:\Users\Andre\Source\Workspaces\SubscriptionCrawler\Test-branch\SubscriptionCrawler\Repository.EntityFramework\bin\Debug\Helpers.dll.config
-C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.csprojAssemblyReference.cache
-C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.dll.config
-C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.csproj.CoreCompileInputs.cache
-C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.dll
-C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.pdb
 C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\Repository.EntityFramework.dll.config
 C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\Repository.EntityFramework.dll
 C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\Repository.EntityFramework.pdb
@@ -335,4 +330,9 @@ C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\System.Memor
 C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\System.Numerics.Vectors.xml
 C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\ComputerScienceFinalProject\Repository.EntityFramework\bin\Debug\System.ValueTuple.xml
+C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.csprojAssemblyReference.cache
+C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.dll.config
+C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.csproj.CoreCompileInputs.cache
 C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.csproj.CopyComplete
+C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.dll
+C:\ComputerScienceFinalProject\Repository.EntityFramework\obj\Debug\Repository.EntityFramework.pdb
