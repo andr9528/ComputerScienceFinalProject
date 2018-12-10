@@ -1,19 +1,19 @@
 FORRETNINGSGRUNDLAG
 	I oktober stiftede vi for første gang med OneHouse og deres problemstilling da den administrerende direktør Lars Thomsen delte deres projektbeskrivelse med os. Siden er der i november blevet holdt et møde med Lars, som yderligere har beskrevet og uddybet problemstillingen for os, samt hans forventinger og forestillinger til hvordan systemet skal udformes. 
 Problemområde
-	Baseret på forretningsmodellen, har vi vurderet, at det 
+	Baseret på forretningsmodellen, har vi vurderet, at den bedste løsning vil være noget som kan understøtte virksomhedens faste månedlige indtægter. Dermed bør løsningen være i stand til at understøtte denne model. Der er både mulighed for at sælge selve systemet til kunder og at sælge servicen systemet giver. Vi anbefaler det sidste, da dette også vil hjælpe OneHouse på længere sigt. Derudover skal det ikke være svært at inkludere denne nye service, i den måde Lars Thomsen på nuværende tidspunkt skaber opmærksomhed på sin virksomhed.
 Parthavere
 Parthaverne er alle som har en eller anden form for interesse i virksomheden og hvad de udvikler. Dette indbefatter også alle som bliver påvirket af vores system.
 	Investorer?
-	Kunder - OneHouses kunder har en stor interesse i at de udvider deres services til også at indkludere markedsføring. Dette betyder at kunder som kommer til OneHouse for i forbindelse med IT-drift og infrastruktur, også har muligheden for at kunne blive tilbudt hjælp til markedsføring i samme forbindelse. Muligheden for at kunne få hjælp til markedsføring er dessuden allerede blevet efterspurgt hos nogle kunder. Mens ikke alle kunder vil have interesse i dette projekt, vil der være en del som er, og disse bør og ønsker sansynligvis at blive involveret i udviklingen af løsningen.
+	Kunder - OneHouses kunder har en stor interesse i at de udvider deres services til også at indkludere markedsføring. Dette betyder at kunder som kommer til OneHouse for i forbindelse med IT-drift og infrastruktur, også har muligheden for at kunne blive tilbudt hjælp til markedsføring i samme forbindelse. Mens ikke alle kunder vil have interesse i dette projekt, vil der være en del som er, og disse bør og ønsker sansynligvis at blive involveret i udviklingen af løsningen.
 	Kunders kunder - OneHouses kunders kunder er i sidste ende målgruppen for systemet der skal udvikles, da disse er dem som markedsføringen skal påvirke. Disse  kan være relevante at indrage i projektet, da de er en vigtig interessent, men ikke selv vil tage initiativet.
-	Ansatte - De ansattes holdning til løsningen afhænger af 
-	Samarbejdspartnere
-	Konkurenter
+	Ansatte?
+	Samarbejdspartnere?
+	Konkurenter?
 Løsning
-	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et system hvor samtlige skærme kan styres for en webside. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige klientskærme forskellige steder. Disse skærme skal automatisk vise ønskede reklamefilm. Intentionen er at kunder både får mulighed for at installere softwaren på computere eller på små RaspberryPi enheder.
-	Årsagen til at vi mener at dette er den bedste løsning er, at det er en nem løsning for OneHouse at komme ind på markedsføringsområdet. OneHouse har ikke noget erfaring på området, og dette er en simpel måde at komme ind på det med. Det eneste det kræve af OneHouse efter systemet er udviklet, er en medarbejder med ansvaret for systemet og kontakten med kunder. Derudover skal de også begynde at gøre kunderne opmærksomme på denne nye mulighed. Når denne service er blevet etableret, vil det også være muligt for OneHouse at markedsføre dette specifikke produkt.
+	I samarbejde med OneHouse er vi noget frem til at den bedste løsningen vil være et system hvor samtlige skærme kan styres for en webside. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige klientskærme forskellige steder. Alle skærme skal kunne styres fra en administrator med rettighed til at kunne tilgå samtlige skærme. Disse skærme skal automatisk vise ønskede reklamefilm. Intentionen er at kunder både får mulighed for at installere softwaren på computere eller på små RaspberryPi enheder.
+	Årsagen til at vi mener at dette er den bedste løsning er, at det vil være den nemmeste måde at få overblik for OneHouse. Vi mener, at løsningen hvor en administrator har adgang til samtlige skærme, gør det nemt for OneHouse at styre det hele, og hurtigt kunne få et overblik over hvordan det står til. 
 Alternative Løsninger
-	OPTION 1
+	Individuelle systemer - 
 	OPTION 2
 Key Performance Indicators
