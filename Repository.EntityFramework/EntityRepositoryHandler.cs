@@ -125,8 +125,8 @@ namespace Repository.EntityFramework
             if (!p.Description.IsNullOrEmpty())
                 query = query.Where(x => x.Description.Contains(p.Description));
 
-            if (p.CreationDate != default(DateTime))
-                query = query.Where(x => x.CreationDate.Date == p.CreationDate.Date);
+            //if (p.CreationDate != default(DateTime))
+            //    query = query.Where(x => x.CreationDate.Date == p.CreationDate.Date);
             if (p.EndTime != default(DateTime))
                 query = query.Where(x => x.EndTime.TimeOfDay == p.EndTime.TimeOfDay);
             if (p.StartTime != default(DateTime))
@@ -160,8 +160,8 @@ namespace Repository.EntityFramework
             if (!c.Description.IsNullOrEmpty())
                 query = query.Where(x => x.Description.Contains(c.Description));
 
-            if (c.CreationDate != default(DateTime))
-                query = query.Where(x => x.CreationDate.Date == c.CreationDate.Date);
+            //if (c.CreationDate != default(DateTime))
+            //    query = query.Where(x => x.CreationDate.Date == c.CreationDate.Date);
 
             if (c.AdsPlayTime != default(TimeSpan))
                 query = query.Where(x => x.AdsPlayTime.TotalHours == c.AdsPlayTime.TotalHours);
@@ -187,8 +187,8 @@ namespace Repository.EntityFramework
             if (!a.Description.IsNullOrEmpty())
                 query = query.Where(x => x.Description.Contains(a.Description));
 
-            if (a.CreationDate != default(DateTime))
-                query = query.Where(x => x.CreationDate.Date == a.CreationDate.Date);
+            //if (a.CreationDate != default(DateTime))
+            //    query = query.Where(x => x.CreationDate.Date == a.CreationDate.Date);
 
             if (a.TotalPlayTime != default(TimeSpan))
                 query = query.Where(x => x.TotalPlayTime.TotalHours == a.TotalPlayTime.TotalHours);

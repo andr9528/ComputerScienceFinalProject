@@ -10,6 +10,7 @@ using Domain.Concrete;
 using Repository.Core;
 using System.Net;
 using System.Runtime.Remoting.Messaging;
+using System.ServiceModel;
 using System.Threading;
 using LibVLCSharp.Shared;
 using Helpers;
@@ -36,6 +37,10 @@ namespace Ad.Client
         {
             Program program = new Program();
             program.Run();
+
+            Console.WriteLine();
+            Console.WriteLine("Press Any Key to Close...");
+            Console.ReadKey();
         }
 
         private void Run()
@@ -53,8 +58,8 @@ namespace Ad.Client
                 {
                     foreach (Domain.Concrete.Ad ad in playlist.Playlist.Ads  )
                     {
-                        if (!File.Exists(Path.Combine(adSaveLocation, ad.Name + "." + ad.FileExtension)))
-                            DownLoadFileFromRemoteLocation(ad.Name + "." + ad.FileExtension);
+                        if (!File.Exists(Path.Combine(adSaveLocation, ad.Name + ad.FileExtension)))
+                            DownLoadFileFromRemoteLocation(ad.Name + ad.FileExtension);
                     }
                 }
 
@@ -76,6 +81,7 @@ namespace Ad.Client
 
         private void StartThread(IPlaylist playlist)
         {
+            Console.WriteLine(string.Format("Starting a Thread for playing the playlist: {0}...", playlist.Name));
             Thread thread = new Thread(() => PlayPlaylist(playlist));
             thread.Start();
             playlistThreads.Add(thread);
@@ -98,12 +104,12 @@ namespace Ad.Client
 
         private IAd PlayAd(IAd ad)
         {
-            string path = Path.Combine(adSaveLocation, ad.Name);
+            Console.WriteLine(string.Format("Playing File: {0}...", ad.Name));
+            string path = Path.Combine(adSaveLocation, ad.Name + ad.FileExtension);
 
             player = new MediaPlayer(vlc);
             Media file = new Media(vlc, path);
 
-            Console.WriteLine("Playing File: " + ad.Name);
             player.ToggleFullscreen();
             player.Play(file);
 
@@ -121,20 +127,43 @@ namespace Ad.Client
 
         private IAd PickAnAd(IPlaylist playlist)
         {
+            Console.WriteLine("Picking an Ad from Playlist...");
+
             throw new NotImplementedException();
         }
 
         private void Init()
         {
+            Console.WriteLine("Initializing Connection to Service...");
             service = new ClientServiceClient();
-            handler = new EntityRepositoryHandler(service.GetHandlerConnectionString());
-            
+
+            Console.WriteLine("Initializing Connection to Database...");
+            try
+            {
+                handler = new EntityRepositoryHandler(service.GetHandlerConnectionString(), ensureDeleted: false);
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                Console.WriteLine("Server is Offline, Unable to communicate with server to get Connection String...");
+                Console.WriteLine();
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+
+                Console.WriteLine();
+                Console.WriteLine("Press Any Key to Close...");
+                Console.ReadKey();
+
+                throw ex;
+            }
+
+            Console.WriteLine("Initializing VLC...");
             Core.Initialize();
             vlc = new LibVLC();
 
 
             if (!File.Exists(localSaveFile))
             {
+                Console.WriteLine("Creating Client in Database...");
                 client = new Domain.Concrete.Client() {Ip = GetIP(), Name = GetHostName()};
                 bool result = handler.Add(client, true);
                 SaveKeyInfos();
@@ -145,6 +174,7 @@ namespace Ad.Client
 
         private void SaveKeyInfos()
         {
+            Console.WriteLine("Saving Key Information Locally...");
             using (TextWriter write = new StreamWriter(localSaveFile, false))
             {
                 StringBuilder builder = new StringBuilder();
@@ -161,6 +191,7 @@ namespace Ad.Client
 
         private void FindItSelf()
         {
+            Console.WriteLine("Attempting to Find itself in the Database...");
             (int id, string ip, string name) = ReadKeyInfos();
 
             IClient predicate = null;
@@ -179,6 +210,7 @@ namespace Ad.Client
 
         private (int Id, string Ip, string Name) ReadKeyInfos()
         {
+            Console.WriteLine("Reading Key Information from File...");
             using (var reader = new StreamReader(localSaveFile))
             {
                 string[] info = reader.ReadLine().Split('|');
@@ -191,6 +223,7 @@ namespace Ad.Client
 
         private string GetHostName()
         {
+            Console.WriteLine("Getting Computer Name...");
             string hostName = Dns.GetHostName();
 
             return hostName;
@@ -199,6 +232,7 @@ namespace Ad.Client
         // https://www.c-sharpcorner.com/UploadFile/167ad2/get-ip-address-using-C-Sharp-code/
         private string GetIP()
         {
+            Console.WriteLine("Getting Computer External Ip...");
             // Retrive the Name of HOST 
             string hostName = GetHostName();
             
@@ -208,20 +242,21 @@ namespace Ad.Client
             return ip;
         }
         private void DownLoadFileFromRemoteLocation(string fileNameAndExtension, string downloadedFileSaveLocation = @"..\Ads\")  
-        {  
+        {
+            Console.WriteLine(string.Format("Downloading File {0} from Server...", fileNameAndExtension));
             try  
             {  
                 using (var fileStream = service.DownloadFile(fileNameAndExtension))  
                 {  
                     if (fileStream == null)  
                     {
-                        Console.WriteLine("File not recieved");  
+                        Console.WriteLine("File was not recieved...");  
                         return;  
                     }  
 
                     SharedCode.SaveFile(Path.Combine(downloadedFileSaveLocation, fileNameAndExtension), fileStream);  
                 } 
-                Console.WriteLine("File downloaded and copied");  
+                Console.WriteLine("File succesfully downloaded and copied...");  
             }  
             catch (Exception ex)  
             {

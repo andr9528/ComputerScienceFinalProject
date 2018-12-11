@@ -416,14 +416,14 @@
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment" /> class.
             </summary>
             <param name="method"> The method's name. </param>
-            <param name="arguments"> The method call's arguments. Can be <see cref="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment"/>. </param>
+            <param name="arguments"> The method call's arguments. Can be <see cref="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment" />. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment.#ctor(System.String,System.Object[],Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment)">
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment" /> class.
             </summary>
             <param name="method"> The method's name. </param>
-            <param name="arguments"> The method call's arguments.  Can be <see cref="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment"/>. </param>
+            <param name="arguments"> The method call's arguments.  Can be <see cref="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment" />. </param>
             <param name="chainedCall"> The next method call to chain after this. </param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment.Method">
@@ -446,33 +446,40 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment.Chain(System.String,System.Object[])">
             <summary>
-              Creates a method chain from this method to another.
+                Creates a method chain from this method to another.
             </summary>
             <param name="method"> The next method's name. </param>
             <param name="arguments"> The next method call's arguments. </param>
             <returns> A new fragment representing the method chain. </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment.Chain(Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment)">
+            <summary>
+                Creates a method chain from this method to another.
+            </summary>
+            <param name="call"> The next method. </param>
+            <returns> A new fragment representing the method chain. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment">
             <summary>
-            Represents a nested closure code fragment.
+                Represents a nested closure code fragment.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment.#ctor(System.String,Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment)">
             <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment" /> class.
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment" /> class.
             </summary>
             <param name="parameter">The nested closure parameter's name.</param>
             <param name="methodCall">The method call used as the body of the nested closure.</param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment.Parameter">
             <summary>
-            Gets the nested closure parameter's name.
+                Gets the nested closure parameter's name.
             </summary>
             <value>The parameter name.</value>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Design.NestedClosureCodeFragment.MethodCall">
             <summary>
-            Gets the method call used as the body of the nested closure.
+                Gets the method call used as the body of the nested closure.
             </summary>
             <value>The method call.</value>
         </member>
@@ -1506,14 +1513,14 @@
             </summary>
         </member>
         <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.ValueConversionSqlLiteralWarning">
-            <summary> 
-                <para> 
-                    A SQL literal is being generated for a value that is using a value conversion. 
-                </para> 
-                <para> 
-                    This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Query" /> category. 
-                </para> 
-            </summary> 
+            <summary>
+                <para>
+                    A SQL literal is being generated for a value that is using a value conversion.
+                </para>
+                <para>
+                    This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Query" /> category.
+                </para>
+            </summary>
         </member>
         <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.ModelValidationKeyDefaultValueWarning">
             <summary>
@@ -1545,7 +1552,7 @@
             <summary>
                 <para>
                     Update commands were batched and are now ready for execution
-                    <see cref="M:Microsoft.EntityFrameworkCore.Infrastructure.RelationalDbContextOptionsBuilder`2.MinBatchSize(System.Int32)"/>.
+                    <see cref="M:Microsoft.EntityFrameworkCore.Infrastructure.RelationalDbContextOptionsBuilder`2.MinBatchSize(System.Int32)" />.
                 </para>
                 <para>
                     This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Update" /> category.
@@ -1559,7 +1566,7 @@
             <summary>
                 <para>
                     Update commands were not batched because there were fewer than
-                    <see cref="M:Microsoft.EntityFrameworkCore.Infrastructure.RelationalDbContextOptionsBuilder`2.MinBatchSize(System.Int32)"/>.
+                    <see cref="M:Microsoft.EntityFrameworkCore.Infrastructure.RelationalDbContextOptionsBuilder`2.MinBatchSize(System.Int32)" />.
                 </para>
                 <para>
                     This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Update" /> category.
@@ -2051,23 +2058,14 @@
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.BoolTypeMapping" /> class.
             </summary>
-            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping"/>. </param>
+            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.BoolTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.BoolTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.BoolTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-               Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter"/>
-               added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.BoolTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -2168,23 +2166,14 @@
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.ByteArrayTypeMapping" /> class.
             </summary>
-            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping"/>. </param>
+            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteArrayTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteArrayTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteArrayTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-               Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter"/>
-               added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteArrayTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -2217,23 +2206,14 @@
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.ByteTypeMapping" /> class.
             </summary>
-            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping"/>. </param>
+            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ByteTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-               Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter"/>
-               added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.CharTypeMapping">
             <summary>
@@ -2257,23 +2237,14 @@
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.CharTypeMapping" /> class.
             </summary>
-            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping"/>. </param>
+            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.CharTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.CharTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.CharTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-               Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter"/>
-               added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.CharTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -2302,23 +2273,14 @@
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.DateTimeOffsetTypeMapping" /> class.
             </summary>
-            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping"/>. </param>
+            <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DateTimeOffsetTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.DateTimeOffsetTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DateTimeOffsetTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-               Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter"/>
-               added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.DateTimeOffsetTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -2349,21 +2311,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DateTimeTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.DateTimeTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DateTimeTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.DateTimeTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -2407,21 +2360,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DecimalTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.DecimalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DecimalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.DecimalTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -2452,21 +2396,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DoubleTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.DoubleTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.DoubleTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.DoubleTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -2501,21 +2436,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.FloatTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.FloatTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.FloatTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.FloatTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -2550,21 +2476,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -2927,6 +2844,24 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.CreateCommand(Microsoft.EntityFrameworkCore.Storage.IRelationalConnection,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object})">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ConfigureCommand(System.Data.Common.DbCommand)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.AdjustCommandText(System.String)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommandBuilder">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
@@ -3203,21 +3138,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.IntTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.IntTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.IntTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.IParameterNameGeneratorFactory">
             <summary>
@@ -3896,6 +3822,18 @@
             <param name="scale"> Specifies a scale for the mapping, or <c>null</c> for default. </param>
             <returns> The type mapping, or <c>null</c> if none was found. </returns>
         </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSourcePlugin">
+            <summary>
+                Represents a plugin relational type mapping source.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSourcePlugin.FindMapping(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingInfo@)">
+            <summary>
+                Finds a type mapping for the given info.
+            </summary>
+            <param name="mappingInfo"> The mapping info to use to create the mapping. </param>
+            <returns> The type mapping, or <c>null</c> if none could be found. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.IRelationalValueBufferFactory">
             <summary>
                 <para>
@@ -3989,6 +3927,24 @@
             <param name="builder"> The <see cref="T:System.Text.StringBuilder" /> to write generated string to. </param>
             <param name="name">
                 The candidate name for the parameter.
+            </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.ISqlGenerationHelper.GenerateParameterNamePlaceholder(System.String)">
+            <summary>
+                Generates a valid parameter placehoder name for the given candidate name.
+            </summary>
+            <param name="name">
+                The candidate name for the parameter placehoder.
+            </param>
+            <returns> A valid placehoder name based on the candidate name. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.ISqlGenerationHelper.GenerateParameterNamePlaceholder(System.Text.StringBuilder,System.String)">
+            <summary>
+                Writes a valid parameter placehoder name for the given candidate name.
+            </summary>
+            <param name="builder"> The <see cref="T:System.Text.StringBuilder" /> to write generated string to. </param>
+            <param name="name">
+                The candidate name for the parameter placehoder.
             </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.ISqlGenerationHelper.EscapeLiteral(System.String)">
@@ -4093,21 +4049,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.LongTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.LongTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.LongTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.ParameterNameGenerator">
             <summary>
@@ -4596,7 +4543,7 @@
             <param name="transactionLogger"> The logger to which transaction messages will be written. </param>
             <param name="connectionLogger"> The logger to which connection messages will be written. </param>
             <param name="connectionStringResolver"> A service for resolving a connection string from a name. </param>
-            <param name="relationalTransactionFactory"> A service for creating <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction"/> instances. </param>
+            <param name="relationalTransactionFactory"> A service for creating <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction" /> instances. </param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalConnectionDependencies.ContextOptions">
             <summary>
@@ -4620,7 +4567,7 @@
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalConnectionDependencies.RelationalTransactionFactory">
             <summary>
-                A service for creating <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction"/> instances.
+                A service for creating <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction" /> instances.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalConnectionDependencies.With(Microsoft.EntityFrameworkCore.Infrastructure.IDbContextOptions)">
@@ -4883,6 +4830,31 @@
                 A SQL script.
             </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.CanConnect">
+            <summary>
+                <para>
+                    Determines whether or not the database is available and can be connected to.
+                </para>
+                <para>
+                    Note that being able to connect to the database does not mean that it is
+                    up-to-date with regard to schema creation, etc.
+                </para>
+            </summary>
+            <returns> <c>True</c> if the database is available; <c>false</c> otherwise. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreator.CanConnectAsync(System.Threading.CancellationToken)">
+            <summary>
+                <para>
+                    Determines whether or not the database is available and can be connected to.
+                </para>
+                <para>
+                    Note that being able to connect to the database does not mean that it is
+                    up-to-date with regard to schema creation, etc.
+                </para>
+            </summary>
+            <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to observe while waiting for the task to complete.</param>
+            <returns> <c>True</c> if the database is available; <c>false</c> otherwise. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.RelationalDatabaseCreatorDependencies">
             <summary>
                 <para>
@@ -5109,7 +5081,7 @@
             <param name="connection"> The connection. </param>
             <param name="command"> The command that was executed. </param>
             <param name="reader"> The underlying reader for the result set. </param>
-            <param name="commandId"> A correlation ID that identifies the <see cref="T:System.Data.Common.DbCommand" /> instance being used. </param>
+            <param name="commandId"> A correlation ID that identifies the <see cref="P:Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.DbCommand" /> instance being used. </param>
             <param name="logger"> The diagnostic source. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.#ctor(System.Data.Common.DbDataReader)">
@@ -5127,6 +5099,11 @@
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.DbDataReader">
             <summary>
                 Gets the underlying reader for the result set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.DbCommand">
+            <summary>
+                Gets the underlying command for the result set.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read">
@@ -5174,6 +5151,78 @@
                 Creates an <see cref="T:Microsoft.EntityFrameworkCore.Storage.IExecutionStrategy" /> for the current database provider.
             </summary>
         </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2">
+            <summary>
+                Base class for relation type mappings to NTS IGeometry and implementing types.
+            </summary>
+            <typeparam name="TGeometry"> The geometry type. </typeparam>
+            <typeparam name="TProvider"> The native type of the database provider. </typeparam>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.#ctor(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter{`0,`1},System.String)">
+            <summary>
+                Creates a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2" /> class.
+            </summary>
+            <param name="converter"> The converter to use when converting to and from database types. </param>
+            <param name="storeType"> The store type name. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.#ctor(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters,Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter{`0,`1})">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" /> class.
+            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <param name="converter"> The converter to use when converting to and from database types. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.SpatialConverter">
+            <summary>
+                The underlying IGeometry converter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.CreateParameter(System.Data.Common.DbCommand,System.String,System.Object,System.Nullable{System.Boolean})">
+            <summary>
+                Creates a <see cref="T:System.Data.Common.DbParameter" /> with the appropriate type information configured.
+            </summary>
+            <param name="command"> The command the parameter should be created on. </param>
+            <param name="name"> The name of the parameter. </param>
+            <param name="value"> The value to be assigned to the parameter. </param>
+            <param name="nullable"> A value indicating whether the parameter should be a nullable type. </param>
+            <returns> The newly created parameter. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.CustomizeDataReaderExpression(System.Linq.Expressions.Expression)">
+            <summary>
+                Gets a custom expression tree for the code to convert from the database value
+                to the model value.
+            </summary>
+            <param name="expression"> The input expression, containing the database value. </param>
+            <returns> The expression with conversion added. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.GenerateCodeLiteral(System.Object)">
+            <summary>
+                Creates a an expression tree that can be used to generate code for the literal value.
+                Currently, only very basic expressions such as constructor calls and factory methods taking
+                simple constants are supported.
+            </summary>
+            <param name="value"> The value for which a literal is needed. </param>
+            <returns> An expression tree that can be used to generate code for the literal value. </returns>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.WKTReaderType">
+            <summary>
+                The type of the NTS 'WKTReader'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.AsText(System.Object)">
+            <summary>
+                Returns the Well-Known-Text (WKT) representation of the given object.
+            </summary>
+            <param name="value"> The 'IGeometry' value. </param>
+            <returns> The WKT. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalGeometryTypeMapping`2.GetSrid(System.Object)">
+            <summary>
+                Returns the SRID representation of the given object.
+            </summary>
+            <param name="value"> The 'IGeometry' value. </param>
+            <returns> The SRID. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.RelationalSqlGenerationHelper">
             <summary>
                 <para>
@@ -5216,6 +5265,22 @@
             </summary>
             <param name="builder">The <see cref="T:System.Text.StringBuilder" /> to write generated string to.</param>
             <param name="name">The candidate name for the parameter.</param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalSqlGenerationHelper.GenerateParameterNamePlaceholder(System.String)">
+            <summary>
+                Generates a valid parameter placeholder name for the given candidate name.
+            </summary>
+            <param name="name">The candidate name for the parameter placeholder.</param>
+            <returns>
+                A valid name based on the candidate name.
+            </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalSqlGenerationHelper.GenerateParameterNamePlaceholder(System.Text.StringBuilder,System.String)">
+            <summary>
+                Writes a valid parameter placeholder name for the given candidate name.
+            </summary>
+            <param name="builder">The <see cref="T:System.Text.StringBuilder" /> to write generated string to.</param>
+            <param name="name">The candidate name for the parameter placeholder.</param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalSqlGenerationHelper.EscapeLiteral(System.String)">
             <summary>
@@ -5339,6 +5404,16 @@
                 A value indicating whether the transaction is owned by this class (i.e. if it can be disposed when this class is disposed).
             </param>
         </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Connection">
+            <summary>
+                The connection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Logger">
+            <summary>
+                The logger.
+            </summary>
+        </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.TransactionId">
             <summary>
                 A correlation ID that allows this transaction to be identified and
@@ -5358,6 +5433,11 @@
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.Dispose">
             <summary>
                 Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.ClearTransaction">
+            <summary>
+                Remove the underlying transaction from the connection
             </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.RelationalTransactionFactory">
@@ -5629,7 +5709,7 @@
             <summary>
                 Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters" /> parameter object.
             </summary>
-            <param name="coreParameters"> Parameters for the <see cref="T:Microsoft.EntityFrameworkCore.Storage.CoreTypeMapping"/> base class. </param>
+            <param name="coreParameters"> Parameters for the <see cref="T:Microsoft.EntityFrameworkCore.Storage.CoreTypeMapping" /> base class. </param>
             <param name="storeType"> The name of the database type. </param>
             <param name="storeTypePostfix"> Indicates which values should be appended to the store type name. </param>
             <param name="dbType"> The <see cref="T:System.Data.DbType" /> to be used. </param>
@@ -5641,7 +5721,7 @@
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.CoreParameters">
             <summary>
-                Parameters for the <see cref="T:Microsoft.EntityFrameworkCore.Storage.CoreTypeMapping"/> base class.
+                Parameters for the <see cref="T:Microsoft.EntityFrameworkCore.Storage.CoreTypeMapping" /> base class.
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.StoreType">
@@ -5674,6 +5754,11 @@
                 The mapping scale.
             </summary>
         </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.PrecisionAndScaleOverriden">
+            <summary>
+                This is provided for compatibility with 2.1 providers and shouldn't be used
+            </summary>
+        </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.FixedLength">
             <summary>
                 The mapping fixed-length flag.
@@ -5684,6 +5769,14 @@
                 Indicates which values should be appended to the store type name.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.WithTypeMappingInfo(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingInfo@)">
+            <summary>
+                Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters" /> parameter object with the given
+                mapping info.
+            </summary>
+            <param name="mappingInfo"> The mapping info containing the facets to use. </param>
+            <returns> The new parameter object. </returns>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.WithStoreTypeAndSize(System.String,System.Nullable{System.Int32},System.Nullable{Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix})">
             <summary>
                 Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters" /> parameter object with the given
@@ -5692,6 +5785,15 @@
             <param name="storeType"> The new store type name. </param>
             <param name="size"> The new size. </param>
             <param name="storeTypePostfix"> The new postfix, or null to leave unchanged. </param>
+            <returns> The new parameter object. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.WithPrecisionAndScale(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+                Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters" /> parameter object with the given
+                store type and size.
+            </summary>
+            <param name="precision"> The precision of data the property is configured to store, or null if no size is configured. </param>
+            <param name="scale"> The scale of data the property is configured to store, or null if no size is configured. </param>
             <returns> The new parameter object. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters.WithComposedConverter(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
@@ -5728,6 +5830,13 @@
                 Returns the parameters used to create this type mapping.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
+            <summary>
+                Creates a copy of this mapping.
+            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
             <summary>
                 Creates a copy of this mapping.
@@ -5736,17 +5845,25 @@
             <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
             <returns> The newly created mapping. </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.Clone(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+                Creates a copy of this mapping.
+            </summary>
+            <param name="precision"> The precision of data the property is configured to store, or null if no size is configured. </param>
+            <param name="scale"> The scale of data the property is configured to store, or null if no size is configured. </param>
+            <returns> The newly created mapping. </returns>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
             <summary>
-               Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter"/>
-               added.
+                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
+                added.
             </summary>
             <param name="converter"> The converter to use. </param>
             <returns> A new type mapping </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingInfo@)">
             <summary>
-                Clones the type mapping to update the name and size from the mapping info, if needed.
+                Clones the type mapping to update facets from the mapping info, if needed.
             </summary>
             <param name="mappingInfo"> The mapping info containing the facets to use. </param>
             <returns> The cloned mapping, or the original mapping if no clone was needed. </returns>
@@ -5759,6 +5876,11 @@
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.StoreType">
             <summary>
                 Gets the name of the database type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.StoreTypeNameBase">
+            <summary>
+                Gets the base name of the database type.
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.DbType">
@@ -5835,6 +5957,14 @@
                 on <see cref="T:System.Data.Common.DbDataReader" /> or one of its subclasses.
             </summary>
             <returns> The method to use to read the value. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.CustomizeDataReaderExpression(System.Linq.Expressions.Expression)">
+            <summary>
+                Gets a custom expression tree for reading the value from the input data reader
+                expression that contains the database value.
+            </summary>
+            <param name="expression"> The input expression, containing the database value. </param>
+            <returns> The expression with customization added. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingInfo">
             <summary>
@@ -6015,7 +6145,7 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSource.FindMapping(Microsoft.EntityFrameworkCore.Storage.TypeMappingInfo@)">
             <summary>
-               Call <see cref="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSource.FindMapping(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingInfo@)" /> instead
+                Call <see cref="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSource.FindMapping(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingInfo@)" /> instead
             </summary>
             <param name="mappingInfo"> The mapping info to use to create the mapping. </param>
             <returns> The type mapping, or <c>null</c> if none could be found. </returns>
@@ -6131,7 +6261,7 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSourceDependencies.#ctor">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSourceDependencies.#ctor(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSourcePlugin})">
             <summary>
                 <para>
                     Creates the service dependencies parameter object for a <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSource" />.
@@ -6145,6 +6275,19 @@
                     the constructor at any point in this process.
                 </para>
             </summary>
+            <param name="plugins"> The plugins. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSourceDependencies.Plugins">
+            <summary>
+                Gets the plugins.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSourceDependencies.With(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSourcePlugin})">
+            <summary>
+                Clones this dependency parameter object with one service replaced.
+            </summary>
+            <param name="plugins"> A replacement for the current dependency of this type. </param>
+            <returns> A new parameter object with the given service replaced. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMappingSourceExtensions">
             <summary>
@@ -6200,7 +6343,7 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalValueBufferFactoryDependencies.#ctor(Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSource)">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalValueBufferFactoryDependencies.#ctor(Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSource,Microsoft.EntityFrameworkCore.Infrastructure.ICoreSingletonOptions)">
             <summary>
                 <para>
                     Creates the service dependencies parameter object for a <see cref="T:Microsoft.EntityFrameworkCore.Storage.IRelationalValueBufferFactory" />
@@ -6220,10 +6363,16 @@
                 </para>
             </summary>
             <param name="typeMappingSource"> The type mapping source. </param>
+            <param name="coreOptions"> The core options. </param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalValueBufferFactoryDependencies.TypeMappingSource">
             <summary>
                 Gets the type mapping source.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.RelationalValueBufferFactoryDependencies.CoreOptions">
+            <summary>
+                Gets core options.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalValueBufferFactoryDependencies.With(Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSource)">
@@ -6231,6 +6380,13 @@
                 Clones this dependency parameter object with one service replaced.
             </summary>
             <param name="typeMappingSource"> A replacement for the current dependency of this type. </param>
+            <returns> A new parameter object with the given service replaced. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.RelationalValueBufferFactoryDependencies.With(Microsoft.EntityFrameworkCore.Infrastructure.ICoreSingletonOptions)">
+            <summary>
+                Clones this dependency parameter object with one service replaced.
+            </summary>
+            <param name="coreOptions"> A replacement for the current dependency of this type. </param>
             <returns> A new parameter object with the given service replaced. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.SByteTypeMapping">
@@ -6257,21 +6413,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.SByteTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.SByteTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.SByteTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.ShortTypeMapping">
             <summary>
@@ -6297,21 +6444,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ShortTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.ShortTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ShortTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix">
             <summary>
@@ -6451,21 +6589,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.StringTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.StringTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.StringTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.StringTypeMapping.EscapeSqlLiteral(System.String)">
             <summary>
@@ -6509,21 +6638,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.TimeSpanTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.TimeSpanTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.TimeSpanTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.TimeSpanTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -6611,6 +6731,33 @@
                 or -1 if no index mapping is needed.
             </param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo.#ctor(System.Type,Microsoft.EntityFrameworkCore.Metadata.IProperty,Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSource,System.Nullable{System.Boolean},System.Int32)">
+            <summary>
+                Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo" /> instance.
+            </summary>
+            <param name="modelClrType"> The type that is needed in the model after conversion. </param>
+            <param name="property"> The property associated with the type, or <c>null</c> if none. </param>
+            <param name="typeMappingSource"> The type mapping source to use to find a mapping if the property does not have one already bound. </param>
+            <param name="fromLeftOuterJoin"> Whether or not the value is coming from a LEFT OUTER JOIN operation. </param>
+            <param name="index">
+                The index of the underlying result set that should be used for this type,
+                or -1 if no index mapping is needed.
+            </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo.#ctor(System.Type,Microsoft.EntityFrameworkCore.Metadata.IProperty,Microsoft.EntityFrameworkCore.Storage.IRelationalTypeMappingSource,System.Nullable{System.Boolean},System.Int32,Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping)">
+            <summary>
+                Creates a new <see cref="T:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo" /> instance.
+            </summary>
+            <param name="modelClrType"> The type that is needed in the model after conversion. </param>
+            <param name="property"> The property associated with the type, or <c>null</c> if none. </param>
+            <param name="typeMappingSource"> The type mapping source to use to find a mapping if the property does not have one already bound. </param>
+            <param name="fromLeftOuterJoin"> Whether or not the value is coming from a LEFT OUTER JOIN operation. </param>
+            <param name="index">
+                The index of the underlying result set that should be used for this type,
+                or -1 if no index mapping is needed.
+            </param>
+            <param name="mapping"> The type mapping to use or <c>null</c> to infer one. </param>
+        </member>
         <member name="P:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo.ProviderClrType">
             <summary>
                 The type that will be read from the database provider.
@@ -6635,6 +6782,11 @@
             <summary>
                 The index of the underlying result set that should be used for this type,
                 or -1 if no index mapping is needed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo.IsFromLeftOuterJoin">
+            <summary>
+                Whether or not the value is coming from a LEFT OUTER JOIN operation.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo.Equals(Microsoft.EntityFrameworkCore.Storage.TypeMaterializationInfo)">
@@ -6681,21 +6833,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.UIntTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.UIntTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.UIntTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.ULongTypeMapping">
             <summary>
@@ -6721,21 +6864,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ULongTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.ULongTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.ULongTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.UntypedRelationalValueBufferFactoryFactory">
             <summary>
@@ -6812,21 +6946,12 @@
             </summary>
             <param name="parameters"> Parameter object for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" />. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.UShortTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.Storage.UShortTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 Creates a copy of this mapping.
             </summary>
-            <param name="storeType"> The name of the database type. </param>
-            <param name="size"> The size of data the property is configured to store, or null if no size is configured. </param>
+            <param name="parameters"> The parameters for this mapping. </param>
             <returns> The newly created mapping. </returns>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Storage.UShortTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                Returns a new copy of this type mapping with the given <see cref="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter" />
-                added.
-            </summary>
-            <param name="converter"> The converter to use. </param>
-            <returns> A new type mapping </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Storage.ValueConversion.RelationalConverterMappingHints">
             <summary>
@@ -6843,7 +6968,7 @@
             <param name="scale"> The suggested scale of the mapped data type. </param>
             <param name="unicode"> Whether or not the mapped data type should support Unicode. </param>
             <param name="fixedLength"> Whether or not the mapped data type is fixed length. </param>
-            <param name="valueGeneratorFactory"> An optional factory for creating a specific <see cref="T:Microsoft.EntityFrameworkCore.ValueGeneration.ValueGenerator"/>. </param>
+            <param name="valueGeneratorFactory"> An optional factory for creating a specific <see cref="T:Microsoft.EntityFrameworkCore.ValueGeneration.ValueGenerator" />. </param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Storage.ValueConversion.RelationalConverterMappingHints.With(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ConverterMappingHints)">
             <summary>
@@ -6883,6 +7008,18 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalExpressionExtensions.FindProperty(System.Linq.Expressions.Expression,System.Type)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalExpressionExtensions.FindOriginatingColumnExpression(System.Linq.Expressions.Expression)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalExpressionExtensions.UnwrapAliasExpression(System.Linq.Expressions.Expression)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -7267,7 +7404,7 @@
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.BadSequenceType">
             <summary>
-                Invalid type for sequence. Valid types are 'Int64' (the default), 'Int32', 'Int16', and 'Byte'.
+                Invalid type for sequence. Valid types are 'Int64' (the default), 'Int32', 'Int16', 'Byte' and 'Decimal'.
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.BadSequenceString">
@@ -7667,7 +7804,42 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.DerivedQueryTypeView(System.Object,System.Object)">
             <summary>
-                The query type '{queryType}' cannot be mapped to a view bacause it is derived from '{baseType}'. Only base query types can be mapped to a view.
+                The query type '{queryType}' cannot be mapped to a view because it is derived from '{baseType}'. Only base query types can be mapped to a view.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.RelationalCloneNotImplemented(System.Object)">
+            <summary>
+                The '{mapping}' does not support 2.2 style type mapping. The database provider needs to be updated to support the full set of mapping customization.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.CaseElseResultTypeUnexpected(System.Object,System.Object)">
+            <summary>
+                The result type of '{elseResultType}' in the else clause is invalid. The expected type is '{resultType}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.CaseWhenClauseResultTypeUnexpected(System.Object,System.Object)">
+            <summary>
+                The result type of '{whenResultType}' in a when clause is invalid. The expected type is '{resultType}'.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.CaseWhenClauseTestTypeUnexpected(System.Object,System.Object)">
+            <summary>
+                The operand type of '{whenOperandType}' in a when clause is invalid. The expected type is '{expectedWhenOperandType}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.SqlFunctionArgumentsAndMappingsMismatch">
+            <summary>
+                The number of argument type mappings does not match the number of arguments.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.SqlFunctionNullArgumentMapping">
+            <summary>
+                One of the specified argument type mappings was null.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Internal.RelationalStrings.SqlFunctionUnexpectedInstanceMapping">
+            <summary>
+                An instance type mapping was specified without an instance expression.
             </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Internal.DictionaryExtensions">
@@ -7748,6 +7920,18 @@
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Infrastructure.IRelationalDbContextOptionsBuilderInfrastructure">
+            <summary>
+                Explicitly implemented by <see cref="T:Microsoft.EntityFrameworkCore.Infrastructure.RelationalDbContextOptionsBuilder`2" /> to hide
+                methods that are used by database provider extension methods but not intended to be called by application
+                developers.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Infrastructure.IRelationalDbContextOptionsBuilderInfrastructure.OptionsBuilder">
+            <summary>
+                Gets the core options builder.
             </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot">
@@ -9892,7 +10076,7 @@
         </member>
         <member name="F:Microsoft.EntityFrameworkCore.Metadata.RelationalAnnotationNames.TypeMapping">
             <summary>
-                The name for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping"/> annotations.
+                The name for <see cref="T:Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping" /> annotations.
             </summary>
         </member>
         <member name="F:Microsoft.EntityFrameworkCore.Metadata.RelationalAnnotationNames.DbFunction">
@@ -11877,7 +12061,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.PopulateMigrations(System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Migrations.Migration}@,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Migrations.Migration}@)">
+        <member name="M:Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.PopulateMigrations(System.Collections.Generic.IEnumerable{System.String},System.String,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Migrations.Migration}@,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Migrations.Migration}@,Microsoft.EntityFrameworkCore.Migrations.Migration@)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -13108,7 +13292,7 @@
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.SqlGenerator">
             <summary>
-                The <see cref="T:Microsoft.EntityFrameworkCore.Update.IUpdateSqlGenerator"/>.
+                The <see cref="T:Microsoft.EntityFrameworkCore.Update.IUpdateSqlGenerator" />.
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.VersionComparer">
@@ -13736,6 +13920,14 @@
             <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to add the SQL fragment. </param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.IndexOptions(Microsoft.EntityFrameworkCore.Migrations.Operations.CreateIndexOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
+            <summary>
+                Generates a SQL fragment for extras (filter, included columns, options) of an index from a <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.CreateIndexOperation" />.
+            </summary>
+            <param name="operation"> The operation. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
+            <param name="builder"> The command builder to use to add the SQL fragment. </param>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.ForeignKeyAction(Microsoft.EntityFrameworkCore.Migrations.ReferentialAction,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
             <summary>
                 Generates a SQL fragment for the given referential action.
@@ -13799,7 +13991,7 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.HasLegacyRenameOperations(Microsoft.EntityFrameworkCore.Metadata.IModel)">
             <summary>
-                Checks whether or not <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.RenameTableOperation"/> and <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.RenameSequenceOperation"/> use
+                Checks whether or not <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.RenameTableOperation" /> and <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.RenameSequenceOperation" /> use
                 the legacy behavior of setting the new name and schema to null when unchanged.
             </summary>
             <param name="model"> The target model. </param>
@@ -15123,6 +15315,141 @@
             </summary>
             <returns>A <see cref="T:System.String" /> representation of the Expression.</returns>
         </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression">
+            <summary>
+                Represents a SQL CASE expression.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.#ctor(Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression"/> class.
+            </summary>
+            <param name="whenClauses"> The list of when clauses. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.#ctor(System.Linq.Expressions.Expression,Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression"/> class.
+            </summary>
+            <param name="operand"> The case operand expression. </param>
+            <param name="whenClauses"> The list of when clauses. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.#ctor(System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause},System.Linq.Expressions.Expression)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression"/> class.
+            </summary>
+            <param name="whenClauses"> The list of when clauses. </param>
+            <param name="elseResult"> The else result expression. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.#ctor(System.Linq.Expressions.Expression,System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause},System.Linq.Expressions.Expression)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression"/> class.
+            </summary>
+            <param name="operand"> The case operand expression. </param>
+            <param name="whenClauses"> The list of when clauses. </param>
+            <param name="elseResult"> The else result expression. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.Operand">
+            <summary>
+                Gets the case operand expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.WhenClauses">
+            <summary>
+                Gets the list of when clauses.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.ElseResult">
+            <summary>
+                Gets the else result expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.NodeType">
+            <summary>
+                 Gets the node type of this <see cref="T:System.Linq.Expressions.Expression"/>.
+            </summary>
+            <value> One of the <see cref="T:System.Linq.Expressions.ExpressionType"/> values. </value>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.Type">
+            <summary>
+                Gets the static type of the expression that this <see cref="T:System.Linq.Expressions.Expression"/> represents.
+            </summary>
+            <value> The <see cref="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.Type"/> that represents the static type of the expression. </value>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.Accept(System.Linq.Expressions.ExpressionVisitor)">
+            <summary>
+                Dispatches to the specific visit method for this node type.
+            </summary>
+            <param name="visitor"> The visitor to visit this node with. </param>
+            <returns> The result of visiting this node. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.VisitChildren(System.Linq.Expressions.ExpressionVisitor)">
+            <summary>
+                Reduces the node and then calls the visitor delegate on the reduced expression. The method throws an
+                exception if the node is not reducible.
+            </summary>
+            <param name="visitor"> The visitor. </param>
+            <returns> The expression being visited, or an expression which should replace it in the tree. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.Equals(System.Object)">
+            <summary>
+                Determines whether the specified object is equal to the current object.
+            </summary>
+            <param name="obj"> The object to compare with the current object. </param>
+            <returns> true if the specified object is equal to the current object; otherwise, false. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.GetHashCode">
+            <summary>
+                Gets a hash code for the current object.
+            </summary>
+            <returns> The hash code. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression.ToString">
+            <summary>
+                Returns a string that represents the current object.
+            </summary>
+            <returns> The string. </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause">
+            <summary>
+                Represents one when clause of a <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause.#ctor(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause"/> class.
+            </summary>
+            <param name="test"> The when operand expression. </param>
+            <param name="result"> The result expression. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause.Test">
+            <summary>
+                Gets the when operand expression.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause.Result">
+            <summary>
+                Gets the result expression.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause.Equals(System.Object)">
+            <summary>
+                Determines whether the specified object is equal to the current object.
+            </summary>
+            <param name="obj"> The object to compare with the current object. </param>
+            <returns> true if the specified object is equal to the current object; otherwise, false. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause.GetHashCode">
+            <summary>
+                Gets a hash code for the current object.
+            </summary>
+            <returns> The hash code. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.CaseWhenClause.ToString">
+            <summary>
+                Returns a string that represents the current object.
+            </summary>
+            <returns> The string. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.Expressions.ColumnExpression">
             <summary>
                 A column expression.
@@ -15463,6 +15790,12 @@
             <returns>
                 A hash code for this object.
             </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.DiscriminatorPredicateExpression.Microsoft#EntityFrameworkCore#Query#Expressions#Internal#IPrintable#Print(Microsoft.EntityFrameworkCore.Query.Internal.ExpressionPrinter)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.DiscriminatorPredicateExpression.ToString">
             <summary>
@@ -16431,6 +16764,11 @@
                 The SQL ORDER BY of this SelectExpression.
             </summary>
         </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.Tags">
+            <summary>
+                Any tags associated with this SelectExpression.
+            </summary>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.Clone(System.String)">
             <summary>
                 Makes a copy of this SelectExpression.
@@ -16929,6 +17267,14 @@
             <param name="returnType"> The return type. </param>
             <param name="arguments"> The arguments. </param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.#ctor(System.String,System.Type,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression" /> class.
+            </summary>
+            <param name="functionName"> Name of the function. </param>
+            <param name="returnType"> The return type. </param>
+            <param name="niladic"> A value indicating whether the function is niladic. </param>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.#ctor(System.String,System.Type,System.String,System.Collections.Generic.IEnumerable{System.Linq.Expressions.Expression})">
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression" /> class.
@@ -16938,6 +17284,17 @@
             <param name="returnType"> The return type. </param>
             <param name="arguments"> The arguments. </param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.#ctor(System.String,System.Type,System.String,System.Collections.Generic.IEnumerable{System.Linq.Expressions.Expression},Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping,System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping})">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression" /> class.
+            </summary>
+            <param name="functionName"> Name of the function. </param>
+            <param name="schema"> The schema this function exists in if any. </param>
+            <param name="returnType"> The return type. </param>
+            <param name="arguments"> The arguments. </param>
+            <param name="resultTypeMapping"> The result type mapping. </param>
+            <param name="argumentTypeMappings"> The type mappings for each argument. </param>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.#ctor(System.Linq.Expressions.Expression,System.String,System.Type,System.Collections.Generic.IEnumerable{System.Linq.Expressions.Expression})">
             <summary>
                 Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression" /> class.
@@ -16946,6 +17303,27 @@
             <param name="functionName"> Name of the function. </param>
             <param name="returnType"> The return type. </param>
             <param name="arguments"> The arguments. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.#ctor(System.Linq.Expressions.Expression,System.String,System.Type,System.Collections.Generic.IEnumerable{System.Linq.Expressions.Expression},Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping,Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping,System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping})">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression" /> class.
+            </summary>
+            <param name="instance"> The instance on which the function is called. </param>
+            <param name="functionName"> Name of the function. </param>
+            <param name="returnType"> The return type. </param>
+            <param name="arguments"> The arguments. </param>
+            <param name="resultTypeMapping"> The result type mapping. </param>
+            <param name="instanceTypeMapping"> The instance type mapping. </param>
+            <param name="argumentTypeMappings"> The type mappings for each argument. </param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.#ctor(System.Linq.Expressions.Expression,System.String,System.Type,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression" /> class.
+            </summary>
+            <param name="instance"> The instance on which the function is called. </param>
+            <param name="functionName"> Name of the function. </param>
+            <param name="returnType"> The return type. </param>
+            <param name="niladic"> A value indicating whether the function is niladic. </param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.FunctionName">
             <summary>
@@ -16968,9 +17346,30 @@
                 The instance.
             </summary>
         </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.IsNiladic">
+            <summary>
+                Gets a value indicating whether the function is niladic.
+            </summary>
+            <value>A value indicating whether the function is niladic.</value>
+        </member>
         <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.Arguments">
             <summary>
                 The arguments.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.ResultTypeMapping">
+            <summary>
+                Gets the type mapping of the result.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.InstanceTypeMapping">
+            <summary>
+                Gets the type mapping of the instance.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.ArgumentTypeMappings">
+            <summary>
+                Gets the type mappings for each argument.
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Query.Expressions.SqlFunctionExpression.NodeType">
@@ -17286,6 +17685,16 @@
                 A SQL expression representing the translated MemberExpression.
             </returns>
         </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMemberTranslatorPlugin">
+            <summary>
+                Represents plugin member translators.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMemberTranslatorPlugin.Translators">
+            <summary>
+                Gets the member translators.
+            </summary>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMethodCallTranslator">
             <summary>
                 A LINQ expression translator for CLR <see cref="T:System.Linq.Expressions.MethodCallExpression" /> expressions.
@@ -17299,6 +17708,16 @@
             <returns>
                 A SQL expression representing the translated MethodCallExpression.
             </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMethodCallTranslatorPlugin">
+            <summary>
+                Represents plugin method call translators.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMethodCallTranslatorPlugin.Translators">
+            <summary>
+                Gets the method call translators.
+            </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.Internal.EnumHasFlagTranslator">
             <summary>
@@ -17543,7 +17962,7 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMemberTranslatorDependencies.#ctor">
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMemberTranslatorDependencies.#ctor(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMemberTranslatorPlugin})">
             <summary>
                 <para>
                     Creates the service dependencies parameter object for a <see cref="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMemberTranslator" />.
@@ -17557,6 +17976,19 @@
                     the constructor at any point in this process.
                 </para>
             </summary>
+            <param name="plugins"> The plugins. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMemberTranslatorDependencies.Plugins">
+            <summary>
+                Gets the plugins.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMemberTranslatorDependencies.With(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMemberTranslatorPlugin})">
+            <summary>
+                Clones this dependency parameter object with one service replaced.
+            </summary>
+            <param name="plugins"> A replacement for the current dependency of this type. </param>
+            <returns> A new parameter object with the given service replaced. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslator">
             <summary>
@@ -17610,7 +18042,7 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslatorDependencies.#ctor(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslatorDependencies.#ctor(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query},System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMethodCallTranslatorPlugin})">
             <summary>
                 <para>
                     Creates the service dependencies parameter object for a <see cref="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslator" />.
@@ -17625,10 +18057,16 @@
                 </para>
             </summary>
             <param name="logger"> A logger. </param>
+            <param name="plugins"> The plugins. </param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslatorDependencies.Logger">
             <summary>
                 The logger.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslatorDependencies.Plugins">
+            <summary>
+                Gets the plugins.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslatorDependencies.With(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
@@ -17636,6 +18074,13 @@
                 Clones this dependency parameter object with one service replaced.
             </summary>
             <param name="logger"> A replacement for the current dependency of this type. </param>
+            <returns> A new parameter object with the given service replaced. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.RelationalCompositeMethodCallTranslatorDependencies.With(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.IMethodCallTranslatorPlugin})">
+            <summary>
+                Clones this dependency parameter object with one service replaced.
+            </summary>
+            <param name="plugins"> A replacement for the current dependency of this type. </param>
             <returns> A new parameter object with the given service replaced. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.ExpressionTranslators.SingleOverloadStaticMethodCallTranslator">
@@ -17769,7 +18214,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.CompositeShaper.Create(Remotion.Linq.Clauses.IQuerySource,Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper,Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper,System.Linq.Expressions.LambdaExpression)">
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.CompositeShaper.Create(Remotion.Linq.Clauses.IQuerySource,Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper,Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper,System.Linq.Expressions.LambdaExpression,System.Boolean)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -17781,7 +18226,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.CompositeShaper.TypedCompositeShaper`5.#ctor(Remotion.Linq.Clauses.IQuerySource,`0,`2,System.Func{`1,`3,`4})">
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.CompositeShaper.TypedCompositeShaper`5.#ctor(Remotion.Linq.Clauses.IQuerySource,`0,`2,System.Func{`1,`3,`4},System.Linq.Expressions.Expression)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -17818,12 +18263,6 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.EntityShaper.#ctor(Remotion.Linq.Clauses.IQuerySource,System.Boolean,Microsoft.EntityFrameworkCore.Metadata.IKey,System.Func{Microsoft.EntityFrameworkCore.Storage.MaterializationContext,System.Object},System.Linq.Expressions.Expression)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
-        </member>
-        <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.EntityShaper.MaterializerExpression">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -18081,7 +18520,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ProjectionShaper.Create(Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper,System.Linq.Expressions.LambdaExpression)">
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ProjectionShaper.Create(Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper,System.Linq.Expressions.LambdaExpression,System.Boolean)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -18171,7 +18610,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper.#ctor(Remotion.Linq.Clauses.IQuerySource)">
+        <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper.#ctor(Remotion.Linq.Clauses.IQuerySource,System.Linq.Expressions.Expression)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -18184,6 +18623,12 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper.UpdateQuerySource(Remotion.Linq.Clauses.IQuerySource)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.Shaper.MaterializerExpression">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -19062,6 +19507,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Internal.RelationalResultOperatorHandler.PrepareSelectExpressionForAggregate(Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression,Remotion.Linq.QueryModel)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
@@ -19819,7 +20270,7 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.RelationalQueryModelVisitor.RemoveOrderings(Remotion.Linq.QueryModel)">
             <summary>
-            Removes orderings for a given query model.
+                Removes orderings for a given query model.
             </summary>
             <param name="queryModel">Query model to remove orderings on.</param>
         </member>
@@ -20224,6 +20675,11 @@
                 A relational command.
             </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.GenerateTagsHeaderComment">
+            <summary>
+                Generates the tags header comment.
+            </summary>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.CreateValueBufferFactory(Microsoft.EntityFrameworkCore.Storage.IRelationalValueBufferFactoryFactory,System.Data.Common.DbDataReader)">
             <summary>
                 Creates a relational value buffer factory.
@@ -20257,6 +20713,11 @@
         <member name="P:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.AliasSeparator">
             <summary>
                 The default alias separator.
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.SingleLineCommentToken">
+            <summary>
+                The default single line comment prefix.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.VisitSelect(Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression)">
@@ -20317,6 +20778,14 @@
             <param name="items">The list of items.</param>
             <param name="joinAction">An optional join action.</param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.GenerateList(System.Collections.Generic.IReadOnlyList{System.Linq.Expressions.Expression},System.Action{Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilder},System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping})">
+            <summary>
+                Performs generation over a list of items by visiting each item.
+            </summary>
+            <param name="items">The list of items.</param>
+            <param name="joinAction">An optional join action.</param>
+            <param name="typeMappings">Option type mappings for each item.</param>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.GenerateList``1(System.Collections.Generic.IReadOnlyList{``0},System.Action{``0},System.Action{Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilder})">
             <summary>
                 Perform generation over a list of items using a provided generation action
@@ -20326,6 +20795,17 @@
             <param name="items">The list of items.</param>
             <param name="generationAction">The generation action.</param>
             <param name="joinAction">An optional join action.</param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.GenerateList``1(System.Collections.Generic.IReadOnlyList{``0},System.Action{``0},System.Action{Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilder},System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping})">
+            <summary>
+                Perform generation over a list of items using a provided generation action
+                and optional join action.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="items">The list of items.</param>
+            <param name="generationAction">The generation action.</param>
+            <param name="joinAction">An optional join action.</param>
+            <param name="typeMappings">Option type mappings for each item.</param>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.VisitFromSql(Microsoft.EntityFrameworkCore.Query.Expressions.FromSqlExpression)">
             <summary>
@@ -20604,6 +21084,13 @@
             <returns>
                 An Expression.
             </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.VisitCase(Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression)">
+            <summary>
+                Visits a case expression.
+            </summary>
+            <param name="caseExpression"> The case expression. </param>
+            <returns> An expression. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.DefaultQuerySqlGenerator.InferTypeMappingFromColumn(System.Linq.Expressions.Expression)">
             <summary>
@@ -20929,6 +21416,13 @@
                 An Expression.
             </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.ISqlExpressionVisitor.VisitCase(Microsoft.EntityFrameworkCore.Query.Expressions.CaseExpression)">
+            <summary>
+            Visits a case expression.
+            </summary>
+            <param name="caseExpression"> The case expression. </param>
+            <returns> An expression. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.Sql.QuerySqlGeneratorDependencies">
             <summary>
                 <para>
@@ -20967,7 +21461,7 @@
             <param name="parameterNameGeneratorFactory"> The parameter name generator factory. </param>
             <param name="relationalTypeMapper"> The relational type mapper. </param>
             <param name="typeMappingSource"> The type mapper. </param>
-            <param name="logger"> The logger. </param> 
+            <param name="logger"> The logger. </param>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Query.Sql.QuerySqlGeneratorDependencies.CommandBuilderFactory">
             <summary>
@@ -20995,9 +21489,9 @@
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Query.Sql.QuerySqlGeneratorDependencies.Logger">
-            <summary> 
-                The logger. 
-            </summary> 
+            <summary>
+                The logger.
+            </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.QuerySqlGeneratorDependencies.With(Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory)">
             <summary>
@@ -21035,11 +21529,11 @@
             <returns> A new parameter object with the given service replaced. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Query.Sql.QuerySqlGeneratorDependencies.With(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Query})">
-            <summary> 
-                Clones this dependency parameter object with one service replaced. 
-            </summary> 
-            <param name="logger"> A replacement for the current dependency of this type. </param> 
-            <returns> A new parameter object with the given service replaced. </returns> 
+            <summary>
+                Clones this dependency parameter object with one service replaced.
+            </summary>
+            <param name="logger"> A replacement for the current dependency of this type. </param>
+            <returns> A new parameter object with the given service replaced. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Query.Sql.QuerySqlGeneratorFactoryBase">
             <summary>
@@ -21098,7 +21592,7 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.RawSqlString.#ctor(System.String)">
             <summary>
-                Constructs a <see cref="T:Microsoft.EntityFrameworkCore.RawSqlString" /> from a see <see cref="T:System.String" />
+                Constructs a <see cref="T:Microsoft.EntityFrameworkCore.RawSqlString" /> from a <see cref="T:System.String" />
             </summary>
             <param name="s"> The string. </param>
         </member>
@@ -21106,6 +21600,67 @@
             <summary>
                 The string format.
             </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions">
+            <summary>
+                Relational database specific extension methods for <see cref="T:Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder" />.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions.ToTable(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder,System.String)">
+            <summary>
+                Configures the view or table that the entity maps to when targeting a relational database.
+            </summary>
+            <param name="collectionOwnershipBuilder"> The builder for the entity type being configured. </param>
+            <param name="name"> The name of the view or table. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions.ToTable``2(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder{``0,``1},System.String)">
+            <summary>
+                Configures the view or table that the entity maps to when targeting a relational database.
+            </summary>
+            <typeparam name="TEntity"> The entity type being configured. </typeparam>
+            <typeparam name="TDependentEntity"> The entity type that this relationship targets. </typeparam>
+            <param name="collectionOwnershipBuilder"> The builder for the entity type being configured. </param>
+            <param name="name"> The name of the view or table. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions.ToTable(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder,System.String,System.String)">
+            <summary>
+                Configures the view or table that the entity maps to when targeting a relational database.
+            </summary>
+            <param name="collectionOwnershipBuilder"> The builder for the entity type being configured. </param>
+            <param name="name"> The name of the view or table. </param>
+            <param name="schema"> The schema of the view or table. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions.ToTable``2(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder{``0,``1},System.String,System.String)">
+            <summary>
+                Configures the view or table that the entity maps to when targeting a relational database.
+            </summary>
+            <typeparam name="TEntity"> The entity type being configured. </typeparam>
+            <typeparam name="TDependentEntity"> The entity type that this relationship targets. </typeparam>
+            <param name="collectionOwnershipBuilder"> The builder for the entity type being configured. </param>
+            <param name="name"> The name of the view or table. </param>
+            <param name="schema"> The schema of the view or table. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions.HasConstraintName(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder,System.String)">
+            <summary>
+                Configures the foreign key constraint name for this relationship when targeting a relational database.
+            </summary>
+            <param name="referenceReferenceBuilder"> The builder being used to configure the relationship. </param>
+            <param name="name"> The name of the foreign key constraint. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalCollectionOwnershipBuilderExtensions.HasConstraintName``2(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder{``0,``1},System.String)">
+            <summary>
+                Configures the foreign key constraint name for this relationship when targeting a relational database.
+            </summary>
+            <param name="referenceReferenceBuilder"> The builder being used to configure the relationship. </param>
+            <param name="name"> The name of the foreign key constraint. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+            <typeparam name="TEntity"> The entity type on one end of the relationship. </typeparam>
+            <typeparam name="TDependentEntity"> The entity type on the other end of the relationship. </typeparam>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions">
             <summary>
@@ -21393,7 +21948,7 @@
         <member name="M:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.SetCommandTimeout(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.Nullable{System.Int32})">
             <summary>
                 <para>
-                    Sets the timeout to use for commands executed with this <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />.
+                    Sets the timeout (in seconds) to use for commands executed with this <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />.
                 </para>
                 <para>
                     Note that the command timeout is distinct from the connection timeout, which is commonly
@@ -21419,7 +21974,7 @@
         <member name="M:Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.GetCommandTimeout(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade)">
             <summary>
                 <para>
-                    Returns the timeout set for commands executed with this <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />.
+                    Returns the timeout (in seconds) set for commands executed with this <see cref="T:Microsoft.EntityFrameworkCore.DbContext" />.
                 </para>
                 <para>
                     Note that the command timeout is distinct from the connection timeout, which is commonly
@@ -21533,10 +22088,28 @@
             <param name="name"> The name of the index. </param>
             <returns> A builder to further configure the index. </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalIndexBuilderExtensions.HasName``1(Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder{``0},System.String)">
+            <summary>
+                Configures the name of the index in the database when targeting a relational database.
+            </summary>
+            <typeparam name="TEntity"> The entity type being configured. </typeparam>
+            <param name="indexBuilder"> The builder for the index being configured. </param>
+            <param name="name"> The name of the index. </param>
+            <returns> A builder to further configure the index. </returns>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.RelationalIndexBuilderExtensions.HasFilter(Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder,System.String)">
             <summary>
                 Determines whether the specified index has filter expression.
             </summary>
+            <param name="indexBuilder"> The builder for the index being configured. </param>
+            <param name="sql"> The filter expression for the index. </param>
+            <returns>A builder to further configure the index. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.RelationalIndexBuilderExtensions.HasFilter``1(Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder{``0},System.String)">
+            <summary>
+                Determines whether the specified index has filter expression.
+            </summary>
+            <typeparam name="TEntity"> The entity type being configured. </typeparam>
             <param name="indexBuilder"> The builder for the index being configured. </param>
             <param name="sql"> The filter expression for the index. </param>
             <returns>A builder to further configure the index. </returns>
@@ -22239,11 +22812,34 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Scaffolding.IProviderCodeGeneratorPlugin">
+            <summary>
+                Implemented by plugins to generate code fragments for reverse engineering.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.IProviderCodeGeneratorPlugin.GenerateProviderOptions">
+            <summary>
+                Generates a method chain used to configure provider-specific options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.IProviderCodeGeneratorPlugin.GenerateContextOptions">
+            <summary>
+                Generates a method chain to configure additional context options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Scaffolding.IProviderConfigurationCodeGenerator">
             <summary>
                 A service typically implemented by database providers to generate code fragments
                 for reverse engineering.
             </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.IProviderConfigurationCodeGenerator.GenerateProviderOptions">
+            <summary>
+                Generates a method chain used to configure provider-specific options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.IProviderConfigurationCodeGenerator.GenerateUseProvider(System.String)">
             <summary>
@@ -22252,6 +22848,21 @@
             </summary>
             <param name="connectionString"> The connection string to include in the code fragment. </param>
             <returns> The code fragment. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.IProviderConfigurationCodeGenerator.GenerateUseProvider(System.String,Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment)">
+            <summary>
+                Generates a code fragment like <c>.UseSqlServer("Database=Foo")</c> which can be used in
+                the <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)" /> method of the generated DbContext.
+            </summary>
+            <param name="connectionString"> The connection string to include in the code fragment. </param>
+            <param name="providerOptions"> The method chain used to configure provider options. </param>
+            <returns> The code fragment. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.IProviderConfigurationCodeGenerator.GenerateContextOptions">
+            <summary>
+                Generates a method chain to configure additional context options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Scaffolding.IScaffoldingProviderCodeGenerator">
             <summary>
@@ -22311,19 +22922,19 @@
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumnExtensions">
             <summary>
-            Extension methods for <see cref="T:Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumn"/>.
+                Extension methods for <see cref="T:Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumn" />.
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumnExtensions.GetUnderlyingStoreType(Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumn)">
             <summary>
-            Gets the underlying store/database type for the given column.
+                Gets the underlying store/database type for the given column.
             </summary>
             <param name="column"> The column. </param>
             <returns> The database/store type, or <c>null</c> if none has been set. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumnExtensions.SetUnderlyingStoreType(Microsoft.EntityFrameworkCore.Scaffolding.Metadata.DatabaseColumn,System.String)">
             <summary>
-            Sets the underlying store/database type for the given column.
+                Sets the underlying store/database type for the given column.
             </summary>
             <param name="column"> The column. </param>
             <param name="value"> The database/store type, or <c>null</c> if none. </param>
@@ -22589,6 +23200,12 @@
                 Parameter object containing dependencies for this service.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGenerator.GenerateProviderOptions">
+            <summary>
+                Generates a method chain used to configure provider-specific options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGenerator.GenerateUseProvider(System.String)">
             <summary>
                 Generates a code fragment like <c>.UseSqlServer("Database=Foo")</c> which can be used in
@@ -22596,6 +23213,21 @@
             </summary>
             <param name="connectionString"> The connection string to include in the code fragment. </param>
             <returns> The code fragment. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGenerator.GenerateUseProvider(System.String,Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment)">
+            <summary>
+                Generates a code fragment like <c>.UseSqlServer("Database=Foo")</c> which can be used in
+                the <see cref="M:Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)" /> method of the generated DbContext.
+            </summary>
+            <param name="connectionString"> The connection string to include in the code fragment. </param>
+            <param name="providerOptions"> The method chain used to configure provider options. </param>
+            <returns> The code fragment. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGenerator.GenerateContextOptions">
+            <summary>
+                Generates a method chain to configure additional context options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorDependencies">
             <summary>
@@ -22616,7 +23248,7 @@
                 </para>
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorDependencies.#ctor">
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorDependencies.#ctor(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Scaffolding.IProviderCodeGeneratorPlugin})">
             <summary>
                 <para>
                     Creates the service dependencies parameter object for a <see cref="T:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGenerator" />.
@@ -22630,6 +23262,36 @@
                     the constructor at any point in this process.
                 </para>
             </summary>
+            <param name="plugins"> The plugins. </param>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorDependencies.Plugins">
+            <summary>
+                Gets the plugins.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorDependencies.With(System.Collections.Generic.IEnumerable{Microsoft.EntityFrameworkCore.Scaffolding.IProviderCodeGeneratorPlugin})">
+            <summary>
+                Clones this dependency parameter object with one service replaced.
+            </summary>
+            <param name="plugins"> A replacement for the current dependency of this type. </param>
+            <returns> A new parameter object with the given service replaced. </returns>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorPlugin">
+            <summary>
+                Base class used by plugins to generate code fragments for reverse engineering.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorPlugin.GenerateContextOptions">
+            <summary>
+                Generates a method chain used to configure provider-specific options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Scaffolding.ProviderCodeGeneratorPlugin.GenerateProviderOptions">
+            <summary>
+                Generates a method chain to configure additional context options.
+            </summary>
+            <returns> The method chain. May be null. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch">
             <summary>

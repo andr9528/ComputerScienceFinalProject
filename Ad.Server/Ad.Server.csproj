@@ -98,6 +98,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Concrete\Domain.Concrete.csproj">
+      <Project>{745142de-d049-4fb4-aafe-7fb494214f16}</Project>
+      <Name>Domain.Concrete</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{1BF85A7C-A60B-4554-A55A-895BAB9859ED}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Helpers\Helpers.csproj">
       <Project>{F4A23918-2A6A-4B1F-9D4B-32CC3E724106}</Project>
       <Name>Helpers</Name>

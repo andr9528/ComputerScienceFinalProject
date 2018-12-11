@@ -7,7 +7,10 @@ using System.Runtime.Remoting.Messaging;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Repository.Core;
+using Repository.EntityFramework;
 using Exception = System.Exception;
+using Domain.Core;
 
 namespace Ad.Server
 {
@@ -27,12 +30,26 @@ namespace Ad.Server
 
             SharedCode.SaveFile(fileSaveLocation, stream);
 
-            return VerifySuccecfullUpload(fileSaveLocation, true);
+            bool result = CreateAdInDatabase(fileSaveLocation);
+
+            return VerifySuccecfullUpload(fileSaveLocation, result, true);
         }
 
-        private bool VerifySuccecfullUpload(string path, bool shouldThrow = false)
+        private bool CreateAdInDatabase(string fileSaveLocation)
         {
-            List<bool> bools = new List<bool>();
+            FileInfo info = new FileInfo(fileSaveLocation);
+            IRepository handler = new EntityRepositoryHandler(GetHandlerConnectionString());
+
+            IAd ad = new Domain.Concrete.Ad() {Name = info.Name.Split('.').First(), FileExtension = info.Extension};
+
+            bool result = handler.Add(ad, true);
+
+            return result;
+        }
+
+        private bool VerifySuccecfullUpload(string path, bool adCreationResult, bool shouldThrow = false)
+        {
+            List<bool> bools = new List<bool>() {adCreationResult};
             List<Exception> errors = new List<Exception>();
 
             FileInfo info = new FileInfo(path);
@@ -70,7 +87,12 @@ namespace Ad.Server
             throw new Exception(builder.ToString());
         }
 
-        public void SetNextFileName(string name, bool @override = false)
+        public void SetNextFileName(string name)
+        {
+            SetNextFileName(name, false);
+        }
+
+        public void SetNextFileName(string name, bool @override)
         {
             if (!File.Exists(Path.Combine(adSaveLocation, "AdName.txt")) || @override)
                 using (var writer = new StreamWriter(Path.Combine(adSaveLocation, "AdName.txt")))

@@ -15,7 +15,10 @@ namespace Ad.Server
         [OperationContract]
         bool UploadFile(Stream stream);
 
-        [OperationContract]
-        void SetNextFileName(string name, bool @override = false);
+        [OperationContract(Name = "SetNextFileNameWithOverride")]
+        void SetNextFileName(string name, bool @override);
+
+        [OperationContract(Name = "SetNextFileNameWithoutOverride")]
+        void SetNextFileName(string name);
     }
 }

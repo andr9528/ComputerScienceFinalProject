@@ -7,11 +7,11 @@
       <xsd:import schemaLocation="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServerService_GetHandler_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetHandler" />
+  <wsdl:message name="IServerService_GetHandlerConnectionString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandlerConnectionString" />
   </wsdl:message>
-  <wsdl:message name="IServerService_GetHandler_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetHandlerResponse" />
+  <wsdl:message name="IServerService_GetHandlerConnectionString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandlerConnectionStringResponse" />
   </wsdl:message>
   <wsdl:message name="IServerService_DownloadFile_InputMessage">
     <wsdl:part name="parameters" element="tns:DownloadFile" />
@@ -25,16 +25,22 @@
   <wsdl:message name="IServerService_UploadFile_OutputMessage">
     <wsdl:part name="parameters" element="tns:UploadFileResponse" />
   </wsdl:message>
-  <wsdl:message name="IServerService_SetNextFileName_InputMessage">
-    <wsdl:part name="parameters" element="tns:SetNextFileName" />
+  <wsdl:message name="IServerService_SetNextFileNameWithOverride_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNextFileNameWithOverride" />
   </wsdl:message>
-  <wsdl:message name="IServerService_SetNextFileName_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetNextFileNameResponse" />
+  <wsdl:message name="IServerService_SetNextFileNameWithOverride_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNextFileNameWithOverrideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_SetNextFileNameWithoutOverride_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetNextFileNameWithoutOverride" />
+  </wsdl:message>
+  <wsdl:message name="IServerService_SetNextFileNameWithoutOverride_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetNextFileNameWithoutOverrideResponse" />
   </wsdl:message>
   <wsdl:portType name="IServerService">
-    <wsdl:operation name="GetHandler">
-      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/GetHandler" message="tns:IServerService_GetHandler_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetHandlerResponse" message="tns:IServerService_GetHandler_OutputMessage" />
+    <wsdl:operation name="GetHandlerConnectionString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClientService/GetHandlerConnectionString" message="tns:IServerService_GetHandlerConnectionString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClientService/GetHandlerConnectionStringResponse" message="tns:IServerService_GetHandlerConnectionString_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DownloadFile">
       <wsdl:input wsaw:Action="http://tempuri.org/IClientService/DownloadFile" message="tns:IServerService_DownloadFile_InputMessage" />
@@ -44,15 +50,19 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServerService/UploadFile" message="tns:IServerService_UploadFile_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServerService/UploadFileResponse" message="tns:IServerService_UploadFile_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SetNextFileName">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/SetNextFileName" message="tns:IServerService_SetNextFileName_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/SetNextFileNameResponse" message="tns:IServerService_SetNextFileName_OutputMessage" />
+    <wsdl:operation name="SetNextFileNameWithOverride">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/SetNextFileNameWithOverride" message="tns:IServerService_SetNextFileNameWithOverride_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/SetNextFileNameWithOverrideResponse" message="tns:IServerService_SetNextFileNameWithOverride_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetNextFileNameWithoutOverride">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerService/SetNextFileNameWithoutOverride" message="tns:IServerService_SetNextFileNameWithoutOverride_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerService/SetNextFileNameWithoutOverrideResponse" message="tns:IServerService_SetNextFileNameWithoutOverride_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ServerService" type="tns:IServerService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetHandler">
-      <soap:operation soapAction="http://tempuri.org/IClientService/GetHandler" style="document" />
+    <wsdl:operation name="GetHandlerConnectionString">
+      <soap:operation soapAction="http://tempuri.org/IClientService/GetHandlerConnectionString" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -78,8 +88,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SetNextFileName">
-      <soap:operation soapAction="http://tempuri.org/IServerService/SetNextFileName" style="document" />
+    <wsdl:operation name="SetNextFileNameWithOverride">
+      <soap:operation soapAction="http://tempuri.org/IServerService/SetNextFileNameWithOverride" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetNextFileNameWithoutOverride">
+      <soap:operation soapAction="http://tempuri.org/IServerService/SetNextFileNameWithoutOverride" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -90,7 +109,7 @@
   </wsdl:binding>
   <wsdl:service name="ServerService">
     <wsdl:port name="BasicHttpBinding_ServerService" binding="tns:BasicHttpBinding_ServerService">
-      <soap:address location="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc/ServerService.svc" />
+      <soap:address location="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

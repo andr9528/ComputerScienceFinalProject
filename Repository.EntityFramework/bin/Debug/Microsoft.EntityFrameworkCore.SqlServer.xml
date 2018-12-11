@@ -98,6 +98,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerOptionsExtension.PopulateDebugInfo(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerOptionsExtension.ApplyServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
@@ -224,6 +230,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="F:Microsoft.EntityFrameworkCore.SqlServer.Metadata.Internal.SqlServerAnnotationNames.Include">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
         <member name="F:Microsoft.EntityFrameworkCore.SqlServer.Metadata.Internal.SqlServerAnnotationNames.ValueGenerationStrategy">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
@@ -309,6 +321,12 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Metadata.Internal.SqlServerIndexBuilderAnnotations.IsClustered(System.Nullable{System.Boolean})">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Metadata.Internal.SqlServerIndexBuilderAnnotations.Include(System.String[])">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -638,7 +656,7 @@
         </member>
         <member name="F:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.LogDefaultDecimalTypeColumn">
             <summary>
-                No type was specified for the decimal column '{property}' on entity type '{entityType}'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'ForHasColumnType()'.
+                No type was specified for the decimal column '{property}' on entity type '{entityType}'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
             </summary>
         </member>
         <member name="F:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.LogByteIdentityColumn">
@@ -749,6 +767,36 @@
         <member name="P:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.InvalidColumnNameForFreeText">
             <summary>
                 The expression passed to the 'propertyReference' parameter of the 'FreeText' method is not a valid reference to a property. The expression should represent a reference to a full-text indexed property on the object referenced in the from clause: 'from e in context.Entities where EF.Functions.FreeText(e.SomeProperty, textToSearchFor) select e'
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.IncludePropertyDuplicated(System.Object,System.Object)">
+            <summary>
+                Include property '{entityType}.{property}' cannot be defined multiple times
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.IncludePropertyInIndex(System.Object,System.Object)">
+            <summary>
+                Include property '{entityType}.{property}' is already included in the index
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.IncludePropertyNotFound(System.Object,System.Object)">
+            <summary>
+                Include property '{entityType}.{property}' not found
+            </summary>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.ContainsFunctionOnClient">
+            <summary>
+                The 'Contains' method is not supported because the query has switched to client-evaluation. Inspect the log to determine which query expressions are triggering client-evaluation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.LogReflexiveConstraintIgnored">
+            <summary>
+                Skipping foreign key '{foreignKeyName}' on table '{tableName}' since all of its columns reference themselves.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Internal.SqlServerStrings.DuplicateKeyMismatchedClustering(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+                The keys {key1} on '{entityType1}' and {key2} on '{entityType2}' are both mapped to '{table}.{keyName}' but with different clustering.
             </summary>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlServer.Query.Expressions.Internal.RowNumberExpression">
@@ -910,13 +958,13 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="T:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerFreeTextMethodCallTranslator">
+        <member name="T:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerFullTextSearchMethodCallTranslator">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerFreeTextMethodCallTranslator.Translate(System.Linq.Expressions.MethodCallExpression)">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerFullTextSearchMethodCallTranslator.Translate(System.Linq.Expressions.MethodCallExpression)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -965,6 +1013,18 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerStartsWithOptimizedTranslator.Translate(System.Linq.Expressions.MethodCallExpression)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerStringConcatMethodCallTranslator">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal.SqlServerStringConcatMethodCallTranslator.Translate(System.Linq.Expressions.MethodCallExpression)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1291,7 +1351,7 @@
             </summary>
             <param name="dependencies"> The dependencies. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Scaffolding.Internal.SqlServerCodeGenerator.GenerateUseProvider(System.String)">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Scaffolding.Internal.SqlServerCodeGenerator.GenerateUseProvider(System.String,Microsoft.EntityFrameworkCore.Design.MethodCallCodeFragment)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1339,7 +1399,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteArrayTypeMapping.#ctor(System.String,System.Nullable{System.Data.DbType},System.Nullable{System.Int32},System.Boolean,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,System.Nullable{Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteArrayTypeMapping.#ctor(System.String,System.Nullable{System.Int32},System.Boolean,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,System.Nullable{Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix})">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1351,17 +1411,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteArrayTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteArrayTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteArrayTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteArrayTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
@@ -1393,17 +1448,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerByteTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -1536,19 +1586,20 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeOffsetTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeOffsetTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeOffsetTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeOffsetTypeMapping.SqlLiteralFormatString">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeOffsetTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1578,17 +1629,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping.SqlLiteralFormatString">
             <summary>
@@ -1602,7 +1648,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping.#ctor(System.String,System.Nullable{System.Data.DbType},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping.#ctor(System.String,System.Nullable{System.Data.DbType},System.Nullable{System.Int32},System.Nullable{System.Int32},Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1614,13 +1660,13 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1644,19 +1690,20 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDoubleTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDoubleTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDoubleTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDoubleTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDoubleTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1728,19 +1775,20 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerFloatTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerFloatTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerFloatTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerFloatTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerFloatTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1764,17 +1812,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerLongTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerLongTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerLongTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerLongTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -1800,17 +1843,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerShortTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerShortTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerShortTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerShortTypeMapping.GenerateNonNullSqlLiteral(System.Object)">
             <summary>
@@ -1878,17 +1916,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerSqlVariantTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerSqlVariantTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerSqlVariantTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping">
             <summary>
@@ -1896,7 +1929,7 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping.#ctor(System.String,System.Nullable{System.Data.DbType},System.Boolean,System.Nullable{System.Int32},System.Boolean)">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping.#ctor(System.String,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Nullable{Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix})">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -1908,17 +1941,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
@@ -1950,17 +1978,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerTimeSpanTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerTimeSpanTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
-        </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerTimeSpanTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
-            <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
-            </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerTimeSpanTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
             <summary>
@@ -2009,13 +2032,13 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.#ctor(System.Type,System.String,Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix,System.String,Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,System.Nullable{System.Data.DbType},System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.#ctor(System.Type,System.String,System.Func{System.Object,System.Linq.Expressions.Expression},Microsoft.EntityFrameworkCore.Storage.StoreTypePostfix,System.String,Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,Microsoft.EntityFrameworkCore.ChangeTracking.ValueComparer,System.Nullable{System.Data.DbType},System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.#ctor(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters,System.String)">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.#ctor(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters,System.Func{System.Object,System.Linq.Expressions.Expression},System.String)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -2027,19 +2050,38 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.Clone(System.String,System.Nullable{System.Int32})">
+        <member name="P:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.LiteralGenerator">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter)">
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.Clone(Microsoft.EntityFrameworkCore.Storage.RelationalTypeMapping.RelationalTypeMappingParameters)">
             <summary>
-                This API supports the Entity Framework Core infrastructure and is not intended to be used
-                directly from your code. This API may change or be removed in future releases.
+                Creates a copy of this mapping.
             </summary>
+            <param name="parameters"> The parameters for this mapping. </param>
+            <returns> The newly created mapping. </returns>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.ConfigureParameter(System.Data.Common.DbParameter)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.GenerateCodeLiteral(System.Object)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.CreateSqlHierarchyIdMapping(System.Type)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerUdtTypeMapping.CreateSqlSpatialMapping(System.Type,System.String)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -2521,6 +2563,35 @@
                 This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Scaffolding" /> category.
             </summary>
         </member>
+        <member name="F:Microsoft.EntityFrameworkCore.Diagnostics.SqlServerEventId.ReflexiveConstraintIgnored">
+            <summary>
+                A reflexive foreign key constraint was skipped.
+                This event is in the <see cref="T:Microsoft.EntityFrameworkCore.DbLoggerCategory.Scaffolding" /> category.
+            </summary>
+        </member>
+        <member name="T:Microsoft.EntityFrameworkCore.SqlServerCollectionOwnershipBuilderExtensions">
+            <summary>
+                SQL Server specific extension methods for <see cref="T:Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder" />.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerCollectionOwnershipBuilderExtensions.ForSqlServerIsMemoryOptimized(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder,System.Boolean)">
+            <summary>
+                Configures the table that the entity maps to when targeting SQL Server as memory-optimized.
+            </summary>
+            <param name="collectionOwnershipBuilder"> The builder for the entity type being configured. </param>
+            <param name="memoryOptimized"> A value indicating whether the table is memory-optimized. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerCollectionOwnershipBuilderExtensions.ForSqlServerIsMemoryOptimized``2(Microsoft.EntityFrameworkCore.Metadata.Builders.CollectionOwnershipBuilder{``0,``1},System.Boolean)">
+            <summary>
+                Configures the table that the entity maps to when targeting SQL Server as memory-optimized.
+            </summary>
+            <typeparam name="TEntity"> The entity type being configured. </typeparam>
+            <typeparam name="TRelatedEntity"> The entity type that this relationship targets. </typeparam>
+            <param name="collectionOwnershipBuilder"> The builder for the entity type being configured. </param>
+            <param name="memoryOptimized"> A value indicating whether the table is memory-optimized. </param>
+            <returns> The same builder instance so that multiple calls can be chained. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlServerDatabaseFacadeExtensions">
             <summary>
                 SQL Server specific extension methods for <see cref="P:Microsoft.EntityFrameworkCore.DbContext.Database" />.
@@ -2614,6 +2685,25 @@
             <param name="memoryOptimized"> A value indicating whether the table is memory-optimized. </param>
             <returns> The same builder instance so that multiple calls can be chained. </returns>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerEntityTypeBuilderExtensions.ForSqlServerHasIndex``1(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+                Configures an index on the specified properties. If there is an existing index on the given
+                set of properties, then the existing index will be returned for configuration.
+            </summary>
+            <typeparam name="TEntity"> The entity type being configured. </typeparam>
+            <param name="entityTypeBuilder"> The builder for the entity type being configured. </param>
+            <param name="indexExpression">
+                <para>
+                    A lambda expression representing the property(s) to be included in the index
+                    (<c>blog => blog.Url</c>).
+                </para>
+                <para>
+                    If the index is made up of multiple properties then specify an anonymous type including the
+                    properties (<c>post => new { post.Title, post.BlogId }</c>).
+                </para>
+            </param>
+            <returns> An object that can be used to configure the index. </returns>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlServerIndexBuilderExtensions">
             <summary>
                 SQL Server specific extension methods for <see cref="T:Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder" />.
@@ -2625,6 +2715,39 @@
             </summary>
             <param name="indexBuilder"> The builder for the index being configured. </param>
             <param name="clustered"> A value indicating whether the index is clustered. </param>
+            <returns> A builder to further configure the index. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerIndexBuilderExtensions.ForSqlServerIsClustered``1(Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder{``0},System.Boolean)">
+            <summary>
+                Configures whether the index is clustered when targeting SQL Server.
+            </summary>
+            <param name="indexBuilder"> The builder for the index being configured. </param>
+            <param name="clustered"> A value indicating whether the index is clustered. </param>
+            <returns> A builder to further configure the index. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerIndexBuilderExtensions.ForSqlServerInclude(Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder,System.String[])">
+            <summary>
+                Configures index include properties when targeting SQL Server.
+            </summary>
+            <param name="indexBuilder"> The builder for the index being configured. </param>
+            <param name="propertyNames"> An array of property names to be used in 'include' clause. </param>
+            <returns> A builder to further configure the index. </returns>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerIndexBuilderExtensions.ForSqlServerInclude``1(Microsoft.EntityFrameworkCore.Metadata.Builders.IndexBuilder{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+            <summary>
+                Configures index include properties when targeting SQL Server.
+            </summary>
+            <param name="indexBuilder"> The builder for the index being configured. </param>
+            <param name="includeExpression">
+                <para>
+                    A lambda expression representing the property(s) to be included in the 'include' clause
+                    (<c>blog => blog.Url</c>).
+                </para>
+                <para>
+                    If multiple properties are to be included then specify an anonymous type including the
+                    properties (<c>post => new { post.Title, post.BlogId }</c>).
+                </para>
+            </param>
             <returns> A builder to further configure the index. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.SqlServerKeyBuilderExtensions">
@@ -2943,6 +3066,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.SqlServerLoggerExtensions.ReflexiveConstraintIgnored(Microsoft.EntityFrameworkCore.Diagnostics.IDiagnosticsLogger{Microsoft.EntityFrameworkCore.DbLoggerCategory.Scaffolding},System.String,System.String)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Internal.SqlServerModelValidator">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
@@ -2979,6 +3108,12 @@
                 directly from your code. This API may change or be removed in future releases.
             </summary>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.SqlServerModelValidator.ValidateIndexIncludeProperties(Microsoft.EntityFrameworkCore.Metadata.IModel)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Internal.SqlServerModelValidator.ValidateSharedTableCompatibility(System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Metadata.IEntityType},System.String)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
@@ -2986,6 +3121,12 @@
             </summary>
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Internal.SqlServerModelValidator.ValidateSharedColumnsCompatibility(System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Metadata.IEntityType},System.String)">
+            <summary>
+                This API supports the Entity Framework Core infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Internal.SqlServerModelValidator.ValidateSharedKeysCompatibility(System.Collections.Generic.IReadOnlyList{Microsoft.EntityFrameworkCore.Metadata.IEntityType},System.String)">
             <summary>
                 This API supports the Entity Framework Core infrastructure and is not intended to be used
                 directly from your code. This API may change or be removed in future releases.
@@ -3080,6 +3221,11 @@
                 been specified.
             </summary>
         </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Metadata.ISqlServerIndexAnnotations.IncludeProperties">
+            <summary>
+                Returns included property names, or <c>null</c> if they have not been specified.
+            </summary>
+        </member>
         <member name="T:Microsoft.EntityFrameworkCore.Metadata.ISqlServerKeyAnnotations">
             <summary>
                 Properties for relational-specific annotations accessed through
@@ -3100,8 +3246,8 @@
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Metadata.ISqlServerModelAnnotations.ValueGenerationStrategy">
             <summary>
-            The <see cref="T:Microsoft.EntityFrameworkCore.Metadata.SqlServerValueGenerationStrategy"/> to use for properties
-            of keys in the model, unless the property has a different strategy explicitly set.
+                The <see cref="T:Microsoft.EntityFrameworkCore.Metadata.SqlServerValueGenerationStrategy" /> to use for properties
+                of keys in the model, unless the property has a different strategy explicitly set.
             </summary>
         </member>
         <member name="P:Microsoft.EntityFrameworkCore.Metadata.ISqlServerModelAnnotations.HiLoSequenceName">
@@ -3216,6 +3362,18 @@
                 Attempts to set clustering using the semantics of the <see cref="T:Microsoft.EntityFrameworkCore.Metadata.RelationalAnnotations" /> in use.
             </summary>
             <param name="value"> The value to set. </param>
+            <returns> <c>True</c> if the annotation was set; <c>false</c> otherwise. </returns>
+        </member>
+        <member name="P:Microsoft.EntityFrameworkCore.Metadata.SqlServerIndexAnnotations.IncludeProperties">
+            <summary>
+                Returns included property names, or <c>null</c> if they have not been specified.
+            </summary>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Metadata.SqlServerIndexAnnotations.SetInclude(System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>
+                Attempts to set included property names using the semantics of the <see cref="T:Microsoft.EntityFrameworkCore.Metadata.RelationalAnnotations" /> in use.
+            </summary>
+            <param name="properties"> The value to set. </param>
             <returns> <c>True</c> if the annotation was set; <c>false</c> otherwise. </returns>
         </member>
         <member name="T:Microsoft.EntityFrameworkCore.Metadata.SqlServerKeyAnnotations">
@@ -3858,32 +4016,6 @@
             <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to add the SQL fragment. </param>
         </member>
-        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.ColumnDefinition(System.String,System.String,System.String,System.Type,System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Object,System.String,System.String,Microsoft.EntityFrameworkCore.Infrastructure.IAnnotatable,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
-            <summary>
-                Generates a SQL fragment for a column definition for the given column metadata.
-            </summary>
-            <param name="schema"> The schema that contains the table, or <c>null</c> to use the default schema. </param>
-            <param name="table"> The table that contains the column. </param>
-            <param name="name"> The column name. </param>
-            <param name="clrType"> The CLR <see cref="T:System.Type" /> that the column is mapped to. </param>
-            <param name="type"> The database/store type for the column, or <c>null</c> if none has been specified. </param>
-            <param name="unicode">
-                Indicates whether or not the column can contain Unicode data, or <c>null</c> if this is not applicable or not specified.
-            </param>
-            <param name="maxLength">
-                The maximum amount of data that the column can contain, or <c>null</c> if this is not applicable or not specified.
-            </param>
-            <param name="rowVersion">
-                Indicates whether or not this column is an automatic concurrency token, such as a SQL Server timestamp/rowversion.
-            </param>
-            <param name="nullable"> Indicates whether or not the column can store <c>NULL</c> values. </param>
-            <param name="defaultValue"> The default value for the column. </param>
-            <param name="defaultValueSql"> The SQL expression to use for the column's default constraint. </param>
-            <param name="computedColumnSql"> The SQL expression to use to compute the column value. </param>
-            <param name="annotatable"> The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.MigrationOperation" /> to use to find any custom annotations. </param>
-            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
-            <param name="builder"> The command builder to use to add the SQL fragment. </param>
-        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.ColumnDefinition(System.String,System.String,System.String,System.Type,System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Object,System.String,System.String,System.Boolean,Microsoft.EntityFrameworkCore.Infrastructure.IAnnotatable,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
             <summary>
                 Generates a SQL fragment for a column definition for the given column metadata.
@@ -3974,6 +4106,14 @@
             <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
             <param name="builder"> The command builder to use to add the SQL fragment. </param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.IndexOptions(Microsoft.EntityFrameworkCore.Migrations.Operations.CreateIndexOperation,Microsoft.EntityFrameworkCore.Metadata.IModel,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
+            <summary>
+                Generates a SQL fragment for extras (filter, included columns, options) of an index from a <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.CreateIndexOperation" />.
+            </summary>
+            <param name="operation"> The operation. </param>
+            <param name="model"> The target model which may be <c>null</c> if the operations exist without a model. </param>
+            <param name="builder"> The command builder to use to add the SQL fragment. </param>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.ForeignKeyAction(Microsoft.EntityFrameworkCore.Migrations.ReferentialAction,Microsoft.EntityFrameworkCore.Migrations.MigrationCommandListBuilder)">
             <summary>
                 Generates a SQL fragment for the given referential action.
@@ -4014,7 +4154,7 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.UseLegacyIndexFilters(Microsoft.EntityFrameworkCore.Metadata.IModel)">
             <summary>
-                Checks whether or not <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.CreateIndexOperation"/> should have a filter generated for it by
+                Checks whether or not <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Operations.CreateIndexOperation" /> should have a filter generated for it by
                 Migrations.
             </summary>
             <param name="model"> The target model. </param>
@@ -4028,9 +4168,9 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.FreeText(Microsoft.EntityFrameworkCore.DbFunctions,System.String,System.String,System.Int32)">
             <summary>
-            <para>
-                A DbFunction method stub that can be used in LINQ queries to target the SQL Server FREETEXT store function.
-            </para>
+                <para>
+                    A DbFunction method stub that can be used in LINQ queries to target the SQL Server FREETEXT store function.
+                </para>
             </summary>
             <remarks>
                 This DbFunction method has no in-memory implementation and will throw if the query switches to client-evaluation.
@@ -4043,9 +4183,9 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.FreeText(Microsoft.EntityFrameworkCore.DbFunctions,System.String,System.String)">
             <summary>
-            <para>
-                A DbFunction method stub that can be used in LINQ queries to target the SQL Server FREETEXT store function.
-            </para>
+                <para>
+                    A DbFunction method stub that can be used in LINQ queries to target the SQL Server FREETEXT store function.
+                </para>
             </summary>
             <remarks>
                 This DbFunction method has no in-memory implementation and will throw if the query switches to client-evaluation.
@@ -4055,10 +4195,39 @@
             <param name="propertyReference">The property on which the search will be performed.</param>
             <param name="freeText">The text that will be searched for in the property.</param>
         </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.Contains(Microsoft.EntityFrameworkCore.DbFunctions,System.String,System.String,System.Int32)">
+            <summary>
+                <para>
+                    A DbFunction method stub that can be used in LINQ queries to target the SQL Server CONTAINS store function.
+                </para>
+            </summary>
+            <remarks>
+                This DbFunction method has no in-memory implementation and will throw if the query switches to client-evaluation.
+                This can happen if the query contains one or more expressions that could not be translated to the store.
+            </remarks>
+            <param name="_">DbFunctions instance</param>
+            <param name="propertyReference">The property on which the search will be performed.</param>
+            <param name="searchCondition">The text that will be searched for in the property and the condition for a match.</param>
+            <param name="languageTerm">A Language ID from the sys.syslanguages table.</param>
+        </member>
+        <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.Contains(Microsoft.EntityFrameworkCore.DbFunctions,System.String,System.String)">
+            <summary>
+                <para>
+                    A DbFunction method stub that can be used in LINQ queries to target the SQL Server CONTAINS store function.
+                </para>
+            </summary>
+            <remarks>
+                This DbFunction method has no in-memory implementation and will throw if the query switches to client-evaluation.
+                This can happen if the query contains one or more expressions that could not be translated to the store.
+            </remarks>
+            <param name="_">DbFunctions instance</param>
+            <param name="propertyReference">The property on which the search will be performed.</param>
+            <param name="searchCondition">The text that will be searched for in the property and the condition for a match.</param>
+        </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffYear(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of year boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
+                Counts the number of year boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4067,8 +4236,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffYear(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of year boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
+                Counts the number of year boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4077,8 +4246,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffYear(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of year boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
+                Counts the number of year boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4087,8 +4256,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffYear(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of year boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
+                Counts the number of year boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(YEAR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4097,8 +4266,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMonth(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of month boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
+                Counts the number of month boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4107,8 +4276,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMonth(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of month boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
+                Counts the number of month boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4117,8 +4286,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMonth(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of month boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
+                Counts the number of month boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4127,8 +4296,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMonth(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of month boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
+                Counts the number of month boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MONTH,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4137,8 +4306,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffDay(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of day boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
+                Counts the number of day boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4147,8 +4316,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffDay(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of day boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
+                Counts the number of day boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4157,8 +4326,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffDay(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of day boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
+                Counts the number of day boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4167,8 +4336,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffDay(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of day boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
+                Counts the number of day boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(DAY,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4177,8 +4346,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffHour(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of hour boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
+                Counts the number of hour boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4187,8 +4356,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffHour(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of hour boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
+                Counts the number of hour boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4197,8 +4366,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffHour(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of hour boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
+                Counts the number of hour boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4207,8 +4376,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffHour(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of hour boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
+                Counts the number of hour boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(HOUR,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4217,8 +4386,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMinute(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of minute boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
+                Counts the number of minute boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4227,8 +4396,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMinute(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of minute boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
+                Counts the number of minute boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4237,8 +4406,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMinute(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of minute boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
+                Counts the number of minute boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4247,8 +4416,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMinute(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of minute boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
+                Counts the number of minute boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MINUTE,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4257,8 +4426,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffSecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of second boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
+                Counts the number of second boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4267,8 +4436,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffSecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of second boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
+                Counts the number of second boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4277,8 +4446,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffSecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of second boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
+                Counts the number of second boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4287,8 +4456,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffSecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of second boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
+                Counts the number of second boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(SECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4297,8 +4466,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMillisecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of millisecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
+                Counts the number of millisecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4307,8 +4476,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMillisecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of millisecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
+                Counts the number of millisecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4317,8 +4486,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMillisecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of millisecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
+                Counts the number of millisecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4327,8 +4496,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMillisecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of millisecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
+                Counts the number of millisecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MILLISECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4337,8 +4506,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMicrosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of microsecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
+                Counts the number of microsecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4347,8 +4516,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMicrosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of microsecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
+                Counts the number of microsecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4357,8 +4526,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMicrosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of microsecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
+                Counts the number of microsecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4367,8 +4536,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffMicrosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of microsecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
+                Counts the number of microsecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(MICROSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4377,8 +4546,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffNanosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTime,System.DateTime)">
             <summary>
-               Counts the number of nanosecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
+                Counts the number of nanosecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4387,8 +4556,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffNanosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
             <summary>
-               Counts the number of nanosecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
+                Counts the number of nanosecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4397,8 +4566,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffNanosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.DateTimeOffset,System.DateTimeOffset)">
             <summary>
-               Counts the number of nanosecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
+                Counts the number of nanosecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4407,8 +4576,8 @@
         </member>
         <member name="M:Microsoft.EntityFrameworkCore.SqlServerDbFunctionsExtensions.DateDiffNanosecond(Microsoft.EntityFrameworkCore.DbFunctions,System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset})">
             <summary>
-               Counts the number of nanosecond boundaries crossed between the startDate and endDate.
-               Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
+                Counts the number of nanosecond boundaries crossed between the startDate and endDate.
+                Corresponds to SQL Server's DATEDIFF(NANOSECOND,startDate,endDate).
             </summary>
             <param name="_">The DbFunctions instance.</param>
             <param name="startDate">Starting date for the calculation.</param>
@@ -4494,21 +4663,21 @@
             </summary>
         </member>
         <member name="M:Microsoft.Extensions.DependencyInjection.SqlServerServiceCollectionExtensions.AddEntityFrameworkSqlServer(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-             <summary>
-                 <para>
-                     Adds the services required by the Microsoft SQL Server database provider for Entity Framework
-                     to an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />. You use this method when using dependency injection
-                     in your application, such as with ASP.NET. For more information on setting up dependency
-                     injection, see http://go.microsoft.com/fwlink/?LinkId=526890.
-                 </para>
-                 <para>
-                     You only need to use this functionality when you want Entity Framework to resolve the services it uses
-                     from an external dependency injection container. If you are not using an external
-                     dependency injection container, Entity Framework will take care of creating the services it requires.
-                 </para>
-             </summary>
-             <example>
-                 <code>
+            <summary>
+                <para>
+                    Adds the services required by the Microsoft SQL Server database provider for Entity Framework
+                    to an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />. You use this method when using dependency injection
+                    in your application, such as with ASP.NET. For more information on setting up dependency
+                    injection, see http://go.microsoft.com/fwlink/?LinkId=526890.
+                </para>
+                <para>
+                    You only need to use this functionality when you want Entity Framework to resolve the services it uses
+                    from an external dependency injection container. If you are not using an external
+                    dependency injection container, Entity Framework will take care of creating the services it requires.
+                </para>
+            </summary>
+            <example>
+                <code>
                        public void ConfigureServices(IServiceCollection services)
                        {
                            var connectionString = "connection string to database";
@@ -4520,11 +4689,11 @@
                                           .UseInternalServiceProvider(serviceProvider));
                        }
                    </code>
-             </example>
-             <param name="serviceCollection"> The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to. </param>
-             <returns>
-                 The same service collection so that multiple calls can be chained.
-             </returns>
+            </example>
+            <param name="serviceCollection"> The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to. </param>
+            <returns>
+                The same service collection so that multiple calls can be chained.
+            </returns>
         </member>
     </members>
 </doc>

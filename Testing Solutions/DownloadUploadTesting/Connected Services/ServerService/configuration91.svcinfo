@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="VYGIOvIYDfC5bwVWXM5q+hVys8o=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="i7ax/6K8P0pn7BmOeXsEUWMEwkc=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ServerService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ServerService" contract="ServerService.IServerService" bindingType="basicHttpBinding" address="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc/ServerService.svc" bindingConfiguration="BasicHttpBinding_ServerService">
+    <endpoint name="BasicHttpBinding_ServerService" contract="ServerService.IServerService" bindingType="basicHttpBinding" address="http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc" bindingConfiguration="BasicHttpBinding_ServerService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc/ServerService.svc</serializedValue>
+          <serializedValue>http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

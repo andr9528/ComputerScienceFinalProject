@@ -15,12 +15,11 @@ namespace DownloadUploadTesting.ServerService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServerService.IServerService")]
     public interface IServerService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
-        object GetHandler();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandlerConnectionString", ReplyAction="http://tempuri.org/IClientService/GetHandlerConnectionStringResponse")]
+        string GetHandlerConnectionString();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
-        System.Threading.Tasks.Task<object> GetHandlerAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandlerConnectionString", ReplyAction="http://tempuri.org/IClientService/GetHandlerConnectionStringResponse")]
+        System.Threading.Tasks.Task<string> GetHandlerConnectionStringAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
         System.IO.Stream DownloadFile(string fileNameAndExtension);
@@ -34,11 +33,17 @@ namespace DownloadUploadTesting.ServerService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/UploadFile", ReplyAction="http://tempuri.org/IServerService/UploadFileResponse")]
         System.Threading.Tasks.Task<bool> UploadFileAsync(System.IO.Stream stream);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileName", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameResponse")]
-        void SetNextFileName(string name, bool @override);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileNameWithOverride", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameWithOverrideResponse")]
+        void SetNextFileNameWithOverride(string name, bool @override);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileName", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameResponse")]
-        System.Threading.Tasks.Task SetNextFileNameAsync(string name, bool @override);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileNameWithOverride", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameWithOverrideResponse")]
+        System.Threading.Tasks.Task SetNextFileNameWithOverrideAsync(string name, bool @override);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileNameWithoutOverride", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameWithoutOverrideResponse")]
+        void SetNextFileNameWithoutOverride(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileNameWithoutOverride", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameWithoutOverrideResponse")]
+        System.Threading.Tasks.Task SetNextFileNameWithoutOverrideAsync(string name);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -68,12 +73,12 @@ namespace DownloadUploadTesting.ServerService {
                 base(binding, remoteAddress) {
         }
         
-        public object GetHandler() {
-            return base.Channel.GetHandler();
+        public string GetHandlerConnectionString() {
+            return base.Channel.GetHandlerConnectionString();
         }
         
-        public System.Threading.Tasks.Task<object> GetHandlerAsync() {
-            return base.Channel.GetHandlerAsync();
+        public System.Threading.Tasks.Task<string> GetHandlerConnectionStringAsync() {
+            return base.Channel.GetHandlerConnectionStringAsync();
         }
         
         public System.IO.Stream DownloadFile(string fileNameAndExtension) {
@@ -92,12 +97,20 @@ namespace DownloadUploadTesting.ServerService {
             return base.Channel.UploadFileAsync(stream);
         }
         
-        public void SetNextFileName(string name, bool @override) {
-            base.Channel.SetNextFileName(name, @override);
+        public void SetNextFileNameWithOverride(string name, bool @override) {
+            base.Channel.SetNextFileNameWithOverride(name, @override);
         }
         
-        public System.Threading.Tasks.Task SetNextFileNameAsync(string name, bool @override) {
-            return base.Channel.SetNextFileNameAsync(name, @override);
+        public System.Threading.Tasks.Task SetNextFileNameWithOverrideAsync(string name, bool @override) {
+            return base.Channel.SetNextFileNameWithOverrideAsync(name, @override);
+        }
+        
+        public void SetNextFileNameWithoutOverride(string name) {
+            base.Channel.SetNextFileNameWithoutOverride(name);
+        }
+        
+        public System.Threading.Tasks.Task SetNextFileNameWithoutOverrideAsync(string name) {
+            return base.Channel.SetNextFileNameWithoutOverrideAsync(name);
         }
     }
 }

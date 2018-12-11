@@ -24,7 +24,7 @@ namespace Domain.Concrete
         public Ad()
         {
             Playlists = new List<IPlaylistAd>();
-            FileLocation = @"C:\inetpub\wwwroot\AdProgram\Ads";
+            FileLocation = @"C:\inetpub\wwwroot\AdProgram\Ads\";
             CreationDate = DateTime.Now;
         }
     }

@@ -83,7 +83,7 @@ namespace DownloadUploadTesting
             {
                 FileInfo file = ChoseFile();
                 Stream stream = file.OpenRead();
-                server.SetNextFileName(file.Name, false);
+                server.SetNextFileNameWithoutOverride(file.Name);
                 server.UploadFile(stream);
             }
             catch (Exception ex)
