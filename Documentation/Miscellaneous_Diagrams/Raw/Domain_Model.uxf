@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>169</y>
+      <x>325</x>
+      <y>65</y>
       <w>156</w>
       <h>130</h>
     </coordinates>
@@ -20,8 +20,8 @@ timesPlayed</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>715</y>
+      <x>325</x>
+      <y>611</y>
       <w>156</w>
       <h>130</h>
     </coordinates>
@@ -29,29 +29,29 @@ timesPlayed</panel_attributes>
 --
 name
 description
-adsPlayed</panel_attributes>
+adsPlayed
+Status</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>923</x>
-      <y>169</y>
+      <x>663</x>
+      <y>65</y>
       <w>260</w>
       <h>143</h>
     </coordinates>
     <panel_attributes>Administration
 --
 totalAdsPlayed
-totalAdRuns
-adScreenStatus</panel_attributes>
+totalAdRuns</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>442</y>
+      <x>325</x>
+      <y>338</y>
       <w>156</w>
       <h>130</h>
     </coordinates>
@@ -66,8 +66,8 @@ dateAdded</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>208</y>
+      <x>468</x>
+      <y>104</y>
       <w>221</w>
       <h>65</h>
     </coordinates>
@@ -80,8 +80,8 @@ Uploaded to &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>286</y>
+      <x>390</x>
+      <y>182</y>
       <w>117</w>
       <h>182</h>
     </coordinates>
@@ -94,8 +94,8 @@ Kept in v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>299</y>
+      <x>468</x>
+      <y>195</y>
       <w>494</w>
       <h>247</h>
     </coordinates>
@@ -108,8 +108,8 @@ Assigns ads to v</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>559</y>
+      <x>390</x>
+      <y>455</y>
       <w>143</w>
       <h>182</h>
     </coordinates>
