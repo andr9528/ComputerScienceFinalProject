@@ -16,4 +16,4 @@ Værdiskabelse
 Omkostninger
 	De primære omkostninger består i løn til de ansatte samt forbrug af faciliteterne. De ansatte er den største omkostning i virksomheden. Forbrug af faciliteterne, er dog også en betydelig omkostning, da OneHouse også betaler vand, varme og el for lejerne af kontorene.
 Indtægter
-	De faste indtægter i form af support- og hostingaftaler giver OneHouse en solid fast indkomst. Det samme gælder den månedlige husleje, som OneHouse får gennem kontorleje. OneHouse er imidlertid afhængige af engangsindtægterne fra softwareudvikling og rådgivning. Derfor er det også en nødvendighed for dem, at de bliver ved med at få nye kunder, der kan holde OneHouse økonomisk solid.
+	De faste indtægter i form af support- og hostingaftaler giver OneHouse en solid fast indkomst. Det samme gælder den månedlige husleje, som OneHouse får gennem kontorleje. OneHouse er imidlertid afhængige af engangsindtægterne fra softwareudvikling og rådgivning. Derfor er det også en nødvendighed for dem, at de bliver ved med at få nye kunder, der kan holde OneHouse økonomisk solide.
