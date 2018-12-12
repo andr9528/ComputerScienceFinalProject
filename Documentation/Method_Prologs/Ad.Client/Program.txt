@@ -21,7 +21,9 @@ Method Description ->
 Input ->
 	None
 Output ->
-	None
+	integer called Id, which is the id of this specific client in the database.
+	string called Ip, which is the ip of this specific client at this moment.
+	string called Name, which is the name of this specific client in the database.
 Returntype ->
 	Valuetuple containing (int, string, string)
 Exceptions ->

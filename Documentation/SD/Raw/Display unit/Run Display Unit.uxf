@@ -157,7 +157,7 @@ DownloadFile(filePath)</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
-return Stream</panel_attributes>
+stream</panel_attributes>
     <additional_attributes>10.0;20.0;480.0;20.0</additional_attributes>
   </element>
   <element>
@@ -231,12 +231,12 @@ DownLoadFileFromRemoteLocation(downloadFileLocation)</panel_attributes>
       <x>240</x>
       <y>480</y>
       <w>460</w>
-      <h>80</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 CreateDirectoryForSaveLocation(downloadedFileSaveLocation)
-SaveFile(downloadedFileSaveLocation, stream)</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0;50.0;60.0;10.0;60.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -248,6 +248,40 @@ SaveFile(downloadedFileSaveLocation, stream)</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 FindItSelf()</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>890</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>460</y>
+      <w>30</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;520.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>510</y>
+      <w>370</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+SaveFile(downloadedFileSaveLocation, stream)</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
   </element>
 </diagram>

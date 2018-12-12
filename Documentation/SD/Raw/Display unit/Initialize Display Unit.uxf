@@ -4,8 +4,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>45</y>
+      <x>81</x>
+      <y>18</y>
       <w>27</w>
       <h>54</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>36</x>
-      <y>27</y>
+      <x>45</x>
+      <y>0</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>63</x>
-      <y>81</y>
+      <x>72</x>
+      <y>54</y>
       <w>36</w>
       <h>522</h>
     </coordinates>
@@ -37,8 +37,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>297</x>
-      <y>27</y>
+      <x>306</x>
+      <y>0</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -48,20 +48,20 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>135</y>
+      <x>99</x>
+      <y>108</y>
       <w>252</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
-GetHandler()</panel_attributes>
+GetHandlerConnectionString()</panel_attributes>
     <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>333</x>
-      <y>45</y>
+      <x>342</x>
+      <y>18</y>
       <w>27</w>
       <h>117</h>
     </coordinates>
@@ -71,8 +71,8 @@ GetHandler()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>324</x>
-      <y>144</y>
+      <x>333</x>
+      <y>117</y>
       <w>36</w>
       <h>108</h>
     </coordinates>
@@ -82,32 +82,20 @@ GetHandler()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>225</y>
+      <x>99</x>
+      <y>198</y>
       <w>252</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
-return EntityFrameworkHandler</panel_attributes>
+connectionString</panel_attributes>
     <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>351</x>
-      <y>153</y>
-      <w>180</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-GetConnectionString()</panel_attributes>
-    <additional_attributes>10.0;10.0;40.0;10.0;40.0;50.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>630</x>
-      <y>27</y>
+      <x>639</x>
+      <y>0</y>
       <w>162</w>
       <h>27</h>
     </coordinates>
@@ -117,21 +105,21 @@ GetConnectionString()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
+      <x>720</x>
+      <y>18</y>
+      <w>27</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
       <x>711</x>
-      <y>45</y>
-      <w>27</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>702</x>
-      <y>207</y>
+      <y>360</y>
       <w>36</w>
-      <h>252</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -139,77 +127,20 @@ GetConnectionString()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>351</x>
-      <y>207</y>
-      <w>369</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-EntityFrameworkHandler(connectionstring)</panel_attributes>
-    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>810</x>
-      <y>27</y>
-      <w>90</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>_:Client_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>846</x>
-      <y>45</y>
-      <w>27</w>
-      <h>342</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>837</x>
-      <y>369</y>
-      <w>36</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>90</x>
-      <y>369</y>
-      <w>765</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-Client()</panel_attributes>
-    <additional_attributes>10.0;20.0;830.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>90</x>
-      <y>396</y>
+      <x>99</x>
+      <y>360</y>
       <w>630</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
-Add(client, true)</panel_attributes>
+Add(client, autosave)</panel_attributes>
     <additional_attributes>10.0;20.0;680.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>459</y>
+      <x>99</x>
+      <y>423</y>
       <w>135</w>
       <h>54</h>
     </coordinates>
@@ -220,20 +151,20 @@ SaveKeyInfos()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>423</y>
+      <x>99</x>
+      <y>387</y>
       <w>630</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
-return bool</panel_attributes>
+result</panel_attributes>
     <additional_attributes>10.0;20.0;680.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>90</y>
+      <x>99</x>
+      <y>63</y>
       <w>90</w>
       <h>54</h>
     </coordinates>
@@ -244,21 +175,20 @@ Init()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>315</y>
-      <w>153</w>
-      <h>72</h>
+      <x>99</x>
+      <y>288</y>
+      <w>99</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
-GetHostName()
 GetIP()</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0;50.0;60.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>36</x>
-      <y>261</y>
+      <x>45</x>
+      <y>234</y>
       <w>846</w>
       <h>351</h>
     </coordinates>
@@ -288,13 +218,47 @@ local save file do exist
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>531</y>
+      <x>99</x>
+      <y>504</y>
       <w>117</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 FindItself()</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;10.0;50.0;60.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>315</y>
+      <w>153</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+GetHostName()</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>414</y>
+      <w>27</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>81</x>
+      <y>567</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>
