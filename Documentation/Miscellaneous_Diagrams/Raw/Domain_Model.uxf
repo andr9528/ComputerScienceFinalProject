@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>325</x>
-      <y>65</y>
+      <y>0</y>
       <w>156</w>
       <h>130</h>
     </coordinates>
@@ -21,7 +21,7 @@ timesPlayed</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>325</x>
-      <y>611</y>
+      <y>546</y>
       <w>156</w>
       <h>130</h>
     </coordinates>
@@ -37,7 +37,7 @@ Status</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>663</x>
-      <y>65</y>
+      <y>0</y>
       <w>260</w>
       <h>143</h>
     </coordinates>
@@ -51,7 +51,7 @@ totalAdRuns</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>325</x>
-      <y>338</y>
+      <y>273</y>
       <w>156</w>
       <h>130</h>
     </coordinates>
@@ -67,7 +67,7 @@ dateAdded</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>468</x>
-      <y>104</y>
+      <y>39</y>
       <w>221</w>
       <h>65</h>
     </coordinates>
@@ -81,7 +81,7 @@ Uploaded to &gt;</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>182</y>
+      <y>117</y>
       <w>117</w>
       <h>182</h>
     </coordinates>
@@ -95,7 +95,7 @@ Kept in v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>468</x>
-      <y>195</y>
+      <y>130</y>
       <w>494</w>
       <h>247</h>
     </coordinates>
@@ -109,7 +109,7 @@ Assigns ads to v</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>455</y>
+      <y>390</y>
       <w>143</w>
       <h>182</h>
     </coordinates>
@@ -118,5 +118,18 @@ m1=1..*
 m2=0..*
 Shown on v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>130</y>
+      <w>351</w>
+      <h>533</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+m2=0..*</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;380.0;10.0;380.0</additional_attributes>
   </element>
 </diagram>
