@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>462</x>
+      <y>140</y>
+      <w>119</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Administration
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>140</x>
+      <y>35</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Ad
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>483</x>
+      <y>511</y>
+      <w>119</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>Playlist
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>819</x>
+      <y>42</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>AdScreen
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>84</x>
+      <y>77</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Burger King - Coinoffers 1
+2:39
+10/11/2018
+264</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>84</x>
+      <y>196</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Burger King - Coinoffers 2
+1:19
+27/11/2018
+218</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>84</x>
+      <y>315</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Wetche - Morgentilbud 1
+0:53
+02/09/2018
+689</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>84</x>
+      <y>427</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>OneHouse - Support 1
+1:30
+01/08/2018
+742</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>434</x>
+      <y>175</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Total Playtime: hh:mm:ss
+Total ad runs: 1913
+bg=white
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>112</y>
+      <w>238</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>210</y>
+      <w>238</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;40.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>210</y>
+      <w>238</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;210.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>210</y>
+      <w>238</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;370.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>210</x>
+      <y>532</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Playlist 1
+4:28
+3
+11/11/2018</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>504</x>
+      <y>532</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Playlist 3
+0:53
+1
+10/09/2018</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>357</x>
+      <y>532</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Playlist 2
+0:00
+0
+12/11/2018</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>651</x>
+      <y>532</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Playlist 4
+2:23
+2
+01/08/2018</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>252</y>
+      <w>91</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>252</y>
+      <w>98</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>252</y>
+      <w>245</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;330.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>112</y>
+      <w>84</w>
+      <h>434</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;600.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>231</y>
+      <w>84</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;430.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>462</y>
+      <w>84</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>462</y>
+      <w>525</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;730.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>350</y>
+      <w>525</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;730.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>350</y>
+      <w>378</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;520.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>784</x>
+      <y>77</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Burger King - Skærm 1
+Skærm 1 på Odense station
+1239
+Online</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>112</y>
+      <w>525</w>
+      <h>434</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;600.0;730.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>784</x>
+      <y>196</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Burger King - Skærm 2
+Skærm 2 på Odense station
+853
+Online</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>231</y>
+      <w>525</w>
+      <h>315</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;430.0;730.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>784</x>
+      <y>315</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Q8
+Skærm på Ringe tankstation
+205
+Offline</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>350</y>
+      <w>231</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;260.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>784</x>
+      <y>427</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>UCL - Odense
+Skærm på UCL i Odense
+900
+Online</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>462</y>
+      <w>84</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;100.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>462</y>
+      <w>231</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;100.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>112</y>
+      <w>231</w>
+      <h>434</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;600.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>252</y>
+      <w>238</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>320.0;10.0;10.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>210</y>
+      <w>238</w>
+      <h>273</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>210</y>
+      <w>238</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>210</y>
+      <w>238</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>112</y>
+      <w>238</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=-
+fg=light_gray</panel_attributes>
+    <additional_attributes>10.0;150.0;320.0;10.0</additional_attributes>
+  </element>
+</diagram>

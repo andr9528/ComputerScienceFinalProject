@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>13</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>688</x>
-      <y>272</y>
-      <w>96</w>
-      <h>80</h>
+      <x>325</x>
+      <y>0</y>
+      <w>156</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Ad
 --
@@ -20,38 +20,40 @@ timesPlayed</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>688</x>
-      <y>608</y>
-      <w>96</w>
-      <h>80</h>
+      <x>325</x>
+      <y>546</y>
+      <w>156</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Ad Screen
 --
 name
 description
-adsPlayed</panel_attributes>
+adsPlayed
+Status</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>896</x>
-      <y>272</y>
-      <w>160</w>
-      <h>88</h>
+      <x>663</x>
+      <y>0</y>
+      <w>260</w>
+      <h>143</h>
     </coordinates>
     <panel_attributes>Administration
 --
-metrics</panel_attributes>
+totalAdsPlayed
+totalAdRuns</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>688</x>
-      <y>440</y>
-      <w>96</w>
-      <h>80</h>
+      <x>325</x>
+      <y>273</y>
+      <w>156</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Playlist
 --
@@ -64,83 +66,70 @@ dateAdded</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>328</y>
-      <w>56</w>
-      <h>144</h>
+      <x>468</x>
+      <y>39</y>
+      <w>221</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>lt=-
-
-
-0..*
-
-Kept-in
-
-
-0..*
-
-</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;30.0</additional_attributes>
+m1=0..*
+m2=1
+Uploaded to &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>512</y>
-      <w>72</w>
-      <h>112</h>
+      <x>390</x>
+      <y>117</y>
+      <w>117</w>
+      <h>182</h>
     </coordinates>
     <panel_attributes>lt=-
-1
-
-Shown-on
-
-
-0..*</panel_attributes>
+m1=0..*
+m2=0..*
+Kept in v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>776</x>
-      <y>296</y>
-      <w>136</w>
-      <h>32</h>
+      <x>468</x>
+      <y>130</y>
+      <w>494</w>
+      <h>247</h>
     </coordinates>
     <panel_attributes>lt=-
-0..*    Entered-on     1</panel_attributes>
-    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+m1=1
+m2=0..*
+Assigns ads to v</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;160.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>776</x>
-      <y>352</y>
-      <w>288</w>
-      <h>144</h>
+      <x>390</x>
+      <y>390</y>
+      <w>143</w>
+      <h>182</h>
     </coordinates>
     <panel_attributes>lt=-
-1
-
-
-
-Assigns-ads-to
-
-
-
-</panel_attributes>
-    <additional_attributes>250.0;10.0;250.0;160.0;10.0;160.0</additional_attributes>
+m1=1..*
+m2=0..*
+Shown on v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
   <element>
-    <id>Text</id>
+    <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>456</y>
-      <w>80</w>
-      <h>56</h>
+      <x>468</x>
+      <y>130</y>
+      <w>351</w>
+      <h>533</h>
     </coordinates>
-    <panel_attributes>0..*
-style=wordwrap</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-
+m1=
+m2=0..*</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;380.0;10.0;380.0</additional_attributes>
   </element>
 </diagram>

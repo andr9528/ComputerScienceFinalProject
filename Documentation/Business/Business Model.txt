@@ -1,42 +1,19 @@
-Key Partners
-	Wh	are our Key Partners
-	Wh	are our Key Suppliers
-	Which Key Resources are we acquiring from partners
-	Which Key Activities d	partners perform?
-Key Activities
-	What Key Activities d	our Value Propositions require
-	Our Distribution Channels
-	Customer Relationships? 
-	Revenue streams?
-Key Resources
-	What Key Resources d	our Value Propositions require?
-	Our Distribution Channels? Customer Relationships?
-	Revenue Streams?
-Customer Segments
-	For whom are we creating value?
-	Wh	are our most important customers?
-Customer Relationships 
-	What type of relationship does each of our Customer?
-	Segments expect us t	establish and maintain with them?
-	Which ones have we established?
-	How are they integrated with the rest of our business model?
-	How costly are they?
-Channels
-	Through which Channels d	our Customer Segments want t	be reached?
-	Which ones work best?
-	Which ones are most cost-efficient?
-	How are we integrating them with customer routines?
-Value Proposition
-	What value does he deliver t	the customer?
-	Which one of our customer’s problems are we helping t	solve?
-	What bundles of products and services are we offering t	each Customer Segment?
-Cost Structure
-	What are the most important costs inherent in our business model?
-	Which Key Resources are most expensive?
-	Which Key Activities are most expensive?
-Revenue Streams
-	For what value are our customers willing t	pay?
-	For what d	they currently pay?
-	How are they currently paying?
-	How would they prefer t	pay?
-	How much does each Revenue Stream contribute t	overall revenues?
+FORRETNINGSMODEL
+Nøglepartnere
+	OneHouse har en række forskellige nøglepartnere, som gør dem i stand til at levere deres services. De primære inkluderer Dell, Microsoft, Oki Data Americas, VMware og WatchGuard. En del af OneHouses primære partnere, tilbyder værktøjer til markedsføring og forretningsrelateret dataanalyse. Derudover har OneHouse også distributionsaftaler med forskellige partnere, der gør det muligt for dem at tilbyde billigere support. 
+Nøgleaktiviteter
+	OneHouse tilbyder en lang række forskellige IT services. Dette inkluderer blandt andet hosting-ydelser som hosted backup, web og mail. De tilbyder også rådgivning inden for IT, IT-support og softwareudvikling. Derudover udlejer de også en række kontorfaciliter i Svendborg. OneHouse lever af at levere services til en lang række af forskellige kunder, og da de tilbyder mange forskellige services, kommer indtægterne også mange forskellige steder fra. Dessuden tilbydes der også rabat, hvis man ønsker at købe flere forskellige services af OneHouse.
+Nøgleressourcer
+	OneHouse skaber sin indtægt ved tre nøgleressourcer. De ansatte, faciliteterne og deres servere. Disse tre ressourcer er alle vitale, for at OneHouse kan levere alle deres services. De ansatte sidder med den viden og kompetencer der er nødvendig for at kunne levere, hvad kunderne har behov for. Dette gælder især på områder som service, vejledning og udvikling. Serverne spiller en afgørende rolle for muligheden for at kunne tilbyde nogen form for hosting. Til sidst er faciliteterne også afgørende, da dette både er hvor serverne rent fysisk er placeret, men også fordi der også tilbydes udlejning af kontorer. 
+Kundesegmenter
+	OneHouse har mange forskellige kunder, da langt de fleste virksomheder har en eller anden form for IT-behov og opfylder i en eller anden form de fleste sådanne behov. De arbejder primært for små og mellemstore virksomheder, og har både faste og engangskunder. De faste kunder benytter sig for det meste af OneHouse for at opfylde deres support- eller hostingbehov. Disse har hermed også en tendens til at gå til OneHouse hvis de får behov for yderligere rådgivning eller udvikling af software. De faste kunder er de vigtigste, da det er en fast indtægt, og det er disse der holder virksomheden stabilt kørende. Derudover har OneHouse også engangskunder, som for det meste kommer for at få rådgivning eller softwareudvikling.
+Kundeforhold
+	Da OneHouse er afhængige af deres faste kunder, går de også meget op i at bevare et godt forhold til dem. Dette gøres blandt andet ved at have en forsat kontakt med kunderne. Derfor går OneHouse også meget op i at bibevare gode kundeforhold. Derfor går en stor del af den brugte tid på dette segment af kunder. For eksempel sender OneHouse gerne en medarbejdere ud til kunder for at løse problemer, selv når det er problemer som egentlig kunne løses hjemmefra med skærmdeling. Derudover tager Lars også selv kontakt til kunderne fra tid til anden, for at sikre at alt er som det skal være.
+Kanaler
+	OneHouse beskæftiger sig en del med opsøgende markedsføring. Lars besidder et stort netværk, som han benytter sig af for at skaffe kunder i virksomheden. Lars bruger dermed selv meget tid på at samarbejde med andre virksomheder - også virksomheder som endnu ikke er kunder, for at opbygge et forhold. Derudover rejser han også meget rundt for at holde møder og skabe interesse for hvad han og OneHouse kan tilbyde. Dette resulterer i at OneHouse er det første mange virksomheder tænker på når de får et IT-relateret behov, og da Lars allerede er et kendt ansigt er der fra starten en form for gensidig tillid. 
+Værdiskabelse
+	OneHouse skaber værdi for deres kunder ved at stille IT til rådighed for virksomhederne. Gennem OneHouse får kunderne adgang til at kunne få en hjemmeside lavet og hosted, de kan få hosted backup samt mailbox. Derudover kan de også tilbyde IT-support og udvikling af software. Alt dette er med til at opfylde størstedelen af deres kunders IT-relaterede behov.
+Omkostninger
+	De primære omkostninger består i løn til de ansatte samt forbrug af faciliteterne. De ansatte er den største omkostning i virksomheden. Forbrug af faciliteterne, er dog også en betydelig omkostning, da OneHouse også betaler vand, varme og el for lejerne af kontorene.
+Indtægter
+	De faste indtægter i form af support- og hostingaftaler giver OneHouse en solid fast indkomst. Det samme gælder den månedlige husleje, som OneHouse får gennem kontorleje. OneHouse er imidlertid afhængige af engangsindtægterne fra softwareudvikling og rådgivning. Derfor er det også en nødvendighed for dem, at de bliver ved med at få nye kunder, der kan holde OneHouse økonomisk solide.

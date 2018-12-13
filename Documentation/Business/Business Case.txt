@@ -1,16 +1,17 @@
-INTRODUCTION
-	
-Virksomhedsbaggrund
-	
-Problem
-
+FORRETNINGSGRUNDLAG
+	I oktober stiftede vi for første gang bekendtskab med OneHouse hvor vi fik overrakt deres problemstilling, da den administrerende direktør Lars Thomsen delte deres projektbeskrivelse med os. Siden er der i november blevet holdt et møde med Lars, som yderligere har beskrevet og uddybet problemstillingen for os, samt hans forventinger og forestillinger til hvordan systemet skal udformes. 
+Problemområde
+	Baseret på forretningsmodellen, har vi vurderet, at den bedste løsning vil være noget som kan understøtte virksomhedens faste månedlige indtægter. Dermed bør løsningen være i stand til at understøtte denne model ved at skabe muligheden for at sælge selve systemet til kunder eller at sælge servicen systemet giver. Vi anbefaler dog den sidste mulighed, da den vil hjælpe OneHouse på længere sigt. Derudover skal det ikke være svært at inkludere denne nye service, i den måde Lars Thomsen på nuværende tidspunkt skaber opmærksomhed på sin virksomhed.
 Parthavere
-	OneHouse?
-	Mr. Boss?
+Parthaverne er alle som har en eller anden form for interesse i virksomheden og hvad de udvikler. Dette indbefatter også alle som bliver påvirket af vores system.
+	Kunder - OneHouses kunder har en stor interesse i at de udvider deres services til også at indkludere markedsføring. Dette betyder at kunder som kommer til OneHouse for i forbindelse med IT-drift og infrastruktur, også har muligheden for at kunne blive tilbudt hjælp til markedsføring i samme forbindelse. Mens ikke alle kunder vil have interesse i dette projekt, vil der være en del som er, og disse bør og ønsker sansynligvis at blive involveret i udviklingen af løsningen.
+	Kunders kunder - OneHouses kunders kunder er i sidste ende målgruppen for systemet der skal udvikles, da disse er dem som markedsføringen skal påvirke. Disse  kan være relevante at indrage i projektet, da de er en vigtig interessent, men ikke selv vil tage initiativet.
+	Ansatte - De ansattes interesse i systemet kan afhænge meget af, hvor meget de vil blive påvirket af systemet, deriblandt at komme til at arbejde med det. Generelt vil de ansatte værdsætte det så længe det bidrager til en værdiforøgelse i virksomheden. Den gruppe der vil blive påvirket mest, vil sansynligvis være virksomhedens supportere, da disse vil skulle installere flere skærme, hvilket vil være til gavn for dem. 
+	Samarbejdspartnere - OneHouses samarbejdspartnere har generelt ikke stor interesse i systemet. Partnerne er primært producenter af produkter og services, som alle sammen forsat vil blive brugt. Dermed bliver samarbejdspartnerene ikke meget påvirket, og deres interesse vil derfor nok heller ikke være betydelig.
 Løsning
-	
+	I samarbejde med OneHouse er vi nået frem til at den bedste løsningen vil være et system hvor samtlige skærme kan styres fra en webside. Planen er at lave et system til OneHouse som har til formål at kunne styre en lang række forskellige klientskærme forskellige steder. Alle skærme skal kunne styres fra en administrator med rettighed til at kunne tilgå samtlige skærme. Disse skærme skal automatisk vise ønskede reklamefilm. Intentionen er at kunder både får mulighed for at installere softwaren på computere eller på små RaspberryPi enheder.
+	Årsagen til at vi mener at dette er den bedste løsning er, at det vil være den nemmeste måde at få overblik for OneHouse. Vi mener, at løsningen hvor en administrator har adgang til samtlige skærme, gør det nemt for OneHouse at styre det hele, og hurtigt kunne få et overblik over hvordan det står til. 
 Alternative Løsninger
-	Nulløsningen
-	OPTION 1 
+	Udover den valgte løsning, har vi også haft forskellige andre bud på hvordan man kunne designe løsningen. Disse vil nu beskrives, samt hvorfor vi valgt dem fra.
+	Individuelle systemer - En anden løsning vi har overvejet, et system med individuelle adminstratorer der har adgang til forskellige ting. I denne version af systemet, ville det være kunden der logger ind i systemet og administrer sine egne skærme. Grunden til at vi har valgt ikke at gå videre med denne mulighed er, at den valgte løsning er simplere for kunder. Denne løsning kræver at kunder sætter sig ind i systemet og bruger tid på det. Muligheden for login til kunder der ønsker selv at kunne se relevante information i den valgte løsning er dog stadig en mulighed.
 	OPTION 2
-Key Performance Indicators

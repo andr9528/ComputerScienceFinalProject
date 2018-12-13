@@ -1,0 +1,18 @@
+\section{Introduktion}
+Denne rapport omhandler udviklingen af et IT-system til OneHouse, som gør det muligt at styre forskellige reklameskærme på forskellige lokationer, uden at skulle være der fysisk. Hertil har vi lavet en hjemmeside til at styre skærmene, en database til at holde reklamer og information, en klient til at afspille reklamerne, og en service som styrer kommunikationen mellem disse.
+
+Løsningen er udviklet i samarbejde med OneHouse. OneHouse er en sammenslutning af tre firmaer, ejet af Lars Thomsen, som også er vores kontaktperson for dette projekt. OneHouse har mere end 20 års erfaring inden for IT, og bruger denne erfaring til at være rådgivere for andre firmaer. Hertil tilbyder de hosting, service og support. Derudover udvikler de også IT-systemer og mobil applikationer.
+
+Projektet baserer sig på en opgave, som Lars Thomsen gerne så udført, uden at skulle tilsidestille firma ressourcer, på denne måde kan han 'prøve' systemet, inden han vælger at bruge ressourcer på det. Idéen med projektet er at skabe et videoafspilningssystem, hvor Lars Thomsen kan fjernstyre reklameskærme på f.eks. tankstationer, eller i butikker fra hvor som helst. 
+
+Måden systemet skaber værdi, er at man kan sælge reklamepladser på disse skærme til andre firmaer, hvor hver visning koster en eller anden mængde penge. Derfor har Lars Thomsen brug for at, systemet kan dokumentere hvilke skærme der er tilsluttet, og om de kører, samt hvor mange gange de forskellige reklamer har kørt. Han ønsker også at være uafhængig af hvilken slags computer, som er tilgængelig på lokationen. På denne måde er det eneste han behøver at tage højde for, om der er en skærm tilgængelig.
+
+\section{Problemstilling}
+Lars Thomsen ønsker et videoafspilningssystem, som han kan bruge til at styre reklameskærme hos klienter, uden at være afhængig af klientens computer. Systemet skal sikre at reklamerne bliver vist, fordi indtægten er afhængig af hvor mange gange hver reklame bliver vist.
+
+\subsection{Problemformulering}
+Hvordan kan vi lave et videoafspilningssystem, som kan rapportere afspilninger og problemer, uden at være afhængig af den tilstedeværende computer?
+\begin{enumerate}
+    \item Hvilken teknologi ville være bedst til at opbevare reklamerne?
+    \item Hvordan viser vi statistikkerne for reklamerne på en overskuelig måde?
+\end{enumerate}
