@@ -170,8 +170,8 @@
     ><path fill="none" d="M469.5 20.5 L10.5 20.5" clip-path="url(#clipPath16)"
       /><path d="M458.7417 14 L470 20.5 L458.7417 27 Z" clip-path="url(#clipPath16)" stroke="none"
       /><path fill="none" d="M458.7417 14 L470 20.5 L458.7417 27 Z" clip-path="url(#clipPath16)"
-      /><text x="200.7104" font-size="14px" y="16" clip-path="url(#clipPath16)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Add(Playlist)</text
+      /><text x="167.2417" font-size="14px" y="16" clip-path="url(#clipPath16)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Add(Playlist, autoSave)</text
     ></g
     ><g stroke-dasharray="8,5" stroke-miterlimit="5" transform="translate(1110,270)" stroke-linecap="butt"
     ><path fill="none" d="M10.5 10.5 L10.5 170.5" clip-path="url(#clipPath17)"
