@@ -3,13 +3,14 @@ Method Name ->
 Method Description ->
 	Saves the file from the inputed Stream to the specifed path in the inputed string, after first calling CreateDirectoryForSaveLocation, with the path.
 Input ->
-	None
+	a string, indicating where to save the file.
+	a stream, contain the file.
 Output ->
-	string, Stream
+	a new file at the inputed strings location containing the information from the stream
 Returntype ->
 	Void
 Exceptions ->
-	None
+	UnauthorizedAccessException
 Assumptions ->
 	None
 ______________________________________________________________________________________
@@ -19,9 +20,9 @@ Method Name ->
 Method Description ->
 	Creates the directories specified in the inputed string, if they do not exist already.
 Input ->
-	string
+	a string, indicating a location where a file abount to be saved, which is used to ensure the directory exists before writeing file to drive.
 Output ->
-	None
+	a new directory for the file from the inputed string, if it doesn't already exist.
 Returntype ->
 	Void
 Exceptions ->

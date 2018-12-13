@@ -1,15 +1,86 @@
 Method Name ->
 	UploadFile
 Method Description ->
-	Takes in a Stream, that it then saved by calling SaveFile from our SharedCode class in our Helper project.
+	Takes in a Stream, that it then saved by calling SaveFile from our SharedCode class in our Helper project. Also calles the method CreateAdInDatabase, with the string from SetNextFileName, and finally returns the result of VerifySuccessfulUpload.
 Input ->
-	Stream
+	a stream containing the file that is being uploaded.
 Output ->
-	None
+	a new file on drive with the name specifed in the method SetNextFileName, with the content of the inputed stream.
+	
+	a true or false, indication wheather action went good or bad
+Returntype ->
+	bool
+Exceptions ->
+	ArgumentNullException
+Assumptions ->
+	that the method SetNextFileName has been called, otherwise a argument null exception is thrown
+______________________________________________________________________________________
+
+Method Name ->
+	CreateAdInDatabase
+Method Description ->
+	Creates a new ad in the database with the Name, Location and Extension of the file specifed in the inputed string.
+Input ->
+	string indicating where the new file is.
+Output ->
+	a new ad in the databse, with the information needed to retrive the ad file externally
+	a true or false, indicating wheather or not the ad was succesfully added to the database.
 Returntype ->
 	bool
 Exceptions ->
 	None
 Assumptions ->
 	None
+______________________________________________________________________________________
 
+Method Name ->
+	VerifySuccessfulUpload
+Method Description ->
+	Checks to see if the file at the inputed locationg exist, and that it is not 0 bytes in size.
+Input ->
+	string indicating where the new file should exist.
+	the result of CreateAdInDatabase.
+	a boolean indicating whether or not the method should thorwn an exception or jsut return a boolean indicating success.
+Output ->
+	a bool indicating if the file was succesfully uploaded and the an ad succesfully created in the database.
+	a exception if something went wrong, and the method input is set to throw exceptions.
+Returntype ->
+	bool
+Exceptions ->
+	Exception
+Assumptions ->
+	None
+______________________________________________________________________________________
+
+Method Name ->
+	ThrowErrors
+Method Description ->
+	builds an error 
+Input ->
+	a list of exceptions, which it uses to build a error message
+Output ->
+	a thrown exceptiong with the combined message and stacktrace of all the inputed exceptions
+Returntype ->
+	Void
+Exceptions ->
+	Exception
+Assumptions ->
+	None
+______________________________________________________________________________________
+
+Method Name ->
+	SetNextFileName
+Method Description ->
+	Created a file AdName.txt in the Ad folder, storing the inputed string for use in UploadFile method.
+Input ->
+	a string, with the name of the next file
+	a true or false, indicating if it is allowed to override existing files, which has a default of false.
+Output ->
+	a new file on drive in the Ad folder, containing the name of the next file to be uploaded.
+Returntype ->
+	Void
+Exceptions ->
+	UnauthorizedAccessException
+Assumptions ->
+	None
+______________________________________________________________________________________

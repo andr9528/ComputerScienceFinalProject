@@ -32,7 +32,7 @@ namespace Ad.Server
 
             bool result = CreateAdInDatabase(fileSaveLocation);
 
-            return VerifySuccecfullUpload(fileSaveLocation, result, true);
+            return VerifySuccessfulUpload(fileSaveLocation, result, true);
         }
 
         private bool CreateAdInDatabase(string fileSaveLocation)
@@ -47,7 +47,7 @@ namespace Ad.Server
             return result;
         }
 
-        private bool VerifySuccecfullUpload(string path, bool adCreationResult, bool shouldThrow = false)
+        private bool VerifySuccessfulUpload(string path, bool adCreationResult, bool shouldThrowExceptions = false)
         {
             List<bool> bools = new List<bool>() {adCreationResult};
             List<Exception> errors = new List<Exception>();
@@ -63,7 +63,7 @@ namespace Ad.Server
             if (!size)
                 errors.Add(new Exception("The File has a size of 0 bytes or less."));
 
-            if (shouldThrow && errors.Count > 0)
+            if (shouldThrowExceptions && errors.Count > 0)
                 ThrowErrors(errors);
 
             if (bools.Any(x => x == false))

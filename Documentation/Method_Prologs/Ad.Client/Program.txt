@@ -5,7 +5,7 @@ Method Description ->
 Input ->
 	None
 Output ->
-	None
+	sets the global variable 'client' to the newest version of client from the database
 Returntype ->
 	Void
 Exceptions ->
@@ -37,9 +37,9 @@ Method Name ->
 Method Description ->
 	Created or overwrites file called KeyInfos, with one line of text. The text in the file are the information needed to get the specific client back from the database, after the program has been closed and reopened. The saved data is the Id, the Ip and the Name of the client, in this order split by a |.
 Input ->
-	None
+	takes Id, Ip and Name from the global variable 'client'
 Output ->
-	None
+	file on drive, beside the .exe, that stores the values taken in. in a format easiliy extracted from.
 Returntype ->
 	Void
 Exceptions ->
@@ -55,7 +55,7 @@ Method Description ->
 Input ->
 	None
 Output ->
-	None
+	establishes connection to the service and database, for future use in the program. also gets the instance of itself from the database by calling FindItSelf
 Returntype ->
 	Void
 Exceptions ->
@@ -71,7 +71,7 @@ Method Description ->
 Input ->
 	None
 Output ->
-	None
+	a string with the name of the computer
 Returntype ->
 	string
 Exceptions ->
@@ -87,7 +87,7 @@ Method Description ->
 Input ->
 	None
 Output ->
-	None
+	a string with the external Ip of the computer
 Returntype ->
 	string
 Exceptions ->
@@ -103,7 +103,7 @@ Method Description ->
 Input ->
 	None
 Output ->
-	None
+	a thread per playlsit, that sleeps until its time to run. also updates the global variable 'client' every so often.
 Returntype ->
 	Void
 Exceptions ->
@@ -113,13 +113,13 @@ Assumptions ->
 ______________________________________________________________________________________
 
 Method Name ->
-	Download
+	DownloadFileFromRemoteLocation
 Method Description ->
 	Method that does the actual work with downloading the specified ad from the server, by calling the DownloadFile method on the client service.
 Input ->
 	IAd
 Output ->
-	None
+	media file on drive, downloaded from the service
 Returntype ->
 	Void
 Exceptions ->
@@ -135,7 +135,7 @@ Method Description ->
 Input ->
 	IPlaylist
 Output ->
-	None
+	a new thread, running the inputed playlist
 Returntype ->
 	Void
 Exceptions ->
@@ -151,7 +151,7 @@ Method Description ->
 Input ->
 	IPlaylist
 Output ->
-	None
+	plays the ads from inputed playlist, when the time matches when the playlist should run
 Returntype ->
 	Void
 Exceptions ->
