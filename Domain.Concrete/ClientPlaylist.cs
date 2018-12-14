@@ -14,5 +14,8 @@ namespace Domain.Concrete
 
         public int FK_ClientId { get; set; }
         public virtual IClient Client { get; set; }
+
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
     }
 }

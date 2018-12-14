@@ -19,6 +19,7 @@ namespace Domain.Concrete
         public string Name { get; set; }
         public string Description { get; set; }
         public bool State { get; set; }
+        public DateTime LastPing { get; set; }
 
         public Client()
         {

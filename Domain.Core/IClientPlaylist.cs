@@ -13,5 +13,8 @@ namespace Domain.Core
 
         int FK_ClientId { get; set; }
         IClient Client { get; set; }
+
+        TimeSpan StartTime { get; set; }
+        TimeSpan EndTime { get; set; }
     }
 }
