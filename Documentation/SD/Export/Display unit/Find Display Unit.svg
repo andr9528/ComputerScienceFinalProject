@@ -106,8 +106,8 @@
     ><path fill="none" d="M10.5 20.5 L299.5 20.5" clip-path="url(#clipPath9)"
       /><path fill="white" d="M288.7417 27 L300 20.5 L288.7417 14 Z" clip-path="url(#clipPath9)" stroke="none"
       /><path fill="none" d="M288.7417 27 L300 20.5 L288.7417 14 Z" clip-path="url(#clipPath9)"
-      /><text x="95.1104" font-size="14px" y="16" clip-path="url(#clipPath9)" font-family="sans-serif" stroke="none" xml:space="preserve"
-      >Update(timeStamp)</text
+      /><text x="112.2241" font-size="14px" y="16" clip-path="url(#clipPath9)" font-family="sans-serif" stroke="none" xml:space="preserve"
+      >Update(client)</text
     ></g
     ><g transform="translate(530,360)"
     ><path fill="none" d="M10.5 20.5 L299.5 20.5" clip-path="url(#clipPath9)"
