@@ -11,74 +11,34 @@ namespace ServerService
 {
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServerService.IServerService")]
     public interface IServerService
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandler", ReplyAction="http://tempuri.org/IClientService/GetHandlerResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(byte[]))]
-        System.Threading.Tasks.Task<object> GetHandlerAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/GetHandlerConnectionString", ReplyAction="http://tempuri.org/IClientService/GetHandlerConnectionStringResponse")]
+        System.Threading.Tasks.Task<string> GetHandlerConnectionStringAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClientService/DownloadFile", ReplyAction="http://tempuri.org/IClientService/DownloadFileResponse")]
-        System.Threading.Tasks.Task<ServerService.RemoteFileInfo> DownloadFileAsync(ServerService.DownloadRequest request);
+        System.Threading.Tasks.Task<byte[]> DownloadFileAsync(string fileNameAndExtension);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/UploadFile", ReplyAction="http://tempuri.org/IServerService/UploadFileResponse")]
+        System.Threading.Tasks.Task<bool> UploadFileAsync(byte[] stream);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileNameWithOverride", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameWithOverrideResponse")]
+        System.Threading.Tasks.Task SetNextFileNameWithOverrideAsync(string name, bool @override);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerService/SetNextFileNameWithoutOverride", ReplyAction="http://tempuri.org/IServerService/SetNextFileNameWithoutOverrideResponse")]
+        System.Threading.Tasks.Task SetNextFileNameWithoutOverrideAsync(string name);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="DownloadRequest", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class DownloadRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string FileName;
-        
-        public DownloadRequest()
-        {
-        }
-        
-        public DownloadRequest(string FileName)
-        {
-            this.FileName = FileName;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RemoteFileInfo", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class RemoteFileInfo
-    {
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
-        public string FileName;
-        
-        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
-        public long Length;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public byte[] FileByteStream;
-        
-        public RemoteFileInfo()
-        {
-        }
-        
-        public RemoteFileInfo(string FileName, long Length, byte[] FileByteStream)
-        {
-            this.FileName = FileName;
-            this.Length = Length;
-            this.FileByteStream = FileByteStream;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     public interface IServerServiceChannel : ServerService.IServerService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     public partial class ServerServiceClient : System.ServiceModel.ClientBase<ServerService.IServerService>, ServerService.IServerService
     {
         
@@ -92,7 +52,7 @@ namespace ServerService
         public ServerServiceClient() : 
                 base(ServerServiceClient.GetDefaultBinding(), ServerServiceClient.GetDefaultEndpointAddress())
         {
-            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_IServerService.ToString();
+            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_ServerService.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
@@ -122,22 +82,29 @@ namespace ServerService
         {
         }
         
-        public System.Threading.Tasks.Task<object> GetHandlerAsync()
+        public System.Threading.Tasks.Task<string> GetHandlerConnectionStringAsync()
         {
-            return base.Channel.GetHandlerAsync();
+            return base.Channel.GetHandlerConnectionStringAsync();
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ServerService.RemoteFileInfo> ServerService.IServerService.DownloadFileAsync(ServerService.DownloadRequest request)
+        public System.Threading.Tasks.Task<byte[]> DownloadFileAsync(string fileNameAndExtension)
         {
-            return base.Channel.DownloadFileAsync(request);
+            return base.Channel.DownloadFileAsync(fileNameAndExtension);
         }
         
-        public System.Threading.Tasks.Task<ServerService.RemoteFileInfo> DownloadFileAsync(string FileName)
+        public System.Threading.Tasks.Task<bool> UploadFileAsync(byte[] stream)
         {
-            ServerService.DownloadRequest inValue = new ServerService.DownloadRequest();
-            inValue.FileName = FileName;
-            return ((ServerService.IServerService)(this)).DownloadFileAsync(inValue);
+            return base.Channel.UploadFileAsync(stream);
+        }
+        
+        public System.Threading.Tasks.Task SetNextFileNameWithOverrideAsync(string name, bool @override)
+        {
+            return base.Channel.SetNextFileNameWithOverrideAsync(name, @override);
+        }
+        
+        public System.Threading.Tasks.Task SetNextFileNameWithoutOverrideAsync(string name)
+        {
+            return base.Channel.SetNextFileNameWithoutOverrideAsync(name);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -152,7 +119,7 @@ namespace ServerService
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServerService))
+            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ServerService))
             {
                 System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
                 result.MaxBufferSize = int.MaxValue;
@@ -166,7 +133,7 @@ namespace ServerService
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServerService))
+            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ServerService))
             {
                 return new System.ServiceModel.EndpointAddress("http://www12.steenhoff.dk:4880/AdProgram/Service/Server Service/ServerService.svc" +
                         "");
@@ -176,18 +143,18 @@ namespace ServerService
         
         private static System.ServiceModel.Channels.Binding GetDefaultBinding()
         {
-            return ServerServiceClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_IServerService);
+            return ServerServiceClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_ServerService);
         }
         
         private static System.ServiceModel.EndpointAddress GetDefaultEndpointAddress()
         {
-            return ServerServiceClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IServerService);
+            return ServerServiceClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_ServerService);
         }
         
         public enum EndpointConfiguration
         {
             
-            BasicHttpBinding_IServerService,
+            BasicHttpBinding_ServerService,
         }
     }
 }
