@@ -28,6 +28,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Connected Services\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
   <ItemGroup>

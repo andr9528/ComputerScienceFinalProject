@@ -20,7 +20,7 @@ namespace Ad.Website.Pages
         public async Task<IActionResult> Post(List<IFormFile> files)
         {
             bool success = false;
-            ServerService.ServerServiceClient serverService = new ServerService.ServerServiceClient();
+            ServerServiceClient serverService = new ServerServiceClient();
 
             long size = files.Sum(f => f.Length);
             var filePath = Path.GetTempFileName();
