@@ -1271,6 +1271,7 @@ C:\ComputerScienceFinalProject\Ad.Client\bin\Debug\Microsoft.Extensions.Logging.
 C:\ComputerScienceFinalProject\Ad.Client\bin\Debug\Microsoft.Extensions.Options.xml
 C:\ComputerScienceFinalProject\Ad.Client\obj\Debug\Ad.Client.csprojAssemblyReference.cache
 C:\ComputerScienceFinalProject\Ad.Client\obj\Debug\Ad.Client.exe.config
+C:\ComputerScienceFinalProject\Ad.Client\obj\Debug\Interop.AXVLC.dll
 C:\ComputerScienceFinalProject\Ad.Client\obj\Debug\Ad.Client.csproj.ResolveComReference.cache
 C:\ComputerScienceFinalProject\Ad.Client\obj\Debug\Ad.Client.csproj.CoreCompileInputs.cache
 C:\ComputerScienceFinalProject\Ad.Client\obj\Debug\Ad.Client.csproj.CopyComplete

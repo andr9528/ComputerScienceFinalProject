@@ -32,6 +32,7 @@ namespace Ad.Client
         private TimeSpan sleepDuringOffTime = new TimeSpan(0, 1, 0);
         private TimeSpan sleepBetweenUpdate = new TimeSpan(0, 15, 0);
         private MediaPlayer player;
+        private List<int> previousPlayedAds = new List<int>();
 
         static void Main(string[] args)
         {
@@ -49,6 +50,7 @@ namespace Ad.Client
             Play();
         }
 
+        #region Play
         private void Play()
         {
             bool firstPlay = true;
@@ -56,7 +58,7 @@ namespace Ad.Client
             {
                 foreach (ClientPlaylist playlist in client.Playlists)
                 {
-                    foreach (Domain.Concrete.Ad ad in playlist.Playlist.Ads  )
+                    foreach (Domain.Concrete.Ad ad in playlist.Playlist.Ads)
                     {
                         if (!File.Exists(Path.Combine(adSaveLocation, ad.Name + ad.FileExtension)))
                             DownLoadFileFromRemoteLocation(ad.Name + ad.FileExtension);
@@ -67,7 +69,7 @@ namespace Ad.Client
                 {
                     foreach (ClientPlaylist playlist in client.Playlists)
                     {
-                        StartThread(playlist.Playlist);
+                        StartThread(playlist);
                     }
 
                     firstPlay = false;
@@ -79,23 +81,26 @@ namespace Ad.Client
             }
         }
 
-        private void StartThread(IPlaylist playlist)
+        private void StartThread(IClientPlaylist playlist)
         {
-            Console.WriteLine(string.Format("Starting a Thread for playing the playlist: {0}...", playlist.Name));
+            Console.WriteLine(string.Format("Starting a Thread for playing the playlist: {0}...", playlist.Playlist.Name));
             Thread thread = new Thread(() => PlayPlaylist(playlist));
             thread.Start();
             playlistThreads.Add(thread);
         }
 
-        private void PlayPlaylist(IPlaylist playlist)
+        private void PlayPlaylist(IClientPlaylist playlist)
         {
             while (client.State)
             {
-                while (DateTime.Now >= playlist.StartTime && DateTime.Now < playlist.EndTime)
+                while (DateTime.Now.TimeOfDay >= playlist.StartTime && DateTime.Now.TimeOfDay < playlist.EndTime)
                 {
-                    IAd ad = PickAnAd(playlist);
-                    ad = PlayAd(ad);
-                    bool result = handler.Update(ad);
+                    IAd ad = PickAnAd(playlist.Playlist);
+                    if (ad != null) 
+                    {
+                        ad = PlayAd(ad);
+                        bool result = handler.Update(ad);
+                    }
                 }
 
                 Thread.Sleep(sleepDuringOffTime);
@@ -125,13 +130,157 @@ namespace Ad.Client
             return ad;
         }
 
+        #region Pick An Ad
         private IAd PickAnAd(IPlaylist playlist)
         {
+            Random random = new Random();
             Console.WriteLine("Picking an Ad from Playlist...");
+            IAd result = null;
 
-            throw new NotImplementedException();
+            switch (playlist.PlayMethod)
+            {
+                case Enums.PlayMethods.SinglePlaythrough:
+                    result = PickSinglePlaythrough(playlist);
+                    break;
+                case Enums.PlayMethods.SingleRandomPlaythrough:
+                    result = PickSingleRandomPlaythrough(playlist, random);
+                    break;
+                case Enums.PlayMethods.LoopedPlaythrough:
+                    result = PickLoopedPlaythrough(playlist);
+                    break;
+                case Enums.PlayMethods.LoopedRandomPlaythrough:
+                    result = PickLoopedRandomPlaythrough(playlist, random);
+                    break;
+                default:
+                    break;
+            }
+
+            return result;
         }
 
+        private IAd PickLoopedRandomPlaythrough(IPlaylist playlist, Random random)
+        {
+            IAd result = null;
+            IPlaylistAd playAd = null;
+
+            if (previousPlayedAds.Count == playlist.Ads.Count)
+                previousPlayedAds.Clear();
+
+            int index = 0;
+            int next = previousPlayedAds.Count == 0 ? 0 : random.Next(0, playlist.Ads.Count - 1);
+
+            while (previousPlayedAds.Contains(next + 1))
+            {
+                next = random.Next(0, playlist.Ads.Count - 1);
+            }
+
+            playAd = playlist.Ads.ElementAt(next);
+            result = playAd.Ad;
+            index += ((List<IPlaylistAd>)playlist.Ads).IndexOf(playAd) + 1;
+            previousPlayedAds.Add(index);
+
+            return result;
+        }
+
+        private IAd PickLoopedPlaythrough(IPlaylist playlist)
+        {
+            IAd result = null;
+            IPlaylistAd playAd = null;
+
+            if (previousPlayedAds.Count == playlist.Ads.Count)
+                previousPlayedAds.Clear();
+
+            int index = 0;
+            int next =  previousPlayedAds.Count == 0 ? 0 : previousPlayedAds.Last();
+
+            if (!(next >= playlist.Ads.Count))
+            {
+                playAd = playlist.Ads.ElementAt(next);
+                result = playAd.Ad;
+                index += ((List<IPlaylistAd>)playlist.Ads).IndexOf(playAd) + 1;
+                previousPlayedAds.Add(index);
+            }
+
+            return result;
+        }
+
+        private IAd PickSingleRandomPlaythrough(IPlaylist playlist, Random random)
+        {
+            IAd result = null;
+            IPlaylistAd playAd = null;
+
+            if (previousPlayedAds.Count == playlist.Ads.Count)
+                return result;
+
+            int index = 0;
+            int next = random.Next(0, playlist.Ads.Count - 1);
+
+            while (previousPlayedAds.Contains(next+1))
+            {
+                next = random.Next(0, playlist.Ads.Count - 1);
+            }
+
+            playAd = playlist.Ads.ElementAt(next);
+            result = playAd.Ad;
+            index += ((List<IPlaylistAd>)playlist.Ads).IndexOf(playAd) + 1;
+            previousPlayedAds.Add(index);
+
+            return result;
+
+        }
+
+        private IAd PickSinglePlaythrough(IPlaylist playlist)
+        {
+            IAd result = null;
+            IPlaylistAd playAd = null;
+
+            int index = 0;
+            int next = previousPlayedAds.Last();
+            
+            if (!(next >= playlist.Ads.Count))
+            {
+                playAd = playlist.Ads.ElementAt(next);
+                result = playAd.Ad;
+                index += ((List<IPlaylistAd>) playlist.Ads).IndexOf(playAd) + 1;
+                previousPlayedAds.Add(index);
+            }
+
+            return result;
+        }
+
+        #endregion
+
+
+        #endregion
+
+        #region Download & Update
+        private void DownLoadFileFromRemoteLocation(string fileNameAndExtension, string downloadedFileSaveLocation = @"..\Ads\")
+        {
+            Console.WriteLine(string.Format("Downloading File {0} from Server...", fileNameAndExtension));
+            try
+            {
+                using (var fileStream = service.DownloadFile(fileNameAndExtension))
+                {
+                    if (fileStream == null)
+                    {
+                        Console.WriteLine("File was not recieved...");
+                        return;
+                    }
+
+                    SharedCode.SaveFile(Path.Combine(downloadedFileSaveLocation, fileNameAndExtension), fileStream);
+                }
+                Console.WriteLine("File succesfully downloaded and copied...");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("File could not be downloaded or saved. Message :" + ex.Message);
+            }
+        }
+
+
+        #endregion
+
+        #region Initialize
         private void Init()
         {
             Console.WriteLine("Initializing Connection to Service...");
@@ -164,14 +313,39 @@ namespace Ad.Client
             if (!File.Exists(localSaveFile))
             {
                 Console.WriteLine("Creating Client in Database...");
-                client = new Domain.Concrete.Client() {Ip = GetIP(), Name = GetHostName()};
+                client = new Domain.Concrete.Client() { Ip = GetIP(), Name = GetHostName() };
                 bool result = handler.Add(client, true);
                 SaveKeyInfos();
             }
-            
+
             FindItSelf();
         }
 
+        private string GetHostName()
+        {
+            Console.WriteLine("Getting Computer Name...");
+            string hostName = Dns.GetHostName();
+
+            return hostName;
+        }
+
+        // https://www.c-sharpcorner.com/UploadFile/167ad2/get-ip-address-using-C-Sharp-code/
+        private string GetIP()
+        {
+            Console.WriteLine("Getting Computer External Ip...");
+            // Retrive the Name of HOST 
+            string hostName = GetHostName();
+
+            // Get the IP  
+            string ip = Dns.GetHostEntry(hostName).AddressList[1].ToString();
+
+            return ip;
+        }
+
+
+        #endregion
+
+        #region Find It Self
         private void SaveKeyInfos()
         {
             Console.WriteLine("Saving Key Information Locally...");
@@ -197,9 +371,9 @@ namespace Ad.Client
             IClient predicate = null;
 
             if (id != 0)
-                predicate = new Domain.Concrete.Client() {Id = id};
-            else 
-                predicate = new Domain.Concrete.Client() {Ip = ip, Name = name};
+                predicate = new Domain.Concrete.Client() { Id = id };
+            else
+                predicate = new Domain.Concrete.Client() { Ip = ip, Name = name };
 
             lock (_lock)
             {
@@ -221,47 +395,7 @@ namespace Ad.Client
             }
         }
 
-        private string GetHostName()
-        {
-            Console.WriteLine("Getting Computer Name...");
-            string hostName = Dns.GetHostName();
 
-            return hostName;
-        }
-
-        // https://www.c-sharpcorner.com/UploadFile/167ad2/get-ip-address-using-C-Sharp-code/
-        private string GetIP()
-        {
-            Console.WriteLine("Getting Computer External Ip...");
-            // Retrive the Name of HOST 
-            string hostName = GetHostName();
-            
-            // Get the IP  
-            string ip = Dns.GetHostEntry(hostName).AddressList[1].ToString();
-
-            return ip;
-        }
-        private void DownLoadFileFromRemoteLocation(string fileNameAndExtension, string downloadedFileSaveLocation = @"..\Ads\")  
-        {
-            Console.WriteLine(string.Format("Downloading File {0} from Server...", fileNameAndExtension));
-            try  
-            {  
-                using (var fileStream = service.DownloadFile(fileNameAndExtension))  
-                {  
-                    if (fileStream == null)  
-                    {
-                        Console.WriteLine("File was not recieved...");  
-                        return;  
-                    }  
-
-                    SharedCode.SaveFile(Path.Combine(downloadedFileSaveLocation, fileNameAndExtension), fileStream);  
-                } 
-                Console.WriteLine("File succesfully downloaded and copied...");  
-            }  
-            catch (Exception ex)  
-            {
-                Console.WriteLine("File could not be downloaded or saved. Message :" + ex.Message);  
-            }  
-        }  
+        #endregion
     }
 }
