@@ -26,6 +26,16 @@
         <div class="tab"> Update </div>
         <div class="contentBox">
 
+            @{
+                ((HomeController)this.ViewContext.Controller).UploadFileToRemoteLocation();
+            }
+
+            @using (Html.BeginForm("UploadFiles", "HomeController", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="file" />
+                <input type="submit" value="OK" />
+            }
+
             <form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
                 <div class="form-group">
                     <div class="col-md-10">
