@@ -127,10 +127,10 @@ namespace Repository.EntityFramework
 
             //if (p.CreationDate != default(DateTime))
             //    query = query.Where(x => x.CreationDate.Date == p.CreationDate.Date);
-            if (p.EndTime != default(DateTime))
-                query = query.Where(x => x.EndTime.TimeOfDay == p.EndTime.TimeOfDay);
-            if (p.StartTime != default(DateTime))
-                query = query.Where(x => x.CreationDate.TimeOfDay == p.CreationDate.TimeOfDay);
+            //if (p.EndTime != default(DateTime))
+            //    query = query.Where(x => x.EndTime.TimeOfDay == p.EndTime.TimeOfDay);
+            //if (p.StartTime != default(DateTime))
+            //    query = query.Where(x => x.CreationDate.TimeOfDay == p.CreationDate.TimeOfDay);
 
             return query;
         }

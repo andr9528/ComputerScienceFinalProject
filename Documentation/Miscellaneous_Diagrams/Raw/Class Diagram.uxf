@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>150</x>
-      <y>750</y>
-      <w>250</w>
-      <h>170</h>
+      <x>2061</x>
+      <y>918</y>
+      <w>225</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>Client
 --
@@ -20,28 +20,29 @@
 + Name: string
 + Description: string
 + State: bool
++ LastPing: DateTime
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>660</y>
-      <w>100</w>
-      <h>110</h>
+      <x>2178</x>
+      <y>792</y>
+      <w>90</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
-      <y>500</y>
-      <w>250</w>
-      <h>170</h>
+      <x>2061</x>
+      <y>630</y>
+      <w>225</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IClient
@@ -53,16 +54,17 @@ IClient
 + AdsPlayCount: int
 + Name: string
 + Description: string
-+ State: bool</panel_attributes>
++ State: bool
++ LastPing: DateTime</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>360</y>
-      <w>110</w>
-      <h>150</h>
+      <x>1890</x>
+      <y>459</y>
+      <w>99</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IEntity
@@ -73,22 +75,22 @@ IEntity
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>460</y>
-      <w>130</w>
-      <h>60</h>
+      <x>1980</x>
+      <y>549</y>
+      <w>261</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Inherits</panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0;110.0;40.0</additional_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0;270.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1640</x>
-      <y>470</y>
-      <w>220</w>
-      <h>210</h>
+      <x>2970</x>
+      <y>621</y>
+      <w>198</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IAd
@@ -96,7 +98,7 @@ IAd
 + Name: string
 + FileLocation: string
 + CreationDate: DateTime 
-+ Playlist: ICollection&lt;IPlaylistAd&gt;
++ Playlists: ICollection&lt;IPlaylistAd&gt;
 + FileExtention: string
 + TotalPlayTime: TimeSpan
 + TotalPlayCount: int
@@ -108,10 +110,10 @@ IAd
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1640</x>
-      <y>740</y>
-      <w>220</w>
-      <h>210</h>
+      <x>2925</x>
+      <y>900</y>
+      <w>198</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>Ad
 --
@@ -131,22 +133,22 @@ IAd
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>400</y>
-      <w>1610</w>
-      <h>90</h>
+      <x>1980</x>
+      <y>495</y>
+      <w>1071</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Inherits</panel_attributes>
-    <additional_attributes>10.0;20.0;1590.0;20.0;1590.0;70.0</additional_attributes>
+    <additional_attributes>10.0;20.0;1170.0;20.0;1170.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1670</x>
-      <y>730</y>
-      <w>30</w>
-      <h>30</h>
+      <x>2952</x>
+      <y>891</y>
+      <w>27</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
@@ -154,10 +156,10 @@ Inherits</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
-      <y>50</y>
-      <w>160</w>
-      <h>90</h>
+      <x>3375</x>
+      <y>945</y>
+      <w>144</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>User
 --
@@ -170,10 +172,10 @@ Inherits</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>230</y>
-      <w>140</w>
-      <h>100</h>
+      <x>3393</x>
+      <y>648</y>
+      <w>126</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IUSer
@@ -187,34 +189,34 @@ IUSer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>320</y>
-      <w>560</w>
-      <h>100</h>
+      <x>1980</x>
+      <y>450</y>
+      <w>1458</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Inherits</panel_attributes>
-    <additional_attributes>10.0;80.0;540.0;80.0;540.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;1600.0;20.0;1600.0;220.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
-      <y>130</y>
-      <w>100</w>
-      <h>120</h>
+      <x>3438</x>
+      <y>729</y>
+      <w>90</w>
+      <h>234</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>0</y>
-      <w>180</w>
-      <h>140</h>
+      <x>3186</x>
+      <y>927</y>
+      <w>162</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>LogEntry
 --
@@ -230,10 +232,10 @@ Implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>210</y>
-      <w>180</w>
-      <h>140</h>
+      <x>3186</x>
+      <y>630</y>
+      <w>162</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 ILogEntry
@@ -249,46 +251,46 @@ ILogEntry
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>130</y>
-      <w>100</w>
-      <h>100</h>
+      <x>3240</x>
+      <y>747</y>
+      <w>90</w>
+      <h>198</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>340</y>
-      <w>290</w>
-      <h>60</h>
+      <x>1980</x>
+      <y>468</y>
+      <w>1269</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Inherits</panel_attributes>
-    <additional_attributes>10.0;40.0;270.0;40.0;270.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;1390.0;20.0;1390.0;180.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1740</x>
-      <y>670</y>
-      <w>100</w>
-      <h>90</h>
+      <x>3006</x>
+      <y>801</y>
+      <w>90</w>
+      <h>117</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1330</x>
-      <y>500</y>
-      <w>130</w>
-      <h>120</h>
+      <x>2772</x>
+      <y>639</y>
+      <w>117</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IPlaylistAd
@@ -302,10 +304,10 @@ IPlaylistAd
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1310</x>
-      <y>780</y>
-      <w>130</w>
-      <h>100</h>
+      <x>2754</x>
+      <y>927</y>
+      <w>117</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>PlaylistAd
 --
@@ -318,36 +320,36 @@ IPlaylistAd
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1370</x>
-      <y>610</y>
-      <w>100</w>
-      <h>190</h>
+      <x>2808</x>
+      <y>738</y>
+      <w>90</w>
+      <h>207</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1450</x>
-      <y>510</y>
-      <w>210</w>
-      <h>50</h>
+      <x>2853</x>
+      <y>567</y>
+      <w>171</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
 Contains
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>160.0;60.0;160.0;20.0;10.0;20.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>500</y>
-      <w>240</w>
-      <h>160</h>
+      <x>2529</x>
+      <y>639</y>
+      <w>216</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IPlaylist
@@ -355,8 +357,7 @@ IPlaylist
 + Clients: ICollection&lt;IClientPlaylist&gt;
 + Ads: ICollection&lt;IPlaylistAd&gt;
 + CreationDate: DateTime
-+ StartTime: DateTime
-+ EndTime: DateTime
++ PlayMethod: PlayMethods
 + Name: string
 + Description: string
 
@@ -366,28 +367,30 @@ IPlaylist
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>430</y>
-      <w>920</w>
-      <h>90</h>
+      <x>1980</x>
+      <y>522</y>
+      <w>639</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Inherits</panel_attributes>
-    <additional_attributes>10.0;20.0;900.0;20.0;900.0;70.0</additional_attributes>
+    <additional_attributes>10.0;20.0;690.0;20.0;690.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>500</y>
-      <w>180</w>
-      <h>110</h>
+      <x>2322</x>
+      <y>639</y>
+      <w>162</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Interface&gt;&gt;
 IClientPlaylist
 --
 + FK_PlaylistId: int
 + FK_ClientId: int
++ StartTime: TimeSpan
++ EndTime: TimeSpan
 + Playlist: IPlaylist
 + Client: IClient
 </panel_attributes>
@@ -396,15 +399,17 @@ IClientPlaylist
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
-      <y>780</y>
-      <w>130</w>
-      <h>100</h>
+      <x>2331</x>
+      <y>936</y>
+      <w>144</w>
+      <h>117</h>
     </coordinates>
-    <panel_attributes>PlaylistAd
+    <panel_attributes>ClientPlaylist
 --
 + FK_PlaylistId: int
 + FK_ClientId: int
++ StartTime: TimeSpan
++ EndTime: TimeSpan
 + Playlist: IPlaylist
 + Client: IClient
 </panel_attributes>
@@ -413,73 +418,72 @@ IClientPlaylist
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>600</y>
-      <w>100</w>
-      <h>200</h>
+      <x>2367</x>
+      <y>756</y>
+      <w>90</w>
+      <h>198</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>510</y>
-      <w>200</w>
-      <h>50</h>
+      <x>2250</x>
+      <y>567</y>
+      <w>135</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
 Contains
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;20.0;110.0;20.0;110.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>500</y>
-      <w>190</w>
-      <h>50</h>
+      <x>2439</x>
+      <y>567</y>
+      <w>144</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
 Contains
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>130.0;80.0;130.0;20.0;10.0;20.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1150</x>
-      <y>510</y>
-      <w>200</w>
-      <h>50</h>
+      <x>2691</x>
+      <y>567</y>
+      <w>144</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;&gt;&gt;&gt;
 Contains
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;20.0;120.0;20.0;120.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
-      <y>760</y>
-      <w>250</w>
-      <h>160</h>
+      <x>2502</x>
+      <y>909</y>
+      <w>225</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>Client
+    <panel_attributes>Playlist
 --
 + Id: int
 + Clients: ICollection&lt;IClientPlaylist&gt;
 + Ads: ICollection&lt;IPlaylistAd&gt;
 + CreationDate: DateTime
-+ StartTime: DateTime
-+ EndTime: DateTime
++ PlayMethod: PlayMethods
 + Name: string
 + Description: string
 </panel_attributes>
@@ -488,13 +492,827 @@ m2=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>650</y>
-      <w>100</w>
-      <h>130</h>
+      <x>2538</x>
+      <y>774</y>
+      <w>90</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+Implements</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>2043</x>
+      <y>603</y>
+      <w>1494</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>Domain.Core</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>2043</x>
+      <y>873</y>
+      <w>1494</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>Domain.Concrete</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>1575</x>
+      <y>450</y>
+      <w>459</w>
+      <h>351</h>
+    </coordinates>
+    <panel_attributes>Repository.Core</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2790</x>
+      <y>1251</y>
+      <w>252</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>AdConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;Ad&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>2043</x>
+      <y>1215</y>
+      <w>1476</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Repository.EntityFramework.Config</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1593</x>
+      <y>594</y>
+      <w>414</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IRepository
+--
+
+--
+Find(predicate: T): T
+FindMultiple(predicate: T): ICollection&lt;T&gt;
+Update(predicate: T, resetRepo: bool = true, autoSave: bool = true): bool
+Delete(predicate: T, resetRepo: bool = true, autoSave: bool = true): bool
+Add(element: T, autoSave: bool = false): bool
+AddRange(elements: ICollection&lt;T&gt;, autoSave: bool = true): string
+Save(): void
+ResetRepo(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2997</x>
+      <y>1080</y>
+      <w>54</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2943</x>
+      <y>1332</y>
+      <w>288</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>LogEntryConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;LogEntry&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3222</x>
+      <y>1251</y>
+      <w>279</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>UserConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;User&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3195</x>
+      <y>1044</y>
+      <w>54</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3384</x>
+      <y>1017</y>
+      <w>54</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2502</x>
+      <y>1332</y>
+      <w>288</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>PlaylistAdConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;PlaylistAd&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2061</x>
+      <y>1251</y>
+      <w>270</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ClientConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;Client&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2088</x>
+      <y>1332</y>
+      <w>306</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>ClientPlaylistConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;ClientPlaylist&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2385</x>
+      <y>1251</y>
+      <w>279</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>PlaylistConfig
+--
+
+--
+Configure(builder: EntityTypeBuilder&lt;Playlist&gt;)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2754</x>
+      <y>1008</y>
+      <w>54</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2529</x>
+      <y>1044</y>
+      <w>54</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2340</x>
+      <y>1044</y>
+      <w>54</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2259</x>
+      <y>1080</y>
+      <w>54</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>1017</x>
+      <y>873</y>
+      <w>1008</w>
+      <h>594</h>
+    </coordinates>
+    <panel_attributes>Repository.EntityFramework</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1602</x>
+      <y>1251</y>
+      <w>360</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>EntityRepository
+--
++ Ads: DbSet&lt;Ad&gt;
++ Clients: DbSet&lt;Client&gt;
++ Playlists: DbSet&lt;Playlist&gt;
++ Users: DbSet&lt;User&gt;
++ LogEntries: DbSet&lt;LogEntry&gt;
++ ClientPlaylists: DbSet&lt;ClientPlaylist&gt;
++ PlaylistAds: DbSet&lt;PlaylistAd&gt;
+--
+OnConfiguring(optionBuilder: DbContextOptionsBuilder): void
+OnModelCreating(modelBuilder: ModelBuilder): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1062</x>
+      <y>909</y>
+      <w>531</w>
+      <h>540</h>
+    </coordinates>
+    <panel_attributes>EntityRepositoryHandler
+--
+
+--
+_Public Methods_
+
+Find(predicate: T): T
+FindMultiple(predicate: T): ICollection&lt;T&gt;
+Update(predicate: T, resetRepo: bool = true, autoSave: bool = true): bool
+Delete(predicate: T, resetRepo: bool = true, autoSave: bool = true): bool
+Add(element: T, autoSave: bool = false): bool
+AddRange(elements: ICollection&lt;T&gt;, autoSave: bool = true): string
+Save(): void
+ResetRepo(): void
+
+--
+_Private Methods_
+
+BuildFindPlaylistQuery(p: IPlaylist. query: IQueryable&lt;Playlist&gt;): IQueryable&lt;Playlist&gt;
+BuildFindUserQuery(u: IUSer, query: IQueryable&lt;User&gt;): IQueryable&lt;User&gt;
+BuildFindClientQuery(c: IClient, query: IQueryable&lt;Client&gt;): IQueryable&lt;Client&gt;
+BuildFindAdQuery(a: IAd, query: IQueryable&lt;Ad&gt;): IQueryable&lt;Ad&gt;
+BuildFindLogEntryQuery(l: ILogEntry, query: IQueryable&lt;LogEntry&gt;): IQueryable&lt;LogEntry&gt;
+
+FindMultiplePlaylists(p: IPlaylist): ICollection&lt;Playlist&gt;
+FindMultipleUsers(u: IUser): ICollection&lt;User&gt;
+FindMultipleLogEntries(l: ILogEntry): ICollection&lt;LogEntry&gt;
+FindMultipleClients(c: IClient): ICollection&lt;Client&gt;
+FindMultipleAds(a: IAd): ICollection&lt;Ad&gt;
+
+FindPlaylist(p: IPlaylist): IPlaylist
+FindAd(a: IAd): IAd
+FindClient(c: IClient): IClient
+FindUser(u: IUser): IUser
+FindLogEntry(l: ILogEntry): ILogEntry
+
+FindMultipleResults(query: IQuaryable&lt;T&gt;): ICollection&lt;T&gt;
+FindAResult(query: IQuaryable&lt;T&gt;): T</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1908</x>
+      <y>1107</y>
+      <w>189</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>190.0;10.0;190.0;100.0;10.0;100.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1953</x>
+      <y>1332</y>
+      <w>108</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1584</x>
+      <y>765</y>
+      <w>153</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+Implements</panel_attributes>
+    <additional_attributes>80.0;10.0;80.0;180.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1584</x>
+      <y>801</y>
+      <w>477</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>510.0;10.0;190.0;10.0;190.0;200.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1584</x>
+      <y>999</y>
+      <w>477</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>510.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1584</x>
+      <y>1062</y>
+      <w>153</w>
+      <h>207</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>120.0;210.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>414</x>
+      <y>405</y>
+      <w>1053</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>Ad.Server</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1134</x>
+      <y>432</y>
+      <w>315</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IClientService
+--
+
+--
+GetHandlerCOnnectionString(): string
+DownloadFile(fileNameAndExtension: string): Stream
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1134</x>
+      <y>594</y>
+      <w>315</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>ClientService
+--
+
+--
+GetHandlerCOnnectionString(): string
+DownloadFile(fileNameAndExtension: string): Stream
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1359</x>
+      <y>522</y>
+      <w>90</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+Implements</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>639</x>
+      <y>432</y>
+      <w>315</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+IServerService
+--
+
+--
+UploadFile(stream: Stream): bool
+SetNextFileName(name: string): void
+SetNextFileName(name: string, override: bool): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>441</y>
+      <w>207</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
+Inherits</panel_attributes>
+    <additional_attributes>210.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>585</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+Inherits</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>423</x>
+      <y>594</y>
+      <w>594</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>ServerService
+--
+
+--
+_Public Methods_
+
+UploadFile(stream: Stream): bool
+SetNextFileName(name: string): void
+SetNextFileName(name: string, override: bool): void
+
+--
+_Private Methods_
+
+CreateAdInDatabase(fileSaveLocation: string): bool
+VerifySuccessfulUpload(path: string, adCreationResult: bool, shouldThrowExceptions: bool = false): bool
+ThrowErrors(errors: List&lt;Exception&gt;): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>531</y>
+      <w>90</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
 Implements</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>783</y>
+      <w>333</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>320.0;140.0;320.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>729</y>
+      <w>369</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses Domain.Concrete.Ad</panel_attributes>
+    <additional_attributes>390.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>792</x>
+      <y>0</y>
+      <w>729</w>
+      <h>387</h>
+    </coordinates>
+    <panel_attributes>Ad.Client</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>828</x>
+      <y>27</y>
+      <w>666</w>
+      <h>333</h>
+    </coordinates>
+    <panel_attributes>Program
+--
+
+--
+_Private Methods_
+
+Main(args: string[]): void
+Run(): void
+Play(): void
+StartThread(playlist: IClientPlaylist): void
+PlayPlaylist(playlist: IClientPlaylist): void
+PlayAd(ad: IAd): IAd
+PickAnAd(playlist: IPlaylist): IAd
+PickLoopedRandomPlaythrough(playlist: IPlaylist, random: Random): IAd
+PickLoopedPlaythrough(playlist: IPlaylist): IAd
+PickSingleRandomPlaythrough(playlist: IPlaylist, random: Random): IAd
+PickSinglePlaythrough(playlist: IPlaylist): IAd
+DownLoadFileFromRemoteLocation(fileNameAndExtension: string, downloadedFileSaveLocation: string = @"..\Ads\"
+Init(): void
+GetHostName(): string
+GetIP(): string
+SaveKeyInfos(): void
+FindItSelf(): void
+ReadKeyInfos(): (int, string, string)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1485</x>
+      <y>216</y>
+      <w>63</w>
+      <h>711</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>20.0;770.0;20.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1485</x>
+      <y>162</y>
+      <w>324</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses Domain.Concrete &amp; Domain.Core</panel_attributes>
+    <additional_attributes>340.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1386</x>
+      <y>351</y>
+      <w>54</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>0</x>
+      <y>45</y>
+      <w>738</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>Helpers</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2583</x>
+      <y>774</y>
+      <w>189</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses Helpers.Enums</panel_attributes>
+    <additional_attributes>190.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>279</x>
+      <y>153</y>
+      <w>441</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>SharedCode
+--
+
+--
+_Public Methods_
+
+_SaveFile(downloadedFileSaveLocation: string, fileStream: Stream): void_
+
+--
+_Private Methods_
+
+_CreateDirectoryForSaveLocation(downloadedFileSaveLocation: string): void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>72</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Enums
+--
+PlayMethods: enum
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>711</x>
+      <y>324</y>
+      <w>135</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>360</y>
+      <w>54</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>198</x>
+      <y>873</y>
+      <w>711</w>
+      <h>576</h>
+    </coordinates>
+    <panel_attributes>Ad.Website</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>927</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>297</x>
+      <y>432</y>
+      <w>360</w>
+      <h>459</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses</panel_attributes>
+    <additional_attributes>380.0;20.0;10.0;20.0;10.0;490.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>9</x>
+      <y>72</y>
+      <w>576</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Extensions
+--
+
+--
+_AddIfNotExists(dbSet: DbSet&lt;TEnt&gt;, entity: TEnt, predicate: Func&lt;TEnt, TKey&gt;): EntityEntry&lt;TEnt&gt;_
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1098</x>
+      <y>1440</y>
+      <w>396</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+Uses Helpers.Extensions</panel_attributes>
+    <additional_attributes>420.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
