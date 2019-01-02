@@ -26,8 +26,10 @@
         <div class="tab"> Update </div>
         <div class="contentBox">
 
+            <button class="btn-success" href="@Url.Action("UploadFileToRemoteLocation", "HomeController")">Start</button>
+
             @{
-                ((HomeController)this.ViewContext.Controller).UploadFileToRemoteLocation();
+               // ((HomeController)this.ViewContext.Controller).UploadFileToRemoteLocation();
             }
 
             @using (Html.BeginForm("UploadFiles", "HomeController", FormMethod.Post, new { enctype = "multipart/form-data" }))

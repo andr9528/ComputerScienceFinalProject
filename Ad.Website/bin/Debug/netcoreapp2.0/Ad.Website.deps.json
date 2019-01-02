@@ -29,7 +29,8 @@
           "System.ServiceModel.Duplex": "4.5.3",
           "System.ServiceModel.Http": "4.5.3",
           "System.ServiceModel.NetTcp": "4.5.3",
-          "System.ServiceModel.Security": "4.5.3"
+          "System.ServiceModel.Security": "4.5.3",
+          "System.Windows.Forms": "4.0.0.0"
         },
         "runtime": {
           "Ad.Website.dll": {}
@@ -3959,6 +3960,14 @@
           "Repository.EntityFramework.dll": {}
         }
       },
+      "System.Windows.Forms/4.0.0.0": {
+        "runtime": {
+          "System.Windows.Forms.dll": {}
+        },
+        "compile": {
+          "System.Windows.Forms.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.0": {
         "dependencies": {
           "Microsoft.NETCore.DotNetHostPolicy": "2.0.0",
@@ -6225,6 +6234,11 @@
     },
     "Repository.EntityFramework/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Windows.Forms/4.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

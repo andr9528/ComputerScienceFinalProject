@@ -41,3 +41,11 @@ C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Microsoft.Enti
 C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Castle.Core.xml
 C:\ComputerScienceFinalProject\Ad.Website\obj\Debug\netcoreapp2.0\Ad.Website.csproj.CopyComplete
 C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Ad.Website.dll.config
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\System.Windows.Forms.dll
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Accessibility.dll
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\System.Deployment.dll
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\System.Windows.Forms.xml
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\Accessibility.xml
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\System.Deployment.xml
+C:\ComputerScienceFinalProject\Ad.Website\bin\Debug\netcoreapp2.0\System.Runtime.Serialization.Formatters.Soap.xml

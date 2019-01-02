@@ -11,7 +11,8 @@ namespace Ad.Website
 {
     public class HomeController : Controller
     {
-        public ActionResult UploadFiles()
+        [HttpGet]
+        public ActionResult Index()
         {
             return View();
         }
@@ -53,9 +54,10 @@ namespace Ad.Website
 
 
 
-
+        [HttpPost]
         private void UploadFileToRemoteLocation()
         {
+            Console.WriteLine("Uploading File...");
             ServerServiceClient serverService = new ServerServiceClient();
 
             try
