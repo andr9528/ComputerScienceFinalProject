@@ -93,7 +93,8 @@ namespace Ad.Client
         {
             while (client.State)
             {
-                while (DateTime.Now.TimeOfDay >= playlist.StartTime && DateTime.Now.TimeOfDay < playlist.EndTime)
+                while (DateTime.Now.TimeOfDay >= playlist.StartTime
+                       && DateTime.Now.TimeOfDay < playlist.EndTime)
                 {
                     IAd ad = PickAnAd(playlist.Playlist);
                     if (ad != null) 
@@ -294,11 +295,9 @@ namespace Ad.Client
             catch (EndpointNotFoundException ex)
             {
                 Console.WriteLine("Server is Offline, Unable to communicate with server to get Connection String...");
-                Console.WriteLine();
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
+                Console.WriteLine(string.Format("{0}{1}{2}", Environment.NewLine + ex.Message,
+                    Environment.NewLine + ex.StackTrace, Environment.NewLine));
 
-                Console.WriteLine();
                 Console.WriteLine("Press Any Key to Close...");
                 Console.ReadKey();
 
@@ -309,7 +308,6 @@ namespace Ad.Client
             Core.Initialize();
             vlc = new LibVLC();
 
-
             if (!File.Exists(localSaveFile))
             {
                 Console.WriteLine("Creating Client in Database...");
@@ -317,7 +315,6 @@ namespace Ad.Client
                 bool result = handler.Add(client, true);
                 SaveKeyInfos();
             }
-
             FindItSelf();
         }
 

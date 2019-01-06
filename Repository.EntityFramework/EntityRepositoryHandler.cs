@@ -124,13 +124,13 @@ namespace Repository.EntityFramework
                 query = query.Where(x => x.Name.Contains(p.Name));
             if (!p.Description.IsNullOrEmpty())
                 query = query.Where(x => x.Description.Contains(p.Description));
-
-            //if (p.creationdate != default(datetime))
-            //    query = query.where(x => x.creationdate.date == p.creationdate.date);
-            //if (p.endtime != default(datetime))
-            //    query = query.where(x => x.endtime.timeofday == p.endtime.timeofday);
-            //if (p.starttime != default(datetime))
-            //    query = query.where(x => x.creationdate.timeofday == p.creationdate.timeofday);
+                
+            //if (p.CreationDate != default(DateTime))
+            //    query = query.Where(x => x.CreationDate.Date == p.CreationDate.Date);
+            //if (p.EndTime != default(DateTime))
+            //    query = query.Where(x => x.EndTime.TimeOfDay == p.EndTime.TimeOfDay);
+            //if (p.StartTime != default(DateTime))
+            //    query = query.Where(x => x.CreationDate.TimeOfDay == p.CreationDate.TimeOfDay);
 
             return query;
         }

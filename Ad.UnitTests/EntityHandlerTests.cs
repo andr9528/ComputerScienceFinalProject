@@ -76,7 +76,8 @@ namespace Ad.UnitTests
         [TestMethod]
         public void UpdateAd_SuccesfullyUpdate()
         {
-            Domain.Concrete.Ad before = new AdGenerator().PropertiesSetter(new Domain.Concrete.Ad());
+            Domain.Concrete.Ad before = new AdGenerator()
+                .PropertiesSetter(new Domain.Concrete.Ad());
 
             bool result = handler.Add(before, true);
 
