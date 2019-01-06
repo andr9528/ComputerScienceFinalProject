@@ -4,17 +4,53 @@
     ViewData["Title"] = "Home page";
 }
 
-<div id="menu">
-    <div class="topTxt">
-        Menu
+<div class="container">
+    <div id="menu">
+        <div class="topTxt">
+            Menu
+        </div>
+        <hr>
+        Home
+        <br />
+        Statistics
+        <br />
+        <b>Adds</b>
+        <br />
+        Clients
+        <br />
+        Playlists
     </div>
-    <hr>
-    Statistics
-    <br />
-    Something Else
-</div>
 
-<div id="content">
-    <div class="tab"> Ads </div>
-    <div class="tab"> Clients </div>
+    <div id="content">
+        <div class="tab"> Upload </div>
+        <div class="tab"> Update </div>
+        <div class="contentBox">
+
+            <button class="btn-success" href="@Url.Action("UploadFileToRemoteLocation", "HomeController")">Start</button>
+
+            @{
+               // ((HomeController)this.ViewContext.Controller).UploadFileToRemoteLocation();
+            }
+
+            @using (Html.BeginForm("UploadFiles", "HomeController", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="file" />
+                <input type="submit" value="OK" />
+            }
+
+            <form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <p>Upload one or more files using this form:</p>
+                        <input type="file" name="files" multiple />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <input type="submit" value="Upload" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

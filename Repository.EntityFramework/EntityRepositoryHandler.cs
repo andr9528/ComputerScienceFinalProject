@@ -124,7 +124,7 @@ namespace Repository.EntityFramework
                 query = query.Where(x => x.Name.Contains(p.Name));
             if (!p.Description.IsNullOrEmpty())
                 query = query.Where(x => x.Description.Contains(p.Description));
-
+                
             //if (p.CreationDate != default(DateTime))
             //    query = query.Where(x => x.CreationDate.Date == p.CreationDate.Date);
             //if (p.EndTime != default(DateTime))
